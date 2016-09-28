@@ -1,31 +1,38 @@
 'use strict';
-var common = require('../common');
+const common = require('../common');
 
 if (!common.hasCrypto) {
   common.skip('missing crypto');
   return;
 }
-var tls = require('tls');
-var net = require('net');
+const tls = require('tls');
+const net = require('net');
+const assert = require('assert');
 
-var bonkers = Buffer.alloc(1024, 42);
+const bonkers = Buffer.alloc(1024, 42);
 
-var server = net.createServer(common.mustCall(function(c) {
-  setTimeout(common.mustCall(function() {
-    var s = new tls.TLSSocket(c, {
+const server = net.createServer(function(c) {
+  setTimeout(function() {
+    const s = new tls.TLSSocket(c, {
       isServer: true,
       server: server
     });
 
-    s.on('error', common.mustCall(function() {}));
+    s.on('error', common.mustCall(function(e) {
+      assert.ok(e instanceof Error,
+        'Instance of Error should be passed to error handler');
+      assert.ok(e.message.match(
+        /SSL routines:SSL23_GET_CLIENT_HELLO:unknown protocol/),
+        'Expecting SSL unknown protocol');
+    }));
 
     s.on('close', function() {
       server.close();
       s.destroy();
     });
-  }), 200);
-})).listen(0, function() {
-  var c = net.connect({port: this.address().port}, function() {
+  }, common.platformTimeout(200));
+}).listen(0, function() {
+  const c = net.connect({port: this.address().port}, function() {
     c.write(bonkers);
   });
 });
