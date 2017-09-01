@@ -1,17 +1,17 @@
 # Deprecated APIs
 
-Node.js may deprecate APIs when either: (a) use of the API is considered to be
+Jayo.js may deprecate APIs when either: (a) use of the API is considered to be
 unsafe, (b) an improved alternative API has been made available, or (c)
 breaking changes to the API are expected in a future major release.
 
-Node.js utilizes three kinds of Deprecations:
+Jayo.js utilizes three kinds of Deprecations:
 
 * Documentation-only
 * Runtime
 * End-of-Life
 
 A Documentation-only deprecation is one that is expressed only within the
-Node.js API docs. These generate no side-effects while running Node.js.
+Jayo.js API docs. These generate no side-effects while running Jayo.js.
 
 A Runtime deprecation will, by default, generate a process warning that will
 be printed to `stderr` the first time the deprecated API is used. When the
@@ -19,7 +19,7 @@ be printed to `stderr` the first time the deprecated API is used. When the
 cause an error to be thrown.
 
 An End-of-Life deprecation is used to identify code that either has been
-removed or will soon be removed from Node.js.
+removed or will soon be removed from Jayo.js.
 
 ## Un-deprecation
 
@@ -99,9 +99,9 @@ option should be used instead.
 
 Type: End-of-Life
 
-In an earlier version of the Node.js `cluster`, a boolean property with the name
+In an earlier version of the Jayo.js `cluster`, a boolean property with the name
 `suicide` was added to the `Worker` object. The intent of this property was to
-provide an indication of how and why the `Worker` instance exited. In Node.js
+provide an indication of how and why the `Worker` instance exited. In Jayo.js
 6.0.0, the old property was deprecated and replaced with a new
 [`worker.exitedAfterDisconnect`][] property. The old property name did not
 precisely describe the actual semantics and was unnecessarily emotion-laden.
@@ -112,7 +112,7 @@ precisely describe the actual semantics and was unnecessarily emotion-laden.
 Type: Documentation-only
 
 The `constants` module has been deprecated. When requiring access to constants
-relevant to specific Node.js builtin modules, developers should instead refer
+relevant to specific Jayo.js builtin modules, developers should instead refer
 to the `constants` property exposed by the relevant module. For instance,
 `require('fs').constants` and `require('os').constants`.
 
@@ -122,9 +122,9 @@ to the `constants` property exposed by the relevant module. For instance,
 Type: End-of-life
 
 Use of the [`crypto.pbkdf2()`][] API without specifying a digest was deprecated
-in Node.js 6.0 because the method defaulted to using the non-recommendend
+in Jayo.js 6.0 because the method defaulted to using the non-recommendend
 `'SHA1'` digest. Previously, a deprecation warning was printed. Starting in
-Node.js 8.0.0, calling `crypto.pbkdf2()` or `crypto.pbkdf2Sync()` with an
+Jayo.js 8.0.0, calling `crypto.pbkdf2()` or `crypto.pbkdf2Sync()` with an
 undefined `digest` will throw a `TypeError`.
 
 <a id="DEP0010"></a>
@@ -195,7 +195,7 @@ The `Intl.v8BreakIterator` is deprecated and will be removed or replaced soon.
 Type: Runtime
 
 Unhandled promise rejections are deprecated. In the future, promise rejections
-that are not handled will terminate the Node.js process with a non-zero exit
+that are not handled will terminate the Jayo.js process with a non-zero exit
 code.
 
 <a id="DEP0019"></a>
@@ -204,7 +204,7 @@ code.
 Type: End-of-Life
 
 In certain cases, `require('.')` may resolve outside the package directory.
-This behavior is deprecated and will be removed in a future major Node.js
+This behavior is deprecated and will be removed in a future major Jayo.js
 release.
 
 <a id="DEP0020"></a>
@@ -543,7 +543,7 @@ documented as an officially supported API.
 
 Type: Runtime
 
-The `tls.createSecurePair()` API was deprecated in documentation in Node.js
+The `tls.createSecurePair()` API was deprecated in documentation in Jayo.js
 0.11.3. Users should use `tls.Socket` instead.
 
 <a id="DEP0065"></a>
@@ -553,7 +553,7 @@ Type: Documentation-only
 
 The `repl` module's `REPL_MODE_MAGIC` constant, used for `replMode` option, has
 been deprecated. Its behavior has been functionally identical to that of
-`REPL_MODE_SLOPPY` since Node.js v6.0.0, when V8 5.0 was imported. Please use
+`REPL_MODE_SLOPPY` since Jayo.js v6.0.0, when V8 5.0 was imported. Please use
 `REPL_MODE_SLOPPY` instead.
 
 The `NODE_REPL_MODE` environment variable is used to set the underlying

@@ -5,16 +5,16 @@
 N-API (pronounced N as in the letter, followed by API)
 is an API for building native Addons. It is independent from
 the underlying JavaScript runtime (ex V8) and is maintained as part of
-Node.js itself. This API will be Application Binary Interface (ABI) stable
-across versions of Node.js. It is intended to insulate Addons from
+Jayo.js itself. This API will be Application Binary Interface (ABI) stable
+across versions of Jayo.js. It is intended to insulate Addons from
 changes in the underlying JavaScript engine and allow modules
-compiled for one version to run on later versions of Node.js without
+compiled for one version to run on later versions of Jayo.js without
 recompilation.
 
 Addons are built/packaged with the same approach/tools
 outlined in the section titled  [C++ Addons](addons.html).
 The only difference is the set of APIs that are used by the native code.
-Instead of using the V8 or [Native Abstractions for Node.js][] APIs,
+Instead of using the V8 or [Native Abstractions for Jayo.js][] APIs,
 the functions available in the N-API are used.
 
 APIs exposed by N-API are generally used to create and manipulate
@@ -44,13 +44,13 @@ The documentation for N-API is structured as follows:
 * [Asynchronous Operations][]
 * [Promises][]
 
-The N-API is a C API that ensures ABI stability across Node.js versions
+The N-API is a C API that ensures ABI stability across Jayo.js versions
 and different compiler levels. However, we also understand that a C++
 API can be easier to use in many cases. To support these cases we expect
 there to be one or more C++ wrapper modules that provide an inlineable C++
 API. Binaries built with these wrapper modules will depend on the symbols
-for the N-API C based functions exported by Node.js. These wrappers are not
-part of N-API, nor will they be maintained as part of Node.js. One such
+for the N-API C based functions exported by Jayo.js. These wrappers are not
+part of N-API, nor will they be maintained as part of Jayo.js. One such
 example is: [node-api](https://github.com/nodejs/node-api).
 
 In order to use the N-API functions, include the file
@@ -330,7 +330,7 @@ code needs to create an Error object: [`napi_create_error`][],
 where result is the napi_value that refers to the newly created
 JavaScript Error object.
 
-The Node.js project is adding error codes to all of the errors
+The Jayo.js project is adding error codes to all of the errors
 generated internally.  The goal is for applications to use these
 error codes for all error checking. The associated error messages
 will remain, but will only be meant to be used for logging and
@@ -1228,7 +1228,7 @@ This API allocates a `node::Buffer` object and initializes it with data
 backed by the passed in buffer. While this is still a fully-supported data
 structure, in most cases using a TypedArray will suffice.
 
-*Note*: For Node.js >=4 `Buffers` are Uint8Arrays.
+*Note*: For Jayo.js >=4 `Buffers` are Uint8Arrays.
 
 #### *napi_create_function*
 <!-- YAML
@@ -3210,7 +3210,7 @@ Addon modules often need to leverage async helpers from libuv as part of their
 implementation. This allows them to schedule work to be executed asynchronously
 so that their methods can return in advance of the work being completed. This
 is important in order to allow them to avoid blocking overall execution
-of the Node.js application.
+of the Jayo.js application.
 
 N-API provides an ABI-stable interface for these
 supporting functions which covers the most common asynchronous use cases.
@@ -3381,11 +3381,11 @@ NAPI_EXTERN napi_status napi_get_version(napi_env env,
 Returns `napi_ok` if the API succeeded.
 
 This API returns the highest N-API version supported by the
-Node.js runtime.  N-API is planned to be additive such that
-newer releases of Node.js may support additional API functions.
+Jayo.js runtime.  N-API is planned to be additive such that
+newer releases of Jayo.js may support additional API functions.
 In order to allow an addon to use a newer function when running with
-versions of Node.js that support it, while providing
-fallback behavior when running with Node.js versions that don't
+versions of Jayo.js that support it, while providing
+fallback behavior when running with Jayo.js versions that don't
 support it:
 
 * Call `napi_get_version()` to determine if the API is available.
@@ -3562,7 +3562,7 @@ object - that is, a promise object created by the underlying engine.
 [ECMAScript Language Specification]: https://tc39.github.io/ecma262/
 [Error Handling]: #n_api_error_handling
 [Module Registration]: #n_api_module_registration
-[Native Abstractions for Node.js]: https://github.com/nodejs/nan
+[Native Abstractions for Jayo.js]: https://github.com/nodejs/nan
 [Object Lifetime Management]: #n_api_object_lifetime_management
 [Object Wrap]: #n_api_object_wrap
 [Section 9.1.6]: https://tc39.github.io/ecma262/#sec-ordinary-object-internal-methods-and-internal-slots-defineownproperty-p-desc

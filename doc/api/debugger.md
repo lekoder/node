@@ -6,8 +6,8 @@
 
 <!-- type=misc -->
 
-Node.js includes an out-of-process debugging utility accessible via a
-[TCP-based protocol][] and built-in debugging client. To use it, start Node.js
+Jayo.js includes an out-of-process debugging utility accessible via a
+[TCP-based protocol][] and built-in debugging client. To use it, start Jayo.js
 with the `inspect` argument followed by the path to the script to debug; a prompt
 will be displayed indicating successful launch of the debugger:
 
@@ -23,7 +23,7 @@ Break on start in myscript.js:1
 debug>
 ```
 
-Node.js's debugger client is not a full-featured debugger, but simple step and
+Jayo.js's debugger client is not a full-featured debugger, but simple step and
 inspection are possible.
 
 Inserting the statement `debugger;` into the source code of a script will
@@ -170,13 +170,13 @@ breakpoint)
 
 ## Advanced Usage
 
-### V8 Inspector Integration for Node.js
+### V8 Inspector Integration for Jayo.js
 
-V8 Inspector integration allows attaching Chrome DevTools to Node.js
+V8 Inspector integration allows attaching Chrome DevTools to Jayo.js
 instances for debugging and profiling. It uses the [Chrome Debugging Protocol][].
 
 V8 Inspector can be enabled by passing the `--inspect` flag when starting a
-Node.js application. It is also possible to supply a custom port with that flag,
+Jayo.js application. It is also possible to supply a custom port with that flag,
 e.g. `--inspect=9222` will accept DevTools connections on port 9222.
 
 To break on the first line of the application code, pass the `--inspect-brk`

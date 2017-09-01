@@ -1,4 +1,4 @@
-# Node.js 6 ChangeLog
+# Jayo.js 6 ChangeLog
 
 <table>
 <tr>
@@ -49,8 +49,8 @@
   * [io.js](CHANGELOG_IOJS.md)
   * [Archive](CHANGELOG_ARCHIVE.md)
 
-*Note*: Node.js v6 is covered by the
-[Node.js Long Term Support Plan](https://github.com/nodejs/LTS) and
+*Note*: Jayo.js v6 is covered by the
+[Jayo.js Long Term Support Plan](https://github.com/nodejs/LTS) and
 will be supported actively until April 2018 and maintained until April 2019.
 
 <a id="6.11.2"></a>
@@ -302,7 +302,7 @@ This LTS release comes with 221 commits. This includes 80 which are test related
 <a id="6.11.1"></a>
 ## 2017-07-11, Version 6.11.1 'Boron' (LTS), @MylesBorins
 
-This is a security release. All Node.js users should consult the security release summary at https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/ for details on patched vulnerabilities.
+This is a security release. All Jayo.js users should consult the security release summary at https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/ for details on patched vulnerabilities.
 
 ### Notable Changes
 
@@ -839,7 +839,7 @@ This LTS release comes with 297 commits. This includes 124 which are test relate
 * [[`d777da27bc`](https://github.com/nodejs/node/commit/d777da27bc)] - **http**: reject control characters in http.request() (Ben Noordhuis) [#8923](https://github.com/nodejs/node/pull/8923)
 * [[`bad0d9367e`](https://github.com/nodejs/node/commit/bad0d9367e)] - **http**: add debug message for invalid header value (Evan Lucas) [#9195](https://github.com/nodejs/node/pull/9195)
 * [[`bde1a7e09e`](https://github.com/nodejs/node/commit/bde1a7e09e)] - **lib**: remove unnecessary parameter for assertCrypto() (Jackson Tian) [#10834](https://github.com/nodejs/node/pull/10834)
-* [[`a2aa2f7de4`](https://github.com/nodejs/node/commit/a2aa2f7de4)] - **lib**: refactor bootstrap_node.js regular expression (Rich Trott) [#10749](https://github.com/nodejs/node/pull/10749)
+* [[`a2aa2f7de4`](https://github.com/nodejs/node/commit/a2aa2f7de4)] - **lib**: refactor bootstrap_Jayo.js regular expression (Rich Trott) [#10749](https://github.com/nodejs/node/pull/10749)
 * [[`797d9ee924`](https://github.com/nodejs/node/commit/797d9ee924)] - **lib**: refactor crypto cipher/hash/curve getters (Rich Trott) [#10682](https://github.com/nodejs/node/pull/10682)
 * [[`69327f5e72`](https://github.com/nodejs/node/commit/69327f5e72)] - **lib**: rename kMaxCallbacksUntilQueueIsShortened (JungMinu) [#11473](https://github.com/nodejs/node/pull/11473)
 * [[`a6b2dfa43c`](https://github.com/nodejs/node/commit/a6b2dfa43c)] - **lib**: add constant kMaxCallbacksUntilQueueIsShortened (Daniel Bevenius) [#11199](https://github.com/nodejs/node/pull/11199)
@@ -1066,7 +1066,7 @@ Notable SEMVER-PATCH changes include:
 * [[`447287c432`](https://github.com/nodejs/node/commit/447287c432)] - **doc**: unify dirname and filename description (Sam Roberts) [#10527](https://github.com/nodejs/node/pull/10527)
 * [[`c3882f4d8b`](https://github.com/nodejs/node/commit/c3882f4d8b)] - **doc**: warn about unvalidated input in child_process (Matthew Garrett) [#10466](https://github.com/nodejs/node/pull/10466)
 * [[`11d8f2439b`](https://github.com/nodejs/node/commit/11d8f2439b)] - **doc**: require two-factor authentication (Rich Trott) [#10529](https://github.com/nodejs/node/pull/10529)
-* [[`017764018c`](https://github.com/nodejs/node/commit/017764018c)] - **doc**: use "Node.js" in V8 guide (Rich Trott) [#10438](https://github.com/nodejs/node/pull/10438)
+* [[`017764018c`](https://github.com/nodejs/node/commit/017764018c)] - **doc**: use "Jayo.js" in V8 guide (Rich Trott) [#10438](https://github.com/nodejs/node/pull/10438)
 * [[`636335a1c3`](https://github.com/nodejs/node/commit/636335a1c3)] - **doc**: require() tries first core not native modules (Vicente Jimenez Aguilar) [#10324](https://github.com/nodejs/node/pull/10324)
 * [[`f7c0eb8ba6`](https://github.com/nodejs/node/commit/f7c0eb8ba6)] - **doc**: clarify the review and landing process (Joyee Cheung) [#10202](https://github.com/nodejs/node/pull/10202)
 * [[`b814b4cec7`](https://github.com/nodejs/node/commit/b814b4cec7)] - **doc**: update writable.write return value (Tanuja-Sawant) [#9468](https://github.com/nodejs/node/pull/9468)
@@ -1209,7 +1209,7 @@ Notable SEMVER-PATCH changes include:
 
 This is a security release of the 'Boron' release line to upgrade OpenSSL to version 1.0.2k
 
-Although the OpenSSL team have determined a maximum severity rating of "moderate", the Node.js
+Although the OpenSSL team have determined a maximum severity rating of "moderate", the Jayo.js
 crypto team (Ben Noordhuis, Shigeki Ohtsu and Fedor Indutny) have determined the impact to Node
 users is "low". Details on this determination can be found
 [on the Nodejs.org website](https://nodejs.org/en/blog/vulnerability/openssl-january-2017/).
@@ -1765,16 +1765,16 @@ commits which are updates to dependencies.
 <a id="6.9.0"></a>
 ## 2016-10-18, Version 6.9.0 'Boron' (LTS), @rvagg
 
-This release marks the transition of Node.js v6 into Long Term Support (LTS) with the codename 'Boron'. The v6 release line now moves in to "Active LTS" and will remain so until April 2018. After that time it will move in to "Maintenance" until end of life in April 2019.
+This release marks the transition of Jayo.js v6 into Long Term Support (LTS) with the codename 'Boron'. The v6 release line now moves in to "Active LTS" and will remain so until April 2018. After that time it will move in to "Maintenance" until end of life in April 2019.
 
-This is also a security release. All Node.js users should consult the security release summary at https://nodejs.org/en/blog/vulnerability/october-2016-security-releases/ for details on patched vulnerabilities.
+This is also a security release. All Jayo.js users should consult the security release summary at https://nodejs.org/en/blog/vulnerability/october-2016-security-releases/ for details on patched vulnerabilities.
 
 ### Notable changes
 
-* **crypto**: Don't automatically attempt to load an OpenSSL configuration file, from the `OPENSSL_CONF` environment variable or from the default location for the current platform. Always triggering a configuration file load attempt may allow an attacker to load compromised OpenSSL configuration into a Node.js process if they are able to place a file in a default location. (Fedor Indutny, Rod Vagg)
+* **crypto**: Don't automatically attempt to load an OpenSSL configuration file, from the `OPENSSL_CONF` environment variable or from the default location for the current platform. Always triggering a configuration file load attempt may allow an attacker to load compromised OpenSSL configuration into a Jayo.js process if they are able to place a file in a default location. (Fedor Indutny, Rod Vagg)
 * **node**: Introduce the `process.release.lts` property, set to `"Boron"`. This value is `"Argon"` for v4 LTS releases and `undefined` for all other releases. (Rod Vagg)
-* **V8**: Backport fix for CVE-2016-5172, an arbitrary memory read. The parser in V8 mishandled scopes, potentially allowing an attacker to obtain sensitive information from arbitrary memory locations via crafted JavaScript code. This vulnerability would require an attacker to be able to execute arbitrary JavaScript code in a Node.js process. (Rod Vagg)
-* **v8_inspector**: Generate a UUID for each execution of the inspector. This provides additional security to prevent unauthorized clients from connecting to the Node.js process via the v8_inspector port when running with `--inspect`. Since the debugging protocol allows extensive access to the internals of a running process, and the execution of arbitrary code, it is important to limit connections to authorized tools only. Vulnerability originally reported by Jann Horn. (Eugene Ostroukhov)
+* **V8**: Backport fix for CVE-2016-5172, an arbitrary memory read. The parser in V8 mishandled scopes, potentially allowing an attacker to obtain sensitive information from arbitrary memory locations via crafted JavaScript code. This vulnerability would require an attacker to be able to execute arbitrary JavaScript code in a Jayo.js process. (Rod Vagg)
+* **v8_inspector**: Generate a UUID for each execution of the inspector. This provides additional security to prevent unauthorized clients from connecting to the Jayo.js process via the v8_inspector port when running with `--inspect`. Since the debugging protocol allows extensive access to the internals of a running process, and the execution of arbitrary code, it is important to limit connections to authorized tools only. Vulnerability originally reported by Jann Horn. (Eugene Ostroukhov)
 
 ### Commits
 
@@ -1901,12 +1901,12 @@ This is also a security release. All Node.js users should consult the security r
 * [[`b05ce842ce`](https://github.com/nodejs/node/commit/b05ce842ce)] - **inspector**: zero out structure members (Eugene Ostroukhov) [#8536](https://github.com/nodejs/node/pull/8536)
 * [[`0b90ff7a8d`](https://github.com/nodejs/node/commit/0b90ff7a8d)] - **inspector**: introduce a smoke test (Eugene Ostroukhov) [#8429](https://github.com/nodejs/node/pull/8429)
 * [[`3222b66abe`](https://github.com/nodejs/node/commit/3222b66abe)] - **inspector**: fix tests on Windows (Eugene Ostroukhov) [#8528](https://github.com/nodejs/node/pull/8528)
-* [[`a1925a7955`](https://github.com/nodejs/node/commit/a1925a7955)] - **lib**: minor improvements to bootstrap_node.js (Rémy MEJA) [#8906](https://github.com/nodejs/node/pull/8906)
+* [[`a1925a7955`](https://github.com/nodejs/node/commit/a1925a7955)] - **lib**: minor improvements to bootstrap_Jayo.js (Rémy MEJA) [#8906](https://github.com/nodejs/node/pull/8906)
 * [[`313a45da24`](https://github.com/nodejs/node/commit/313a45da24)] - **lib**: changed var to const in linkedlist (Adri Van Houdt) [#8609](https://github.com/nodejs/node/pull/8609)
 * [[`6cd5588a67`](https://github.com/nodejs/node/commit/6cd5588a67)] - **lib**: fix TypeError in v8-polyfill (Wyatt Preul) [#8863](https://github.com/nodejs/node/pull/8863)
 * [[`ba361a2aa0`](https://github.com/nodejs/node/commit/ba361a2aa0)] - **lib**: remove let from for loops (Myles Borins) [#8873](https://github.com/nodejs/node/pull/8873)
 * [[`beb288b639`](https://github.com/nodejs/node/commit/beb288b639)] - **lib**: changed var to const in internal/v8_polyfill (Adri Van Houdt) [#8615](https://github.com/nodejs/node/pull/8615)
-* [[`858a7bbacf`](https://github.com/nodejs/node/commit/858a7bbacf)] - **lib**: changed var to const in bootstrap_node.js (Adri Van Houdt) [#8588](https://github.com/nodejs/node/pull/8588)
+* [[`858a7bbacf`](https://github.com/nodejs/node/commit/858a7bbacf)] - **lib**: changed var to const in bootstrap_Jayo.js (Adri Van Houdt) [#8588](https://github.com/nodejs/node/pull/8588)
 * [[`31232adebb`](https://github.com/nodejs/node/commit/31232adebb)] - **module**: fix comment from "read-only" to "shallow" (Bryan English) [#8887](https://github.com/nodejs/node/pull/8887)
 * [[`0eaf3ff53c`](https://github.com/nodejs/node/commit/0eaf3ff53c)] - **path**: fallback to process cwd when resolving drive cwd (Jason Ginchereau) [#8541](https://github.com/nodejs/node/pull/8541)
 * [[`d72a7b3d0c`](https://github.com/nodejs/node/commit/d72a7b3d0c)] - **path**: fix path.relative UNC path result (Jason Ginchereau) [#8523](https://github.com/nodejs/node/pull/8523)
@@ -2037,16 +2037,16 @@ This is also a security release. All Node.js users should consult the security r
 <a id="6.7.0"></a>
 ## 2016-09-27, Version 6.7.0 (Current), @evanlucas
 
-This is a security release. All Node.js users should consult the security release summary at https://nodejs.org/en/blog/vulnerability/september-2016-security-releases/ for details on patched vulnerabilities.
+This is a security release. All Jayo.js users should consult the security release summary at https://nodejs.org/en/blog/vulnerability/september-2016-security-releases/ for details on patched vulnerabilities.
 
 ### Notable changes
 
 Semver Minor:
 
 * **openssl**:
-  - Upgrade to 1.0.2i, fixes a number of defects impacting Node.js: CVE-2016-6304 ("OCSP Status Request extension unbounded memory growth", high severity), CVE-2016-2183, CVE-2016-2178 and CVE-2016-6306. (Shigeki Ohtsu) [#8714](https://github.com/nodejs/node/pull/8714)
+  - Upgrade to 1.0.2i, fixes a number of defects impacting Jayo.js: CVE-2016-6304 ("OCSP Status Request extension unbounded memory growth", high severity), CVE-2016-2183, CVE-2016-2178 and CVE-2016-6306. (Shigeki Ohtsu) [#8714](https://github.com/nodejs/node/pull/8714)
   - Upgrade to 1.0.2j, fixes a defect included in 1.0.2i resulting in a crash when using CRLs, CVE-2016-7052. (Shigeki Ohtsu) [#8786](https://github.com/nodejs/node/pull/8786)
-  - Remove support for loading dynamic third-party engine modules. An attacker may be able to hide malicious code to be inserted into Node.js at runtime by masquerading as one of the dynamic engine modules. Originally reported by Ahmed Zaki (Skype). (Ben Noordhuis) [nodejs/node-private#73](https://github.com/nodejs/node-private/pull/73)
+  - Remove support for loading dynamic third-party engine modules. An attacker may be able to hide malicious code to be inserted into Jayo.js at runtime by masquerading as one of the dynamic engine modules. Originally reported by Ahmed Zaki (Skype). (Ben Noordhuis) [nodejs/node-private#73](https://github.com/nodejs/node-private/pull/73)
 * **http**: CVE-2016-5325 - Properly validate for allowable characters in the `reason` argument in `ServerResponse#writeHead()`. Fixes a possible response splitting attack vector. This introduces a new case where `throw` may occur when configuring HTTP responses, users should already be adopting try/catch here. Originally reported independently by Evan Lucas and Romain Gaucher. (Evan Lucas) [nodejs/node-private#60](https://github.com/nodejs/node-private/pull/60)
 
 Semver Patch:
@@ -2275,7 +2275,7 @@ Semver Patch:
 * [[`4118598dbb`](https://github.com/nodejs/node/commit/4118598dbb)] - **src**: don't include a null character in the WriteConsoleW call (Nikolai Vavilov) [#7764](https://github.com/nodejs/node/pull/7764)
 * [[`d863619a30`](https://github.com/nodejs/node/commit/d863619a30)] - **src**: clean up PER_ISOLATE_STRING_PROPERTIES, v2 (Ben Noordhuis) [#8207](https://github.com/nodejs/node/pull/8207)
 * [[`d3950a2013`](https://github.com/nodejs/node/commit/d3950a2013)] - **src**: clean up PER_ISOLATE_STRING_PROPERTIES, v1 (Ben Noordhuis) [#8207](https://github.com/nodejs/node/pull/8207)
-* [[`8f9fb8154d`](https://github.com/nodejs/node/commit/8f9fb8154d)] - **src**: updating references to the old node.js file (Daniel Bevenius) [#8092](https://github.com/nodejs/node/pull/8092)
+* [[`8f9fb8154d`](https://github.com/nodejs/node/commit/8f9fb8154d)] - **src**: updating references to the old Jayo.js file (Daniel Bevenius) [#8092](https://github.com/nodejs/node/pull/8092)
 * [[`091ba2c511`](https://github.com/nodejs/node/commit/091ba2c511)] - **src**: fix build break for !NODE_USE_V8_PLATFORM (Kunal Pathak) [#8114](https://github.com/nodejs/node/pull/8114)
 * [[`1bf80a0a3f`](https://github.com/nodejs/node/commit/1bf80a0a3f)] - **stream**: avoid caching prepend check (Calvin Metcalf) [#8018](https://github.com/nodejs/node/pull/8018)
 * [[`cda8bfc3c8`](https://github.com/nodejs/node/commit/cda8bfc3c8)] - **test**: fix tests after V8 upgrade (Ali Ijaz Sheikh) [#6482](https://github.com/nodejs/node/pull/6482)
@@ -2409,7 +2409,7 @@ Semver Patch:
 * [[`17ae49a055`](https://github.com/nodejs/node/commit/17ae49a055)] - **doc**: improve Buffer code examples (Brian White) [#7784](https://github.com/nodejs/node/pull/7784)
 * [[`0ffeddb5b4`](https://github.com/nodejs/node/commit/0ffeddb5b4)] - **doc**: various documentation formatting fixes (Сковорода Никита Андреевич) [#7637](https://github.com/nodejs/node/pull/7637)
 * [[`1fa9330ac6`](https://github.com/nodejs/node/commit/1fa9330ac6)] - **doc**: add princejwesley to collaborators (Prince J Wesley) [#7877](https://github.com/nodejs/node/pull/7877)
-* [[`715ac62670`](https://github.com/nodejs/node/commit/715ac62670)] - **doc**: clarify that the node.js irc channel is not under tsc oversight (James M Snell) [#7810](https://github.com/nodejs/node/pull/7810)
+* [[`715ac62670`](https://github.com/nodejs/node/commit/715ac62670)] - **doc**: clarify that the Jayo.js irc channel is not under tsc oversight (James M Snell) [#7810](https://github.com/nodejs/node/pull/7810)
 * [[`edb877da65`](https://github.com/nodejs/node/commit/edb877da65)] - **doc**: fix `added:` date for `NODE_REPL_HISTORY` (Anna Henningsen) [#7775](https://github.com/nodejs/node/pull/7775)
 * [[`27f92efaee`](https://github.com/nodejs/node/commit/27f92efaee)] - **doctool**: improve the title of pages in doc (yorkie) [#7939](https://github.com/nodejs/node/pull/7939)
 * [[`18a3064937`](https://github.com/nodejs/node/commit/18a3064937)] - **fs**: restore JS implementation of realpath (Bartosz Sosnowski) [#7899](https://github.com/nodejs/node/pull/7899)
@@ -2592,22 +2592,22 @@ Semver Patch:
 ### Notable changes
 
 * **buffer**: Added `buffer.swap64()` to complement `swap16()` & `swap32()`. (Zach Bjornson) [#7157](https://github.com/nodejs/node/pull/7157)
-* **build**: New `configure` options have been added for building Node.js as a shared library. (Stefan Budeanu) [#6994](https://github.com/nodejs/node/pull/6994)
+* **build**: New `configure` options have been added for building Jayo.js as a shared library. (Stefan Budeanu) [#6994](https://github.com/nodejs/node/pull/6994)
   - The options are: `--shared`, `--without-v8-platform` & `--without-bundled-v8`.
 * **crypto**: Root certificates have been updated. (Ben Noordhuis) [#7363](https://github.com/nodejs/node/pull/7363)
 * **debugger**: The server address is now configurable via `--debug=<address>:<port>`. (Ben Noordhuis) [#3316](https://github.com/nodejs/node/pull/3316)
 * **npm**: Upgraded npm to v3.10.3 (Kat Marchán) [#7515](https://github.com/nodejs/node/pull/7515) & (Rebecca Turner) [#7410](https://github.com/nodejs/node/pull/7410)
 * **readline**: Added the `prompt` option to the readline constructor. (Evan Lucas) [#7125](https://github.com/nodejs/node/pull/7125)
-* **repl / vm**: `sigint`/`ctrl+c` will now break out of infinite loops without stopping the Node.js instance. (Anna Henningsen) [#6635](https://github.com/nodejs/node/pull/6635)
+* **repl / vm**: `sigint`/`ctrl+c` will now break out of infinite loops without stopping the Jayo.js instance. (Anna Henningsen) [#6635](https://github.com/nodejs/node/pull/6635)
 * **src**:
   - Added a `node::FreeEnvironment` public C++ API. (Cheng Zhao) [#3098](https://github.com/nodejs/node/pull/3098)
   - Refactored `require('constants')`, constants are now available directly from their respective modules. (James M Snell) [#6534](https://github.com/nodejs/node/pull/6534)
 * **stream**: Improved `readable.read()` performance by up to 70%. (Brian White) [#7077](https://github.com/nodejs/node/pull/7077)
 * **timers**: `setImmediate()` is now up to 150% faster in some situations. (Andras) [#6436](https://github.com/nodejs/node/pull/6436)
 * **util**: Added a `breakLength` option to `util.inspect()` to control how objects are formatted across lines. (cjihrig) [#7499](https://github.com/nodejs/node/pull/7499)
-* **v8-inspector**: Experimental support has been added for debugging Node.js over the inspector protocol. (Ali Ijaz Sheikh) [#6792](https://github.com/nodejs/node/pull/6792)
+* **v8-inspector**: Experimental support has been added for debugging Jayo.js over the inspector protocol. (Ali Ijaz Sheikh) [#6792](https://github.com/nodejs/node/pull/6792)
   - **Note: This feature is _experimental_, and it could be altered or removed.**
-  - You can try this feature by running Node.js with the `--inspect` flag.
+  - You can try this feature by running Jayo.js with the `--inspect` flag.
 
 ### Commits
 
@@ -2641,7 +2641,7 @@ Semver Patch:
 * [[`c544213717`](https://github.com/nodejs/node/commit/c544213717)] - **deps**: backport 7dfb5beeec from V8 upstream (Myles Borins) [#7348](https://github.com/nodejs/node/pull/7348)
 * [[`b0da07a788`](https://github.com/nodejs/node/commit/b0da07a788)] - **doc**: add `added:` information for timers (Anna Henningsen) [#7493](https://github.com/nodejs/node/pull/7493)
 * [[`63d361b531`](https://github.com/nodejs/node/commit/63d361b531)] - **doc**: fix documentation of process.argv (Tarun Garg) [#7449](https://github.com/nodejs/node/pull/7449)
-* [[`45f83e59c4`](https://github.com/nodejs/node/commit/45f83e59c4)] - **doc**: add guide for Node.js Timers (Ryan Lewis) [#6825](https://github.com/nodejs/node/pull/6825)
+* [[`45f83e59c4`](https://github.com/nodejs/node/commit/45f83e59c4)] - **doc**: add guide for Jayo.js Timers (Ryan Lewis) [#6825](https://github.com/nodejs/node/pull/6825)
 * [[`7d07a0b68e`](https://github.com/nodejs/node/commit/7d07a0b68e)] - **doc**: improve usage of `zero`/`0` (Rich Trott) [#7466](https://github.com/nodejs/node/pull/7466)
 * [[`8d18aed59e`](https://github.com/nodejs/node/commit/8d18aed59e)] - **doc**: fixing minor typo in `AtExit` hooks section (Daniel Bevenius) [#7485](https://github.com/nodejs/node/pull/7485)
 * [[`58ae35c34d`](https://github.com/nodejs/node/commit/58ae35c34d)] - **doc**: fix broken refs to `url.parse()` in http docs (Anna Henningsen) [#7392](https://github.com/nodejs/node/pull/7392)
@@ -2854,8 +2854,8 @@ Semver Patch:
   - [`npm/npm@f04e05`](https://github.com/npm/npm/commit/df04e05af1f257a1903372e1baf334c0969fbdbd) [npm/npm#10013](https://github.com/npm/npm/issues/10013) `read-package-tree@5.1.4`: Fixes an issue where `npm install` would fail if your `node_modules` was symlinked. ([@iarna](https://github.com/iarna))
   - [`b894413`](https://github.com/npm/npm/commit/b8944139a935680c4a267468bb2d3c3082b5609f) [#12372](https://github.com/npm/npm/issues/12372) Changing a nested dependency in an `npm-shrinkwrap.json` and then running `npm install` would not get up the updated package. This corrects that. ([@misterbyrne](https://github.com/misterbyrne))
   - This release includes `npm@3.9.0`, which is the result of our Windows testing push -- the test suite (should) pass on Windows now. We're working on getting AppVeyor to a place where we can just rely on it like Travis.
-* **tty**: Default to blocking mode for stdio on OS X. A bug fix in libuv 1.9.0, introduced in Node.js v6.0.0, exposed problems with Node's use of non-blocking stdio, particularly on OS X which has a small output buffer. This change should fix CLI applications that have been having problems with output since Node.js v6.0.0 on OS X. The core team is continuing to address stdio concerns that exist across supported platforms and progress can be tracked at <https://github.com/nodejs/node/issues/6980>. (Jeremiah Senkpiel) [#6895](https://github.com/nodejs/node/pull/6895)
-* **V8**: Upgrade to V8 5.0.71.52. This includes a fix that addresses problems experienced by users of node-inspector since Node.js v6.0.0, see <https://github.com/node-inspector/node-inspector/issues/864> for details. (Michaël Zasso) [#6928](https://github.com/nodejs/node/pull/6928)
+* **tty**: Default to blocking mode for stdio on OS X. A bug fix in libuv 1.9.0, introduced in Jayo.js v6.0.0, exposed problems with Node's use of non-blocking stdio, particularly on OS X which has a small output buffer. This change should fix CLI applications that have been having problems with output since Jayo.js v6.0.0 on OS X. The core team is continuing to address stdio concerns that exist across supported platforms and progress can be tracked at <https://github.com/nodejs/node/issues/6980>. (Jeremiah Senkpiel) [#6895](https://github.com/nodejs/node/pull/6895)
+* **V8**: Upgrade to V8 5.0.71.52. This includes a fix that addresses problems experienced by users of node-inspector since Jayo.js v6.0.0, see <https://github.com/node-inspector/node-inspector/issues/864> for details. (Michaël Zasso) [#6928](https://github.com/nodejs/node/pull/6928)
 
 ### Commits
 
@@ -2933,7 +2933,7 @@ Semver Patch:
 * [[`bf4724a7bb`](https://github.com/nodejs/node/commit/bf4724a7bb)] - **doc**: remove link to Sign in crypto.md (Kirill Fomichev) [#6812](https://github.com/nodejs/node/pull/6812)
 * [[`ba3089970d`](https://github.com/nodejs/node/commit/ba3089970d)] - **doc**: add `added:` in for `tty` (Rich Trott) [#6783](https://github.com/nodejs/node/pull/6783)
 * [[`758fadfa0d`](https://github.com/nodejs/node/commit/758fadfa0d)] - **doc**: update openssl.org hash links (silverwind) [#6817](https://github.com/nodejs/node/pull/6817)
-* [[`b2c7d466d4`](https://github.com/nodejs/node/commit/b2c7d466d4)] - **doc,test**: add `How to write a Node.js test` guide (Santiago Gimeno) [#6984](https://github.com/nodejs/node/pull/6984)
+* [[`b2c7d466d4`](https://github.com/nodejs/node/commit/b2c7d466d4)] - **doc,test**: add `How to write a Jayo.js test` guide (Santiago Gimeno) [#6984](https://github.com/nodejs/node/pull/6984)
 * [[`c4329aa226`](https://github.com/nodejs/node/commit/c4329aa226)] - **fs**: move mkdtemp* functions near static functions (Sakthipriyan Vairamani) [#6828](https://github.com/nodejs/node/pull/6828)
 * [[`c068880757`](https://github.com/nodejs/node/commit/c068880757)] - **fs**: mkdtemp shouldn't crash if no callback passed (Sakthipriyan Vairamani) [#6828](https://github.com/nodejs/node/pull/6828)
 * [[`2ab36093e6`](https://github.com/nodejs/node/commit/2ab36093e6)] - **http**: use `localAddress` instead of `path` (Dirceu Pereira Tiegs) [#5190](https://github.com/nodejs/node/pull/5190)
@@ -3188,7 +3188,7 @@ running in big endian mode in addition to the existing 64-bit binaries for runni
 * [[`ab7055b003`](https://github.com/nodejs/node/commit/ab7055b003)] - **doc**: fix fs.realpath man pg links (phette23) [#6451](https://github.com/nodejs/node/pull/6451)
 * [[`13e660888f`](https://github.com/nodejs/node/commit/13e660888f)] - **doc**: extra clarification of historySize option (vsemozhetbyt) [#6397](https://github.com/nodejs/node/pull/6397)
 * [[`3d5b732660`](https://github.com/nodejs/node/commit/3d5b732660)] - **doc**: clarifies http.serverResponse implementation (Allen Hernandez) [#6072](https://github.com/nodejs/node/pull/6072)
-* [[`7034ebe2bc`](https://github.com/nodejs/node/commit/7034ebe2bc)] - **doc**: use `Node.js` in synopsis document (Rich Trott) [#6476](https://github.com/nodejs/node/pull/6476)
+* [[`7034ebe2bc`](https://github.com/nodejs/node/commit/7034ebe2bc)] - **doc**: use `Jayo.js` in synopsis document (Rich Trott) [#6476](https://github.com/nodejs/node/pull/6476)
 * [[`4ae39f9863`](https://github.com/nodejs/node/commit/4ae39f9863)] - **doc**: remove all scrollbar styling (Claudio Rodriguez) [#6479](https://github.com/nodejs/node/pull/6479)
 * [[`e6c8da45b1`](https://github.com/nodejs/node/commit/e6c8da45b1)] - **(SEMVER-MINOR)** **doc**: make `writable.setDefaultEncoding()` return `this` (Alexander Makarenko) [#5040](https://github.com/nodejs/node/pull/5040)
 * [[`4068d64f4f`](https://github.com/nodejs/node/commit/4068d64f4f)] - **doc**: fix EventEmitter#eventNames() example (Сковорода Никита Андреевич) [#6417](https://github.com/nodejs/node/pull/6417)
@@ -3197,7 +3197,7 @@ running in big endian mode in addition to the existing 64-bit binaries for runni
 * [[`fd37d54eb5`](https://github.com/nodejs/node/commit/fd37d54eb5)] - **doc**: added note warning about change to console.endTime() (Ben Page) [#6454](https://github.com/nodejs/node/pull/6454)
 * [[`b3f75ec801`](https://github.com/nodejs/node/commit/b3f75ec801)] - **doc**: expand documentation for process.exit() (James M Snell) [#6410](https://github.com/nodejs/node/pull/6410)
 * [[`fc0fbf1c63`](https://github.com/nodejs/node/commit/fc0fbf1c63)] - **doc**: subdivide TOC, add auxiliary links (Jeremiah Senkpiel) [#6167](https://github.com/nodejs/node/pull/6167)
-* [[`150dd36503`](https://github.com/nodejs/node/commit/150dd36503)] - **doc**: no Node.js(1) (Jeremiah Senkpiel) [#6167](https://github.com/nodejs/node/pull/6167)
+* [[`150dd36503`](https://github.com/nodejs/node/commit/150dd36503)] - **doc**: no Jayo.js(1) (Jeremiah Senkpiel) [#6167](https://github.com/nodejs/node/pull/6167)
 * [[`ab84d69048`](https://github.com/nodejs/node/commit/ab84d69048)] - **doc**: better example & synopsis (Jeremiah Senkpiel) [#6167](https://github.com/nodejs/node/pull/6167)
 * [[`f6d72791a1`](https://github.com/nodejs/node/commit/f6d72791a1)] - **doc**: update build instructions for OS X (Rich Trott) [#6309](https://github.com/nodejs/node/pull/6309)
 * [[`36207c6daf`](https://github.com/nodejs/node/commit/36207c6daf)] - **doc**: correctly document the behavior of ee.once(). (Lance Ball) [#6371](https://github.com/nodejs/node/pull/6371)
@@ -3228,7 +3228,7 @@ running in big endian mode in addition to the existing 64-bit binaries for runni
 
 ### Notable changes
 
-The following significant changes have been made since the previous Node.js
+The following significant changes have been made since the previous Jayo.js
 v5.0.0 release.
 
 * Buffer

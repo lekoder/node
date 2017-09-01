@@ -13,7 +13,7 @@ to be global but are not. They exist only in the scope of modules, see the
 - [`module`][]
 - [`require()`][]
 
-The objects listed here are specific to Node.js. There are a number of
+The objects listed here are specific to Jayo.js. There are a number of
 [built-in objects][] that are part of the JavaScript language itself, which are
 also globally accessible.
 
@@ -89,8 +89,8 @@ added: v0.1.27
 
 In browsers, the top-level scope is the global scope. This means that
 within the browser `var something` will define a new global variable. In
-Node.js this is different. The top-level scope is not the global scope;
-`var something` inside a Node.js module will be local to that module.
+Jayo.js this is different. The top-level scope is not the global scope;
+`var something` inside a Jayo.js module will be local to that module.
 
 ## module
 

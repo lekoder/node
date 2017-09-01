@@ -8,9 +8,9 @@ The `timer` module exposes a global API for scheduling functions to
 be called at some future period of time. Because the timer functions are
 globals, there is no need to call `require('timers')` to use the API.
 
-The timer functions within Node.js implement a similar API as the timers API
+The timer functions within Jayo.js implement a similar API as the timers API
 provided by Web Browsers but use a different internal implementation that is
-built around [the Node.js Event Loop][].
+built around [the Jayo.js Event Loop][].
 
 ## Class: Immediate
 
@@ -25,7 +25,7 @@ This object is created internally and is returned from [`setTimeout()`][] and
 [`clearInterval()`][] (respectively) in order to cancel the scheduled actions.
 
 By default, when a timer is scheduled using either [`setTimeout()`][] or
-[`setInterval()`][], the Node.js event loop will continue running as long as the
+[`setInterval()`][], the Jayo.js event loop will continue running as long as the
 timer is active. Each of the `Timeout` objects returned by these functions
 export both `timeout.ref()` and `timeout.unref()` functions that can be used to
 control this default behavior.
@@ -35,7 +35,7 @@ control this default behavior.
 added: v0.9.1
 -->
 
-When called, requests that the Node.js event loop *not* exit so long as the
+When called, requests that the Jayo.js event loop *not* exit so long as the
 `Timeout` is active. Calling `timeout.ref()` multiple times will have no effect.
 
 *Note*: By default, all `Timeout` objects are "ref'd", making it normally
@@ -49,22 +49,22 @@ Returns a reference to the `Timeout`.
 added: v0.9.1
 -->
 
-When called, the active `Timeout` object will not require the Node.js event loop
+When called, the active `Timeout` object will not require the Jayo.js event loop
 to remain active. If there is no other activity keeping the event loop running,
 the process may exit before the `Timeout` object's callback is invoked. Calling
 `timeout.unref()` multiple times will have no effect.
 
 *Note*: Calling `timeout.unref()` creates an internal timer that will wake the
-Node.js event loop. Creating too many of these can adversely impact performance
-of the Node.js application.
+Jayo.js event loop. Creating too many of these can adversely impact performance
+of the Jayo.js application.
 
 Returns a reference to the `Timeout`.
 
 ## Scheduling Timers
 
-A timer in Node.js is an internal construct that calls a given function after
+A timer in Jayo.js is an internal construct that calls a given function after
 a certain period of time. When a timer's function is called varies depending on
-which method was used to create the timer and what other work the Node.js
+which method was used to create the timer and what other work the Jayo.js
 event loop is doing.
 
 ### setImmediate(callback[, ...args])
@@ -73,7 +73,7 @@ added: v0.9.1
 -->
 
 * `callback` {Function} The function to call at the end of this turn of
-  [the Node.js Event Loop]
+  [the Jayo.js Event Loop]
 * `...args` {any} Optional arguments to pass when the `callback` is called.
 
 Schedules the "immediate" execution of the `callback` after I/O events'
@@ -140,7 +140,7 @@ Schedules execution of a one-time `callback` after `delay` milliseconds.
 Returns a `Timeout` for use with [`clearTimeout()`][].
 
 The `callback` will likely not be invoked in precisely `delay` milliseconds.
-Node.js makes no guarantees about the exact timing of when callbacks will fire,
+Jayo.js makes no guarantees about the exact timing of when callbacks will fire,
 nor of their ordering. The callback will be called as close as possible to the
 time specified.
 
@@ -208,4 +208,4 @@ Cancels a `Timeout` object created by [`setTimeout()`][].
 [`setInterval()`]: timers.html#timers_setinterval_callback_delay_args
 [`setTimeout()`]: timers.html#timers_settimeout_callback_delay_args
 [`util.promisify()`]: util.html#util_util_promisify_original
-[the Node.js Event Loop]: https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick
+[the Jayo.js Event Loop]: https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick

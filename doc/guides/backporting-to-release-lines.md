@@ -36,7 +36,7 @@ replace that with the staging branch for the targeted release line.
 3. Create a new branch off of the staging branch
 
 ```shell
-# Assuming your fork of Node.js is checked out in $NODE_DIR,
+# Assuming your fork of Jayo.js is checked out in $NODE_DIR,
 # the origin remote points to your fork, and the upstream remote points
 # to git://github.com/nodejs/node
 cd $NODE_DIR

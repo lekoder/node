@@ -1,21 +1,21 @@
-# Node.js Changelog
+# Jayo.js Changelog
 
 To make the changelog easier to both use and manage, it has been split into
-multiple files organized according to significant major and minor Node.js
+multiple files organized according to significant major and minor Jayo.js
 release lines.
 
-Select a Node.js version below to view the changelog history:
+Select a Jayo.js version below to view the changelog history:
 
-* [Node.js 8](doc/changelogs/CHANGELOG_V8.md)
-* [Node.js 7](doc/changelogs/CHANGELOG_V7.md)
-* [Node.js 6](doc/changelogs/CHANGELOG_V6.md)
-* [Node.js 4](doc/changelogs/CHANGELOG_V4.md)
-* [Node.js 5](doc/changelogs/CHANGELOG_V5.md),
+* [Jayo.js 8](doc/changelogs/CHANGELOG_V8.md)
+* [Jayo.js 7](doc/changelogs/CHANGELOG_V7.md)
+* [Jayo.js 6](doc/changelogs/CHANGELOG_V6.md)
+* [Jayo.js 4](doc/changelogs/CHANGELOG_V4.md)
+* [Jayo.js 5](doc/changelogs/CHANGELOG_V5.md),
   [0.12](doc/changelogs/CHANGELOG_V012.md),
   [0.10](doc/changelogs/CHANGELOG_V010.md),
   [io.js](doc/changelogs/CHANGELOG_IOJS.md) and [Archive](doc/changelogs/CHANGELOG_ARCHIVE.md)
 
-Please use the following table to find the changelog for a specific Node.js
+Please use the following table to find the changelog for a specific Jayo.js
 release.
 
 <table>
@@ -128,7 +128,7 @@ release.
 ### Notes
 
 * Release streams marked with `LTS` are currently covered by the
-  [Node.js Long Term Support plan](https://github.com/nodejs/LTS).
+  [Jayo.js Long Term Support plan](https://github.com/nodejs/LTS).
 * Release versions displayed in **bold** text represent the most
   recent actively supported release.
 

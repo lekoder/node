@@ -1,4 +1,4 @@
-# Node.js Collaborator Guide
+# Jayo.js Collaborator Guide
 
 **Contents**
 
@@ -14,7 +14,7 @@
    - [I Just Made a Mistake](#i-just-made-a-mistake)
    - [Long Term Support](#long-term-support)
 
-This document contains information for Collaborators of the Node.js
+This document contains information for Collaborators of the Jayo.js
 project regarding maintaining the code, documentation and issues.
 
 Collaborators should be familiar with the guidelines for new
@@ -25,7 +25,7 @@ understand the project governance model as outlined in
 ## Issues and Pull Requests
 
 Courtesy should always be shown to individuals submitting issues and
-pull requests to the Node.js project.
+pull requests to the Jayo.js project.
 
 Collaborators should feel free to take full responsibility for
 managing issues and pull requests they feel qualified to handle, as
@@ -33,9 +33,9 @@ long as this is done while being mindful of these guidelines, the
 opinions of other Collaborators and guidance of the TSC.
 
 Collaborators may **close** any issue or pull request they believe is
-not relevant for the future of the Node.js project. Where this is
+not relevant for the future of the Jayo.js project. Where this is
 unclear, the issue should be left open for several days to allow for
-additional discussion. Where this does not yield input from Node.js
+additional discussion. Where this does not yield input from Jayo.js
 Collaborators or additional evidence that the issue has relevance, the
 issue may be closed. Remember that issues can always be re-opened if
 necessary.
@@ -44,7 +44,7 @@ necessary.
 
 ## Accepting Modifications
 
-All modifications to the Node.js code and documentation should be
+All modifications to the Jayo.js code and documentation should be
 performed via GitHub pull requests, including modifications by
 Collaborators and TSC members.
 
@@ -101,7 +101,7 @@ or documentation.
 * [`citgm-smoker`](https://ci.nodejs.org/job/citgm-smoker/)
 uses [`CitGM`](https://github.com/nodejs/citgm) to allow you to run `npm install && npm test`
 on a large selection of common modules. This is useful to check whether a
-change will cause breakage in the ecosystem. To test Node.JS ABI changes
+change will cause breakage in the ecosystem. To test Jayo.js ABI changes
 you can run [`citgm-abi-smoker`](https://ci.nodejs.org/job/citgm-abi-smoker/).
 
 * [`node-stress-single-test`](https://ci.nodejs.org/job/node-stress-single-test/)
@@ -109,45 +109,45 @@ is designed to allow one to run a group of tests over and over on a specific
 platform to confirm that the test is reliable.
 
 * [`node-test-commit-v8-linux`](https://ci.nodejs.org/job/node-test-commit-v8-linux/)
-is designed to allow validation of changes to the copy of V8 in the Node.js
+is designed to allow validation of changes to the copy of V8 in the Jayo.js
 tree by running the standard V8 tests. It should be run whenever the
-level of V8 within Node.js is updated or new patches are floated on V8.
+level of V8 within Jayo.js is updated or new patches are floated on V8.
 
 ### Internal vs. Public API
 
 Due to the nature of the JavaScript language, it can often be difficult to
-establish a clear distinction between which parts of the Node.js implementation
-represent the "public" API Node.js users should assume to be stable and which
-are considered part of the "internal" implementation detail of Node.js itself.
+establish a clear distinction between which parts of the Jayo.js implementation
+represent the "public" API Jayo.js users should assume to be stable and which
+are considered part of the "internal" implementation detail of Jayo.js itself.
 A general rule of thumb has been to base the determination off what
-functionality is actually *documented* in the official Node.js API
+functionality is actually *documented* in the official Jayo.js API
 documentation. However, it has been repeatedly demonstrated that either the
-documentation does not completely cover implemented behavior or that Node.js
-users have come to rely heavily on undocumented aspects of the Node.js
+documentation does not completely cover implemented behavior or that Jayo.js
+users have come to rely heavily on undocumented aspects of the Jayo.js
 implementation.
 
 While there are numerous exceptions, the following general rules should be
-followed to determine which aspects of the Node.js API are considered
+followed to determine which aspects of the Jayo.js API are considered
 "internal":
 
 - Any and all functionality exposed via `process.binding(...)` is considered to
-  be internal and *not* part of the Node.js Public API.
+  be internal and *not* part of the Jayo.js Public API.
 - Any and all functionality implemented in `lib/internal/**/*.js` that is not
   re-exported by code in `lib/*.js`, or is not documented as part of the
-  Node.js Public API, is considered to be internal.
+  Jayo.js Public API, is considered to be internal.
 - Any object property or method whose key is a non-exported `Symbol` is
   considered to be an internal property.
 - Any object property or method whose key begins with the underscore `_` prefix,
-  and is not documented as part of the Node.js Public API, is considered to be
+  and is not documented as part of the Jayo.js Public API, is considered to be
   an internal property.
 - Any object, property, method, argument, behavior, or event not documented in
-  the Node.js documentation is considered to be internal.
-- Any native C/C++ APIs/ABIs exported by the Node.js `*.h` header files that
+  the Jayo.js documentation is considered to be internal.
+- Any native C/C++ APIs/ABIs exported by the Jayo.js `*.h` header files that
   are hidden behind the `NODE_WANT_INTERNALS` flag are considered to be
   internal.
 
 Exception to each of these points can be made if use or behavior of a given
-internal API can be demonstrated to be sufficiently relied upon by the Node.js
+internal API can be demonstrated to be sufficiently relied upon by the Jayo.js
 ecosystem such that any changes would cause too much breakage. The threshold
 for what qualifies as "too much breakage" is to be decided on a case-by-case
 basis by the TSC.
@@ -196,7 +196,7 @@ non-internal side effects of using a particular API.
 With a few notable exceptions outlined below, when backwards incompatible
 changes to a *Public* API are necessary, the existing API *must* be deprecated
 *first* and the new API either introduced in parallel or added after the next
-major Node.js version following the deprecation as a replacement for the
+major Jayo.js version following the deprecation as a replacement for the
 deprecated API. In other words, as a general rule, existing *Public* APIs
 *must not* change (in a backwards incompatible way) without a deprecation.
 
@@ -218,8 +218,8 @@ existing code to continue working without modification, or adding new
 properties to an options argument) are handled as semver-minor changes.
 
 Note that errors thrown, along with behaviors and APIs implemented by
-dependencies of Node.js (e.g. those originating from V8) are generally not
-under the control of Node.js and therefore *are not directly subject to this
+dependencies of Jayo.js (e.g. those originating from V8) are generally not
+under the control of Jayo.js and therefore *are not directly subject to this
 policy*. However, care should still be taken when landing updates to
 dependencies when it is known or expected that breaking changes to error
 handling may have been made. Additional CI testing may be required.
@@ -227,15 +227,15 @@ handling may have been made. Additional CI testing may be required.
 #### When breaking changes actually break things
 
 Breaking changes are difficult primarily because they change the fundamental
-assumptions a user of Node.js has when writing their code and can cause
+assumptions a user of Jayo.js has when writing their code and can cause
 existing code to stop functioning as expected -- costing developers and users
 time and energy to fix.
 
 Because breaking (semver-major) changes are permitted to land in master at any
 time, it should be *understood and expected* that at least some subset of the
 user ecosystem *may* be adversely affected *in the short term* when attempting
-to build and use Node.js directly from master. This potential instability is
-precisely why Node.js offers distinct Current and LTS release streams that
+to build and use Jayo.js directly from master. This potential instability is
+precisely why Jayo.js offers distinct Current and LTS release streams that
 offer explicit stability guarantees.
 
 Specifically:
@@ -286,20 +286,20 @@ New core modules must be landed with a [Stability Index][] of Experimental,
 and must remain Experimental until a semver-major release.
 
 For new modules that involve significant effort, non-trivial additions to
-Node.js or significant new capabilities, an [Enhancement Proposal][] is
+Jayo.js or significant new capabilities, an [Enhancement Proposal][] is
 recommended but not required.
 
 ### Deprecations
 
 Deprecation refers to the identification of Public APIs that should no longer
 be used and that may be removed or modified in non-backwards compatible ways in
-a future major release of Node.js. Deprecation *may* be used with internal APIs
+a future major release of Jayo.js. Deprecation *may* be used with internal APIs
 if there is expected impact on the user community.
 
-Node.js uses three fundamental Deprecation levels:
+Jayo.js uses three fundamental Deprecation levels:
 
 * *Documentation-Only Deprecation* refers to elements of the Public API that are
-  being staged for deprecation in a future Node.js major release. An explicit
+  being staged for deprecation in a future Jayo.js major release. An explicit
   notice indicating the deprecated status is added to the API documentation
   *but no functional changes are implemented in the code*. There will be no
   runtime deprecation warning emitted for such deprecations.
@@ -307,12 +307,12 @@ Node.js uses three fundamental Deprecation levels:
 * *Runtime Deprecation* refers to the use of process warnings emitted at
   runtime the first time that a deprecated API is used. A command-line
   switch can be used to escalate such warnings into runtime errors that will
-  cause the Node.js process to exit. As with Documentation-Only Deprecation,
+  cause the Jayo.js process to exit. As with Documentation-Only Deprecation,
   the documentation for the API must be updated to clearly indicate the
   deprecated status.
 
 * *End-of-life* refers to APIs that have gone through Runtime Deprecation and
-  are ready to be removed from Node.js entirely.
+  are ready to be removed from Jayo.js entirely.
 
 Documentation-Only Deprecations *may* be handled as semver-minor or
 semver-major changes. Such deprecations have no impact on the successful
@@ -326,15 +326,15 @@ deprecation as a semver-minor.
 All Documentation-Only and Runtime deprecations will be assigned a unique
 identifier that can be used to persistently refer to the deprecation in
 documentation, emitted process warnings, or errors thrown. Documentation for
-these identifiers will be included in the Node.js API documentation and will
-be immutable once assigned. Even if End-of-Life code is removed from Node.js,
+these identifiers will be included in the Jayo.js API documentation and will
+be immutable once assigned. Even if End-of-Life code is removed from Jayo.js,
 the documentation for the assigned deprecation identifier must remain in the
-Node.js API documentation.
+Jayo.js API documentation.
 
 <a id="deprecation-cycle"></a>
-A "Deprecation cycle" is one full Node.js major release during which an API
+A "Deprecation cycle" is one full Jayo.js major release during which an API
 has been in one of the three Deprecation levels. (Note that Documentation-Only
-Deprecations may land in a Node.js minor release but must not be upgraded to
+Deprecations may land in a Jayo.js minor release but must not be upgraded to
 a Runtime Deprecation until the next major release.)
 
 No API can be moved to End-of-life without first having gone through a
@@ -343,7 +343,7 @@ Runtime Deprecation cycle.
 A best effort will be made to communicate pending deprecations and associated
 mitigations with the ecosystem as soon as possible (preferably *before* the pull
 request adding the deprecation lands in master). All deprecations included in
-a Node.js release should be listed prominently in the "Notable Changes" section
+a Jayo.js release should be listed prominently in the "Notable Changes" section
 of the release notes.
 
 ### Involving the TSC
@@ -573,7 +573,7 @@ git push upstream master
 (`git push -f`). This should generally be seen as forbidden (since
 you're rewriting history on a repository other people are working
 against) but is allowed for simpler slip-ups such as typos in commit
-messages. However, you are only allowed to force push to any Node.js
+messages. However, you are only allowed to force push to any Jayo.js
 branch within 10 minutes from your original push. If someone else
 pushes to the branch or the 10 minute period passes, consider the
 commit final.
@@ -586,7 +586,7 @@ commit final.
 #### What is LTS?
 
 Long Term Support (often referred to as *LTS*) guarantees application developers
-a 30 month support cycle with specific versions of Node.js.
+a 30 month support cycle with specific versions of Jayo.js.
 
 You can find more information [in the full LTS plan](https://github.com/nodejs/lts#lts-plan).
 

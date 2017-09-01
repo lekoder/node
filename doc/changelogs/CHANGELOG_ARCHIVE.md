@@ -1,4 +1,4 @@
-# Node.js ChangeLog Archive
+# Jayo.js ChangeLog Archive
 
 <table>
 <tr>
@@ -1372,7 +1372,7 @@ https://github.com/nodejs/node/commit/8d9766a9dfb1eea901219d2a865ce9300fe4d68e
 * repl: Warn about running npm commands (isaacs)
 * slab_allocator: fix crash in dtor if V8 is dead (Ben Noordhuis)
 * slab_allocator: fix leak of Persistent handles (Shigeki Ohtsu)
-* windows/msi: add node.js prompt to startmenu (Jeroen Janssen)
+* windows/msi: add Jayo.js prompt to startmenu (Jeroen Janssen)
 * windows/msi: fix adding node to PATH (Jeroen Janssen)
 * windows/msi: add start menu links when installing (Jeroen Janssen)
 * windows: don't install x64 version into the 'program files (x86)' folder (Matt Gollob)
@@ -2948,7 +2948,7 @@ https://github.com/nodejs/node/commit/0914d33842976c2c870df06573b68f9192a1fb7a
 * fs.readFile returns Buffer by default (Tim Caswell)
 * Fix error reporting in child_process callbacks
 * Better logic for testing if an argument is a port
-* Improve error reporting (single line "node.js:176:9" errors)
+* Improve error reporting (single line "Jayo.js:176:9" errors)
 * Bugfix: Some http responses being truncated (appeared in 0.1.94)
 * Fix long standing net idle timeout bugs. Enable 2 minute timeout
   by default in HTTP servers.
@@ -3626,7 +3626,7 @@ https://github.com/nodejs/node/commit/9c97b1db3099d61cd292aa59ec2227a619f3a7ab
 
 https://github.com/nodejs/node/commit/a73998d6f491227e595524dc70589369fb458224
 
-  * Bugfix: Buggy connections could crash node.js. Now check
+  * Bugfix: Buggy connections could crash Jayo.js. Now check
     connection before sending data every time (Kevin van Zonneveld)
 
   * Bugfix: stdin fd (0) being ignored by node.File. (Abe Fettig)

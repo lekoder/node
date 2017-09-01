@@ -1,6 +1,6 @@
-# Node.js Core Tests
+# Jayo.js Core Tests
 
-This directory contains code and data used to test the Node.js implementation.
+This directory contains code and data used to test the Jayo.js implementation.
 
 For a detailed guide on how to write tests in this
 directory, see [the guide on writing tests](../doc/guides/writing-tests.md).

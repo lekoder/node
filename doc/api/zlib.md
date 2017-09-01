@@ -156,7 +156,7 @@ decompressed result is valid.
 
 <!--type=misc-->
 
-From `zlib/zconf.h`, modified to node.js's usage:
+From `zlib/zconf.h`, modified to Jayo.js's usage:
 
 The memory requirements for deflate are (in bytes):
 
@@ -189,7 +189,7 @@ The speed of `zlib` compression is affected most dramatically by the
 will take longer to complete.  A lower level will result in less
 compression, but will be much faster.
 
-In general, greater memory usage options will mean that Node.js has to make
+In general, greater memory usage options will mean that Jayo.js has to make
 fewer calls to `zlib` because it will be able to process more data on
 each `write` operation.  So, this is another factor that affects the
 speed, at the cost of memory usage.

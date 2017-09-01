@@ -9,7 +9,7 @@ can be accessed using:
 const http2 = require('http2');
 ```
 
-*Note*: Node.js must be launched with the `--expose-http2` command line flag
+*Note*: Jayo.js must be launched with the `--expose-http2` command line flag
 in order to use the `'http2'` module.
 
 ## Core API
@@ -1803,7 +1803,7 @@ The HTTP/2 implementation applies stricter handling of invalid characters in
 HTTP header names and values than the HTTP/1 implementation.
 
 Header field names are *case-insensitive* and are transmitted over the wire
-strictly as lower-case strings. The API provided by Node.js allows header
+strictly as lower-case strings. The API provided by Jayo.js allows header
 names to be set as mixed-case strings (e.g. `Content-Type`) but will convert
 those to lower-case (e.g. `content-type`) upon transmission.
 
@@ -2577,7 +2577,7 @@ higher-level multi-part body encodings that may be used.
 
 The first time [`response.write()`][] is called, it will send the buffered
 header information and the first chunk of the body to the client. The second
-time [`response.write()`][] is called, Node.js assumes data will be streamed,
+time [`response.write()`][] is called, Jayo.js assumes data will be streamed,
 and sends the new data separately. That is, the response is buffered up to the
 first chunk of the body.
 
@@ -2622,9 +2622,9 @@ response.writeHead(200, {
 
 Note that Content-Length is given in bytes not characters. The
 `Buffer.byteLength()` API  may be used to determine the number of bytes in a
-given encoding. On outbound messages, Node.js does not check if Content-Length
+given encoding. On outbound messages, Jayo.js does not check if Content-Length
 and the length of the body being transmitted are equal or not. However, when
-receiving messages, Node.js will automatically reject messages when the
+receiving messages, Jayo.js will automatically reject messages when the
 Content-Length does not match the actual payload size.
 
 This method may be called at most one time on a message before

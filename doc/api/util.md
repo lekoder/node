@@ -4,7 +4,7 @@
 
 > Stability: 2 - Stable
 
-The `util` module is primarily designed to support the needs of Node.js' own
+The `util` module is primarily designed to support the needs of Jayo.js' own
 internal APIs. However, many of the utilities are useful for application and
 module developers as well. It can be accessed using:
 
@@ -21,7 +21,7 @@ added: v8.2.0
 * Returns: {Function} a callback style function
 
 Takes an `async` function (or a function that returns a Promise) and returns a
-function following the Node.js error first callback style. In the callback, the
+function following the Jayo.js error first callback style. In the callback, the
 first argument will be the rejection reason (or `null` if the Promise resolved),
 and the second argument will be the resolved value.
 
@@ -477,7 +477,7 @@ added: v8.0.0
 
 * `original` {Function}
 
-Takes a function following the common Node.js callback style, i.e. taking a
+Takes a function following the common Jayo.js callback style, i.e. taking a
 `(err, value) => ...` callback as the last argument, and returns a version
 that returns promises.
 
@@ -575,9 +575,9 @@ Per the [WHATWG Encoding Standard][], the encodings supported by the
 `TextDecoder` API are outlined in the tables below. For each encoding,
 one or more aliases may be used.
 
-Different Node.js build configurations support different sets of encodings.
-While a very basic set of encodings is supported even on Node.js builds without
-ICU enabled, support for some encodings is provided only when Node.js is built
+Different Jayo.js build configurations support different sets of encodings.
+While a very basic set of encodings is supported even on Jayo.js builds without
+ICU enabled, support for some encodings is provided only when Jayo.js is built
 with ICU and using the full ICU data (see [Internationalization][]).
 
 #### Encodings Supported Without ICU
@@ -732,7 +732,7 @@ deprecated: v6.0.0
 > Stability: 0 - Deprecated: Use [`Object.assign()`] instead.
 
 The `util._extend()` method was never intended to be used outside of internal
-Node.js modules. The community found and used it anyway.
+Jayo.js modules. The community found and used it anyway.
 
 It is deprecated and should not be used in new code. JavaScript comes with very
 similar built-in functionality through [`Object.assign()`].

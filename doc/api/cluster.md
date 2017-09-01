@@ -4,8 +4,8 @@
 
 > Stability: 2 - Stable
 
-A single instance of Node.js runs in a single thread. To take advantage of
-multi-core systems the user will sometimes want to launch a cluster of Node.js
+A single instance of Jayo.js runs in a single thread. To take advantage of
+multi-core systems the user will sometimes want to launch a cluster of Jayo.js
 processes to handle the load.
 
 The cluster module allows easy creation of child processes that all share
@@ -39,7 +39,7 @@ if (cluster.isMaster) {
 }
 ```
 
-Running Node.js will now share port 8000 between the workers:
+Running Jayo.js will now share port 8000 between the workers:
 
 ```txt
 $ node server.js
@@ -82,7 +82,7 @@ out of a total of eight.
 
 Because `server.listen()` hands off most of the work to the master
 process, there are three cases where the behavior between a normal
-Node.js process and a cluster worker differs:
+Jayo.js process and a cluster worker differs:
 
 1. `server.listen({fd: 7})` Because the message is passed to the master,
    file descriptor 7 **in the parent** will be listened on, and the
@@ -97,7 +97,7 @@ Node.js process and a cluster worker differs:
    port is random the first time, but predictable thereafter. To listen
    on a unique port, generate a port number based on the cluster worker ID.
 
-*Note*: Node.js does not provide routing logic. It is, therefore important to
+*Note*: Jayo.js does not provide routing logic. It is, therefore important to
 design an application such that it does not rely too heavily on in-memory data
 objects for things like sessions and login.
 
@@ -105,7 +105,7 @@ Because workers are all separate processes, they can be killed or
 re-spawned depending on a program's needs, without affecting other
 workers.  As long as there are some workers still alive, the server will
 continue to accept connections.  If no workers are alive, existing connections
-will be dropped and new connections will be refused. Node.js does not
+will be dropped and new connections will be refused. Jayo.js does not
 automatically manage the number of workers, however. It is the application's
 responsibility to manage the worker pool based on its own needs.
 
@@ -574,7 +574,7 @@ Emitted when the cluster master receives a message from any worker.
 
 See [child_process event: 'message'][].
 
-Before Node.js v6.0, this event emitted only the message and the handle,
+Before Jayo.js v6.0, this event emitted only the message and the handle,
 but not the worker object, contrary to what the documentation stated.
 
 If support for older versions is required but a worker object is not
@@ -705,7 +705,7 @@ changes:
 -->
 
 * {Object}
-  * `execArgv` {Array} List of string arguments passed to the Node.js
+  * `execArgv` {Array} List of string arguments passed to the Jayo.js
     executable. (Default=`process.execArgv`)
   * `exec` {string} File path to worker file.  (Default=`process.argv[1]`)
   * `args` {Array} String arguments passed to worker.

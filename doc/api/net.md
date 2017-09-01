@@ -368,7 +368,7 @@ A `net.Socket` can be created by the user and used directly to interact with
 a server. For example, it is returned by [`net.createConnection()`][],
 so the user can use it to talk to the server.
 
-It can also be created by Node.js and passed to the user when a connection
+It can also be created by Jayo.js and passed to the user when a connection
 is received. For example, it is passed to the listeners of a
 [`'connection'`][] event emitted on a [`net.Server`][], so the user can use
 it to interact with the client.
@@ -507,7 +507,7 @@ added: v0.3.8
 `net.Socket` has the property that `socket.write()` always works. This is to
 help users get up and running quickly. The computer cannot always keep up
 with the amount of data that is written to a socket - the network connection
-simply might be too slow. Node.js will internally queue up the data written to a
+simply might be too slow. Jayo.js will internally queue up the data written to a
 socket and send it out over the wire when it is possible. (Internally it is
 polling on the socket's file descriptor for being writable).
 

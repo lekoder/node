@@ -4,8 +4,8 @@
 <!-- type=global -->
 
 The `process` object is a `global` that provides information about, and control
-over, the current Node.js process. As a global, it is always available to
-Node.js applications without using `require()`.
+over, the current Jayo.js process. As a global, it is always available to
+Jayo.js applications without using `require()`.
 
 ## Process Events
 
@@ -16,10 +16,10 @@ The `process` object is an instance of [`EventEmitter`][].
 added: v0.11.12
 -->
 
-The `'beforeExit'` event is emitted when Node.js empties its event loop and has
-no additional work to schedule. Normally, the Node.js process will exit when
+The `'beforeExit'` event is emitted when Jayo.js empties its event loop and has
+no additional work to schedule. Normally, the Jayo.js process will exit when
 there is no work scheduled, but a listener registered on the `'beforeExit'`
-event can make asynchronous calls, and thereby cause the Node.js process to
+event can make asynchronous calls, and thereby cause the Jayo.js process to
 continue.
 
 The listener callback function is invoked with the value of
@@ -36,7 +36,7 @@ unless the intention is to schedule additional work.
 added: v0.7.7
 -->
 
-If the Node.js process is spawned with an IPC channel (see the [Child Process][]
+If the Jayo.js process is spawned with an IPC channel (see the [Child Process][]
 and [Cluster][] documentation), the `'disconnect'` event will be emitted when
 the IPC channel is closed.
 
@@ -45,14 +45,14 @@ the IPC channel is closed.
 added: v0.1.7
 -->
 
-The `'exit'` event is emitted when the Node.js process is about to exit as a
+The `'exit'` event is emitted when the Jayo.js process is about to exit as a
 result of either:
 
 * The `process.exit()` method being called explicitly;
-* The Node.js event loop no longer having any additional work to perform.
+* The Jayo.js event loop no longer having any additional work to perform.
 
 There is no way to prevent the exiting of the event loop at this point, and once
-all `'exit'` listeners have finished running the Node.js process will terminate.
+all `'exit'` listeners have finished running the Jayo.js process will terminate.
 
 The listener callback function is invoked with the exit code specified either
 by the [`process.exitCode`][] property, or the `exitCode` argument passed to the
@@ -66,7 +66,7 @@ process.on('exit', (code) => {
 });
 ```
 
-Listener functions **must** only perform **synchronous** operations. The Node.js
+Listener functions **must** only perform **synchronous** operations. The Jayo.js
 process will exit immediately after calling the `'exit'` event listeners
 causing any additional work still queued in the event loop to be abandoned.
 In the following example, for instance, the timeout will never occur:
@@ -84,7 +84,7 @@ process.on('exit', (code) => {
 added: v0.5.10
 -->
 
-If the Node.js process is spawned with an IPC channel (see the [Child Process][]
+If the Jayo.js process is spawned with an IPC channel (see the [Child Process][]
 and [Cluster][] documentation), the `'message'` event is emitted whenever a
 message sent by a parent process using [`childprocess.send()`][] is received by
 the child process.
@@ -102,7 +102,7 @@ added: v1.4.1
 
 The `'rejectionHandled'` event is emitted whenever a `Promise` has been rejected
 and an error handler was attached to it (using [`promise.catch()`][], for
-example) later than one turn of the Node.js event loop.
+example) later than one turn of the Jayo.js event loop.
 
 The listener callback is invoked with a reference to the rejected `Promise` as
 the only argument.
@@ -151,7 +151,7 @@ added: v0.1.18
 -->
 
 The `'uncaughtException'` event is emitted when an uncaught JavaScript
-exception bubbles all the way back to the event loop. By default, Node.js
+exception bubbles all the way back to the event loop. By default, Jayo.js
 handles such exceptions by printing the stack trace to `stderr` and exiting.
 Adding a handler for the `'uncaughtException'` event overrides this default
 behavior.
@@ -266,12 +266,12 @@ being emitted. Alternatively, the [`'rejectionHandled'`][] event may be used.
 added: v6.0.0
 -->
 
-The `'warning'` event is emitted whenever Node.js emits a process warning.
+The `'warning'` event is emitted whenever Jayo.js emits a process warning.
 
 A process warning is similar to an error in that it describes exceptional
 conditions that are being brought to the user's attention. However, warnings
-are not part of the normal Node.js and JavaScript error handling flow.
-Node.js can emit warnings whenever it detects bad coding practices that could
+are not part of the normal Jayo.js and JavaScript error handling flow.
+Jayo.js can emit warnings whenever it detects bad coding practices that could
 lead to sub-optimal application performance, bugs or security vulnerabilities.
 
 The listener function is called with a single `warning` argument whose value is
@@ -290,7 +290,7 @@ process.on('warning', (warning) => {
 });
 ```
 
-By default, Node.js will print process warnings to `stderr`. The `--no-warnings`
+By default, Jayo.js will print process warnings to `stderr`. The `--no-warnings`
 command-line option can be used to suppress the default console output but the
 `'warning'` event will still be emitted by the `process` object.
 
@@ -321,7 +321,7 @@ $ node --no-warnings
 The `--trace-warnings` command-line option can be used to have the default
 console output for warnings include the full stack trace of the warning.
 
-Launching Node.js using the `--throw-deprecation` command line flag will
+Launching Jayo.js using the `--throw-deprecation` command line flag will
 cause custom deprecation warnings to be thrown as exceptions.
 
 Using the `--trace-deprecation` command line flag will cause the custom
@@ -343,7 +343,7 @@ custom or application-specific warnings.
 <!--type=event-->
 <!--name=SIGINT, SIGHUP, etc.-->
 
-Signal events will be emitted when the Node.js process receives a signal. Please
+Signal events will be emitted when the Jayo.js process receives a signal. Please
 refer to signal(7) for a listing of standard POSIX signal names such as
 `SIGINT`, `SIGHUP`, etc.
 
@@ -366,18 +366,18 @@ terminal programs.
 
 It is important to take note of the following:
 
-* `SIGUSR1` is reserved by Node.js to start the debugger.  It's possible to
+* `SIGUSR1` is reserved by Jayo.js to start the debugger.  It's possible to
   install a listener but doing so will _not_ stop the debugger from starting.
 * `SIGTERM` and `SIGINT` have default handlers on non-Windows platforms that
   resets the terminal mode before exiting with code `128 + signal number`. If
   one of these signals has a listener installed, its default behavior will be
-  removed (Node.js will no longer exit).
+  removed (Jayo.js will no longer exit).
 * `SIGPIPE` is ignored by default. It can have a listener installed.
 * `SIGHUP` is generated on Windows when the console window is closed, and on
   other platforms under various similar conditions, see signal(7). It can have a
-  listener installed, however Node.js will be unconditionally terminated by
+  listener installed, however Jayo.js will be unconditionally terminated by
   Windows about 10 seconds later. On non-Windows platforms, the default
-  behavior of `SIGHUP` is to terminate Node.js, but once a listener has been
+  behavior of `SIGHUP` is to terminate Jayo.js, but once a listener has been
   installed its default behavior will be removed.
 * `SIGTERM` is not supported on Windows, it can be listened on.
 * `SIGINT` from the terminal is supported on all platforms, and can usually be
@@ -390,7 +390,7 @@ It is important to take note of the following:
   will only happen on write to the console when the cursor is being moved, or
   when a readable tty is used in raw mode.
 * `SIGKILL` cannot have a listener installed, it will unconditionally terminate
-  Node.js on all platforms.
+  Jayo.js on all platforms.
 * `SIGSTOP` cannot have a listener installed.
 * `SIGBUS`, `SIGFPE`, `SIGSEGV` and `SIGILL`, when not raised artificially
    using kill(2), inherently leave the process in a state from which it is not
@@ -398,7 +398,7 @@ It is important to take note of the following:
    hanging in an endless loop, since listeners attached using `process.on()` are
    called asynchronously and therefore unable to correct the underlying problem.
 
-*Note*: Windows does not support sending signals, but Node.js offers some
+*Note*: Windows does not support sending signals, but Jayo.js offers some
 emulation with [`process.kill()`][], and [`ChildProcess.kill()`][]. Sending
 signal `0` can be used to test for the existence of a process. Sending `SIGINT`,
 `SIGTERM`, and `SIGKILL` cause the unconditional termination of the target
@@ -409,7 +409,7 @@ process.
 added: v0.7.0
 -->
 
-The `process.abort()` method causes the Node.js process to exit immediately and
+The `process.abort()` method causes the Jayo.js process to exit immediately and
 generate a core file.
 
 ## process.arch
@@ -420,7 +420,7 @@ added: v0.5.0
 * {string}
 
 The `process.arch` property returns a String identifying the processor
-architecture that the Node.js process is currently running on. For instance
+architecture that the Jayo.js process is currently running on. For instance
 `'arm'`, `'ia32'`, or `'x64'`.
 
 ```js
@@ -435,7 +435,7 @@ added: v0.1.27
 * {Array}
 
 The `process.argv` property returns an array containing the command line
-arguments passed when the Node.js process was launched. The first element will
+arguments passed when the Jayo.js process was launched. The first element will
 be [`process.execPath`]. See `process.argv0` if access to the original value of
 `argv[0]` is needed.  The second element will be the path to the JavaScript
 file being executed. The remaining elements will be any additional command line
@@ -450,7 +450,7 @@ process.argv.forEach((val, index) => {
 });
 ```
 
-Launching the Node.js process as:
+Launching the Jayo.js process as:
 
 ```console
 $ node process-args.js one two=three four
@@ -474,7 +474,7 @@ added: 6.4.0
 * {string}
 
 The `process.argv0` property stores a read-only copy of the original value of
-`argv[0]` passed when Node.js starts.
+`argv[0]` passed when Jayo.js starts.
 
 ```console
 $ bash -c 'exec -a customArgv0 ./node'
@@ -489,7 +489,7 @@ $ bash -c 'exec -a customArgv0 ./node'
 added: v7.1.0
 -->
 
-If the Node.js process was spawned with an IPC channel (see the
+If the Jayo.js process was spawned with an IPC channel (see the
 [Child Process][] documentation), the `process.channel`
 property is a reference to the IPC channel. If no IPC channel exists, this
 property is `undefined`.
@@ -502,7 +502,7 @@ added: v0.1.17
 * `directory` {string}
 
 The `process.chdir()` method changes the current working directory of the
-Node.js process or throws an exception if doing so fails (for instance, if
+Jayo.js process or throws an exception if doing so fails (for instance, if
 the specified `directory` does not exist).
 
 ```js
@@ -523,7 +523,7 @@ added: v0.7.7
 * {Object}
 
 The `process.config` property returns an Object containing the JavaScript
-representation of the configure options used to compile the current Node.js
+representation of the configure options used to compile the current Jayo.js
 executable. This is the same as the `config.gypi` file that was produced when
 running the `./configure` script.
 
@@ -568,7 +568,7 @@ added: v0.7.2
 
 * {boolean}
 
-If the Node.js process is spawned with an IPC channel (see the [Child Process][]
+If the Jayo.js process is spawned with an IPC channel (see the [Child Process][]
 and [Cluster][] documentation), the `process.connected` property will return
 `true` so long as the IPC channel is connected and will return `false` after
 `process.disconnect()` is called.
@@ -615,7 +615,7 @@ added: v0.1.8
 
 * Returns: {string}
 
-The `process.cwd()` method returns the current working directory of the Node.js
+The `process.cwd()` method returns the current working directory of the Jayo.js
 process.
 
 ```js
@@ -627,7 +627,7 @@ console.log(`Current directory: ${process.cwd()}`);
 added: v0.7.2
 -->
 
-If the Node.js process is spawned with an IPC channel (see the [Child Process][]
+If the Jayo.js process is spawned with an IPC channel (see the [Child Process][]
 and [Cluster][] documentation), the `process.disconnect()` method will close the
 IPC channel to the parent process, allowing the child process to exit gracefully
 once there are no other connections keeping it alive.
@@ -635,7 +635,7 @@ once there are no other connections keeping it alive.
 The effect of calling `process.disconnect()` is that same as calling the parent
 process's [`ChildProcess.disconnect()`][].
 
-If the Node.js process was not spawned with an IPC channel,
+If the Jayo.js process was not spawned with an IPC channel,
 `process.disconnect()` will be `undefined`.
 
 ## process.emitWarning(warning[, options])
@@ -810,7 +810,7 @@ An example of this object looks like:
 ```
 
 It is possible to modify this object, but such modifications will not be
-reflected outside the Node.js process. In other words, the following example
+reflected outside the Jayo.js process. In other words, the following example
 would not work:
 
 ```console
@@ -866,10 +866,10 @@ added: v0.7.7
 
 * {Object}
 
-The `process.execArgv` property returns the set of Node.js-specific command-line
-options passed when the Node.js process was launched. These options do not
+The `process.execArgv` property returns the set of Jayo.js-specific command-line
+options passed when the Jayo.js process was launched. These options do not
 appear in the array returned by the [`process.argv`][] property, and do not
-include the Node.js executable, the name of the script, or any options following
+include the Jayo.js executable, the name of the script, or any options following
 the script name. These options are useful in order to spawn child processes with
 the same execution environment as the parent.
 
@@ -901,7 +901,7 @@ added: v0.1.100
 * {string}
 
 The `process.execPath` property returns the absolute pathname of the executable
-that started the Node.js process.
+that started the Jayo.js process.
 
 For example:
 
@@ -918,10 +918,10 @@ added: v0.1.13
 
 * `code` {integer} The exit code. Defaults to `0`.
 
-The `process.exit()` method instructs Node.js to terminate the process
+The `process.exit()` method instructs Jayo.js to terminate the process
 synchronously with an exit status of `code`. If `code` is omitted, exit uses
 either the 'success' code `0` or the value of `process.exitCode` if it has been
-set.  Node.js will not terminate until all the [`'exit'`] event listeners are
+set.  Jayo.js will not terminate until all the [`'exit'`] event listeners are
 called.
 
 To exit with a 'failure' code:
@@ -930,7 +930,7 @@ To exit with a 'failure' code:
 process.exit(1);
 ```
 
-The shell that executed Node.js should see the exit code as `1`.
+The shell that executed Jayo.js should see the exit code as `1`.
 
 It is important to note that calling `process.exit()` will force the process to
 exit as quickly as possible *even if there are still asynchronous operations
@@ -938,7 +938,7 @@ pending* that have not yet completed fully, *including* I/O operations to
 `process.stdout` and `process.stderr`.
 
 In most situations, it is not actually necessary to call `process.exit()`
-explicitly. The Node.js process will exit on its own *if there is no additional
+explicitly. The Jayo.js process will exit on its own *if there is no additional
 work pending* in the event loop. The `process.exitCode` property can be set to
 tell the process which exit code to use when the process exits gracefully.
 
@@ -954,8 +954,8 @@ if (someConditionNotMet()) {
 }
 ```
 
-The reason this is problematic is because writes to `process.stdout` in Node.js
-are sometimes *asynchronous* and may occur over multiple ticks of the Node.js
+The reason this is problematic is because writes to `process.stdout` in Jayo.js
+are sometimes *asynchronous* and may occur over multiple ticks of the Jayo.js
 event loop. Calling `process.exit()`, however, forces the process to exit
 *before* those additional writes to `stdout` can be performed.
 
@@ -972,7 +972,7 @@ if (someConditionNotMet()) {
 }
 ```
 
-If it is necessary to terminate the Node.js process due to an error condition,
+If it is necessary to terminate the Jayo.js process due to an error condition,
 throwing an *uncaught* error and allowing the process to terminate accordingly
 is safer than calling `process.exit()`.
 
@@ -997,7 +997,7 @@ added: v2.0.0
 -->
 
 The `process.getegid()` method returns the numerical effective group identity
-of the Node.js process. (See getegid(2).)
+of the Jayo.js process. (See getegid(2).)
 
 ```js
 if (process.getegid) {
@@ -1056,7 +1056,7 @@ added: v0.9.4
 
 The `process.getgroups()` method returns an array with the supplementary group
 IDs. POSIX leaves it unspecified if the effective group ID is included but
-Node.js ensures it always is.
+Jayo.js ensures it always is.
 
 *Note*: This function is only available on POSIX platforms (i.e. not Windows
 or Android).
@@ -1127,7 +1127,7 @@ added: v0.9.4
 
 The `process.initgroups()` method reads the `/etc/group` file and initializes
 the group access list, using all groups of which the user is a member. This is
-a privileged operation that requires that the Node.js process either have `root`
+a privileged operation that requires that the Jayo.js process either have `root`
 access or the `CAP_SETGID` capability.
 
 Note that care must be taken when dropping privileges. Example:
@@ -1182,7 +1182,7 @@ setTimeout(() => {
 process.kill(process.pid, 'SIGHUP');
 ```
 
-*Note*: When `SIGUSR1` is received by a Node.js process, Node.js will start
+*Note*: When `SIGUSR1` is received by a Jayo.js process, Jayo.js will start
 the debugger, see [Signal Events][].
 
 ## process.mainModule
@@ -1215,7 +1215,7 @@ changes:
     * `external` {integer}
 
 The `process.memoryUsage()` method returns an object describing the memory usage
-of the Node.js process measured in bytes.
+of the Jayo.js process measured in bytes.
 
 For example, the code:
 
@@ -1358,7 +1358,7 @@ added: v0.1.16
 * {string}
 
 The `process.platform` property returns a string identifying the operating
-system platform on which the Node.js process is running. For instance
+system platform on which the Jayo.js process is running. For instance
 `'darwin'`, `'freebsd'`, `'linux'`, `'sunos'` or `'win32'`
 
 ```js
@@ -1380,20 +1380,20 @@ tarball.
 
 `process.release` contains the following properties:
 
-* `name` {string} A value that will always be `'node'` for Node.js. For
+* `name` {string} A value that will always be `'node'` for Jayo.js. For
   legacy io.js releases, this will be `'io.js'`.
 * `sourceUrl` {string} an absolute URL pointing to a _`.tar.gz`_ file containing
   the source code of the current release.
 * `headersUrl`{string} an absolute URL pointing to a _`.tar.gz`_ file containing
   only the source header files for the current release. This file is
   significantly smaller than the full source file and can be used for compiling
-  Node.js native add-ons.
+  Jayo.js native add-ons.
 * `libUrl` {string} an absolute URL pointing to a _`node.lib`_ file matching the
   architecture and version of the current release. This file is used for
-  compiling Node.js native add-ons. _This property is only present on Windows
-  builds of Node.js and will be missing on all other platforms._
+  compiling Jayo.js native add-ons. _This property is only present on Windows
+  builds of Jayo.js and will be missing on all other platforms._
 * `lts` {string} a string label identifying the [LTS][] label for this release.
-  If the Node.js release is not an LTS release, this will be `undefined`.
+  If the Jayo.js release is not an LTS release, this will be `undefined`.
 
 For example:
 
@@ -1423,11 +1423,11 @@ added: v0.5.9
 * `callback` {Function}
 * Returns: {boolean}
 
-If Node.js is spawned with an IPC channel, the `process.send()` method can be
+If Jayo.js is spawned with an IPC channel, the `process.send()` method can be
 used to send messages to the parent process. Messages will be received as a
 [`'message'`][] event on the parent's [`ChildProcess`][] object.
 
-If Node.js was not spawned with an IPC channel, `process.send()` will be
+If Jayo.js was not spawned with an IPC channel, `process.send()` will be
 `undefined`.
 
 *Note*: This function uses [`JSON.stringify()`][] internally to serialize the
@@ -1523,7 +1523,7 @@ added: v0.9.4
 * `groups` {Array}
 
 The `process.setgroups()` method sets the supplementary group IDs for the
-Node.js process. This is a privileged operation that requires the Node.js process
+Jayo.js process. This is a privileged operation that requires the Jayo.js process
 to have `root` or the `CAP_SETGID` capability.
 
 The `groups` array can contain numeric group IDs, group names or both.
@@ -1566,7 +1566,7 @@ The `process.stderr` property returns a stream connected to
 stream) unless fd `2` refers to a file, in which case it is
 a [Writable][] stream.
 
-*Note*: `process.stderr` differs from other Node.js streams in important ways,
+*Note*: `process.stderr` differs from other Jayo.js streams in important ways,
 see [note on process I/O][] for more information.
 
 ## process.stdin
@@ -1596,7 +1596,7 @@ process.stdin.on('end', () => {
 ```
 
 As a [Duplex][] stream, `process.stdin` can also be used in "old" mode that
-is compatible with scripts written for Node.js prior to v0.10.
+is compatible with scripts written for Jayo.js prior to v0.10.
 For more information see [Stream compatibility][].
 
 *Note*: In "old" streams mode the `stdin` stream is paused by default, so one
@@ -1618,12 +1618,12 @@ For example, to copy process.stdin to process.stdout:
 process.stdin.pipe(process.stdout);
 ```
 
-*Note*: `process.stdout` differs from other Node.js streams in important ways,
+*Note*: `process.stdout` differs from other Jayo.js streams in important ways,
 see [note on process I/O][] for more information.
 
 ### A note on process I/O
 
-`process.stdout` and `process.stderr` differ from other Node.js streams in
+`process.stdout` and `process.stderr` differ from other Jayo.js streams in
 important ways:
 
 1. They are used internally by [`console.log()`][] and [`console.error()`][],
@@ -1686,7 +1686,7 @@ different maximum length restrictions on the title. Usually such restrictions
 are quite limited. For instance, on Linux and macOS, `process.title` is limited
 to the size of the binary name plus the length of the command line arguments
 because setting the `process.title` overwrites the `argv` memory of the
-process.  Node.js v0.8 allowed for longer process title strings by also
+process.  Jayo.js v0.8 allowed for longer process title strings by also
 overwriting the `environ` memory but that was potentially insecure and
 confusing in some (rather obscure) cases.
 
@@ -1697,7 +1697,7 @@ added: v0.1.19
 
 * `mask` {number}
 
-The `process.umask()` method sets or returns the Node.js process's file mode
+The `process.umask()` method sets or returns the Jayo.js process's file mode
 creation mask. Child processes inherit the mask from the parent process. Invoked
 without an argument, the current mask is returned, otherwise the umask is set to
 the argument value and the previous mask is returned.
@@ -1718,7 +1718,7 @@ added: v0.5.0
 
 * Returns: {number}
 
-The `process.uptime()` method returns the number of seconds the current Node.js
+The `process.uptime()` method returns the number of seconds the current Jayo.js
 process has been running.
 
 *Note*: The return value includes fractions of a second. Use `Math.floor()`
@@ -1731,7 +1731,7 @@ added: v0.1.3
 
 * {string}
 
-The `process.version` property returns the Node.js version string.
+The `process.version` property returns the Jayo.js version string.
 
 ```js
 console.log(`Version: ${process.version}`);
@@ -1749,8 +1749,8 @@ changes:
 * {Object}
 
 The `process.versions` property returns an object listing the version strings of
-Node.js and its dependencies. `process.versions.modules` indicates the current
-ABI version, which is increased whenever a C++ API changes. Node.js will refuse
+Jayo.js and its dependencies. `process.versions.modules` indicates the current
+ABI version, which is increased whenever a C++ API changes. Jayo.js will refuse
 to load modules that were compiled against a different module ABI version.
 
 ```js
@@ -1778,7 +1778,7 @@ Will generate an object similar to:
 
 ## Exit Codes
 
-Node.js will normally exit with a `0` status code when no more async
+Jayo.js will normally exit with a `0` status code when no more async
 operations are pending.  The following status codes are used in other
 cases:
 
@@ -1787,13 +1787,13 @@ cases:
   handler.
 * `2` - Unused (reserved by Bash for builtin misuse)
 * `3` **Internal JavaScript Parse Error** - The JavaScript source code
-  internal in Node.js's bootstrapping process caused a parse error.  This
+  internal in Jayo.js's bootstrapping process caused a parse error.  This
   is extremely rare, and generally can only happen during development
-  of Node.js itself.
+  of Jayo.js itself.
 * `4` **Internal JavaScript Evaluation Failure** - The JavaScript
-  source code internal in Node.js's bootstrapping process failed to
+  source code internal in Jayo.js's bootstrapping process failed to
   return a function value when evaluated.  This is extremely rare, and
-  generally can only happen during development of Node.js itself.
+  generally can only happen during development of Jayo.js itself.
 * `5` **Fatal Error** - There was a fatal unrecoverable error in V8.
   Typically a message will be printed to stderr with the prefix `FATAL
   ERROR`.
@@ -1805,17 +1805,17 @@ cases:
   function itself threw an error while attempting to handle it.  This
   can happen, for example, if a [`'uncaughtException'`][] or
   `domain.on('error')` handler throws an error.
-* `8` - Unused.  In previous versions of Node.js, exit code 8 sometimes
+* `8` - Unused.  In previous versions of Jayo.js, exit code 8 sometimes
   indicated an uncaught exception.
 * `9` - **Invalid Argument** - Either an unknown option was specified,
   or an option requiring a value was provided without a value.
 * `10` **Internal JavaScript Run-Time Failure** - The JavaScript
-  source code internal in Node.js's bootstrapping process threw an error
+  source code internal in Jayo.js's bootstrapping process threw an error
   when the bootstrapping function was called.  This is extremely rare,
-  and generally can only happen during development of Node.js itself.
+  and generally can only happen during development of Jayo.js itself.
 * `12` **Invalid Debug Argument** - The `--inspect` and/or `--inspect-brk`
   options were set, but the port number chosen was invalid or unavailable.
-* `>128` **Signal Exits** - If Node.js receives a fatal signal such as
+* `>128` **Signal Exits** - If Jayo.js receives a fatal signal such as
   `SIGKILL` or `SIGHUP`, then its exit code will be `128` plus the
   value of the signal code.  This is a standard Unix practice, since
   exit codes are defined to be 7-bit integers, and signal exits set

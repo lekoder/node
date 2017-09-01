@@ -1,4 +1,4 @@
-# Node.js 4 ChangeLog
+# Jayo.js 4 ChangeLog
 
 <table>
 <tr>
@@ -59,14 +59,14 @@
   * [Archive](CHANGELOG_ARCHIVE.md)
 
 
-*Note*: Node.js v4 is covered by the
-[Node.js Long Term Support Plan](https://github.com/nodejs/LTS) and
+*Note*: Jayo.js v4 is covered by the
+[Jayo.js Long Term Support Plan](https://github.com/nodejs/LTS) and
 will be supported actively until April 2017 and maintained until April 2018.
 
 <a id="4.8.4"></a>
 ## 2017-07-11, Version 4.8.4 'Argon' (Maintenance), @MylesBorins
 
-This is a security release. All Node.js users should consult the security release summary at https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/ for details on patched vulnerabilities.
+This is a security release. All Jayo.js users should consult the security release summary at https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/ for details on patched vulnerabilities.
 
 ### Notable Changes
 
@@ -346,7 +346,7 @@ commits which are updates to dependencies.
 * [[`acbe4d3516`](https://github.com/nodejs/node/commit/acbe4d3516)] - **doc**: add joyeecheung to collaborators (Joyee Cheung) [#10603](https://github.com/nodejs/node/pull/10603)
 * [[`c7378c4d5f`](https://github.com/nodejs/node/commit/c7378c4d5f)] - **doc**: warn about unvalidated input in child_process (Matthew Garrett) [#10466](https://github.com/nodejs/node/pull/10466)
 * [[`08e924e45c`](https://github.com/nodejs/node/commit/08e924e45c)] - **doc**: require two-factor authentication (Rich Trott) [#10529](https://github.com/nodejs/node/pull/10529)
-* [[`d260fb2e7e`](https://github.com/nodejs/node/commit/d260fb2e7e)] - **doc**: use "Node.js" in V8 guide (Rich Trott) [#10438](https://github.com/nodejs/node/pull/10438)
+* [[`d260fb2e7e`](https://github.com/nodejs/node/commit/d260fb2e7e)] - **doc**: use "Jayo.js" in V8 guide (Rich Trott) [#10438](https://github.com/nodejs/node/pull/10438)
 * [[`4f168a4a31`](https://github.com/nodejs/node/commit/4f168a4a31)] - **doc**: require() tries first core not native modules (Vicente Jimenez Aguilar) [#10324](https://github.com/nodejs/node/pull/10324)
 * [[`5777c79c52`](https://github.com/nodejs/node/commit/5777c79c52)] - **doc**: clarify the review and landing process (Joyee Cheung) [#10202](https://github.com/nodejs/node/pull/10202)
 * [[`d3a7fb8a9e`](https://github.com/nodejs/node/commit/d3a7fb8a9e)] - **doc**: redirect 'Start a Working Group' to TSC repo (William Kapke) [#9655](https://github.com/nodejs/node/pull/9655)
@@ -453,7 +453,7 @@ commits which are updates to dependencies.
 
 This is a security release of the 'Argon' release line to upgrade OpenSSL to version 1.0.2k
 
-Although the OpenSSL team have determined a maximum severity rating of "moderate", the Node.js
+Although the OpenSSL team have determined a maximum severity rating of "moderate", the Jayo.js
 crypto team (Ben Noordhuis, Shigeki Ohtsu and Fedor Indutny) have determined the impact to Node
 users is "low". Details on this determination can be found
 [on the Nodejs.org website](https://nodejs.org/en/blog/vulnerability/openssl-january-2017/).
@@ -937,7 +937,7 @@ This LTS release comes with 219 commits. This includes 80 commits that are docs 
 * [[`bbbbb19658`](https://github.com/nodejs/node/commit/bbbbb19658)] - **doc**: add information about CTC quorum rules (Rich Trott) [#7813](https://github.com/nodejs/node/pull/7813)
 * [[`d759d4e0a6`](https://github.com/nodejs/node/commit/d759d4e0a6)] - **doc**: remove platform assumption from CONTRIBUTING (Bethany N Griggs) [#7783](https://github.com/nodejs/node/pull/7783)
 * [[`b01854dd9d`](https://github.com/nodejs/node/commit/b01854dd9d)] - **doc**: add princejwesley to collaborators (Prince J Wesley) [#7877](https://github.com/nodejs/node/pull/7877)
-* [[`26f5168c02`](https://github.com/nodejs/node/commit/26f5168c02)] - **doc**: clarify that the node.js irc channel is not under tsc oversight (James M Snell) [#7810](https://github.com/nodejs/node/pull/7810)
+* [[`26f5168c02`](https://github.com/nodejs/node/commit/26f5168c02)] - **doc**: clarify that the Jayo.js irc channel is not under tsc oversight (James M Snell) [#7810](https://github.com/nodejs/node/pull/7810)
 * [[`506e367062`](https://github.com/nodejs/node/commit/506e367062)] - **doc**: update readme with andrasq as a collaborator (Andras) [#7801](https://github.com/nodejs/node/pull/7801)
 * [[`590c52a309`](https://github.com/nodejs/node/commit/590c52a309)] - **doc**: update CTC governance information (Rich Trott) [#7719](https://github.com/nodejs/node/pull/7719)
 * [[`fdff642e0b`](https://github.com/nodejs/node/commit/fdff642e0b)] - **doc**: fix util.deprecate() example (Evan Lucas) [#7674](https://github.com/nodejs/node/pull/7674)
@@ -1059,7 +1059,7 @@ This LTS release comes with 219 commits. This includes 80 commits that are docs 
 <a id="4.6.1"></a>
 ## 2016-10-18, Version 4.6.1 'Argon' (LTS), @rvagg
 
-This is a security release. All Node.js users should consult the security release summary at https://nodejs.org/en/blog/vulnerability/october-2016-security-releases/ for details on patched vulnerabilities.
+This is a security release. All Jayo.js users should consult the security release summary at https://nodejs.org/en/blog/vulnerability/october-2016-security-releases/ for details on patched vulnerabilities.
 
 ### Notable Changes
 
@@ -1073,16 +1073,16 @@ This is a security release. All Node.js users should consult the security releas
 <a id="4.6.0"></a>
 ## 2016-09-27, Version 4.6.0 'Argon' (LTS), @rvagg
 
-This is a security release. All Node.js users should consult the security release summary at https://nodejs.org/en/blog/vulnerability/september-2016-security-releases/ for details on patched vulnerabilities.
+This is a security release. All Jayo.js users should consult the security release summary at https://nodejs.org/en/blog/vulnerability/september-2016-security-releases/ for details on patched vulnerabilities.
 
 ### Notable Changes
 
 Semver Minor:
 
 * **openssl**:
-  - Upgrade to 1.0.2i, fixes a number of defects impacting Node.js: CVE-2016-6304 ("OCSP Status Request extension unbounded memory growth", high severity), CVE-2016-2183, CVE-2016-6303, CVE-2016-2178 and CVE-2016-6306. (Shigeki Ohtsu) [#8714](https://github.com/nodejs/node/pull/8714)
+  - Upgrade to 1.0.2i, fixes a number of defects impacting Jayo.js: CVE-2016-6304 ("OCSP Status Request extension unbounded memory growth", high severity), CVE-2016-2183, CVE-2016-6303, CVE-2016-2178 and CVE-2016-6306. (Shigeki Ohtsu) [#8714](https://github.com/nodejs/node/pull/8714)
   - Upgrade to 1.0.2j, fixes a defect included in 1.0.2i resulting in a crash when using CRLs, CVE-2016-7052. (Shigeki Ohtsu) [#8786](https://github.com/nodejs/node/pull/8786)
-  - Remove support for loading dynamic third-party engine modules. An attacker may be able to hide malicious code to be inserted into Node.js at runtime by masquerading as one of the dynamic engine modules. Originally reported by Ahmed Zaki (Skype). (Ben Noordhuis) [nodejs/node-private#70](https://github.com/nodejs/node-private/pull/70)
+  - Remove support for loading dynamic third-party engine modules. An attacker may be able to hide malicious code to be inserted into Jayo.js at runtime by masquerading as one of the dynamic engine modules. Originally reported by Ahmed Zaki (Skype). (Ben Noordhuis) [nodejs/node-private#70](https://github.com/nodejs/node-private/pull/70)
 * **http**: CVE-2016-5325 - Properly validate for allowable characters in the `reason` argument in `ServerResponse#writeHead()`. Fixes a possible response splitting attack vector. This introduces a new case where `throw` may occur when configuring HTTP responses, users should already be adopting try/catch here. Originally reported independently by Evan Lucas and Romain Gaucher. (Evan Lucas) [nodejs/node-private#46](https://github.com/nodejs/node-private/pull/46)
 
 Semver Patch:
@@ -1274,7 +1274,7 @@ Semver Patch:
 * [[`9121e94e62`](https://github.com/nodejs/node/commit/9121e94e62)] - **doc**: note that process.config can and will be changed (James M Snell) [#6266](https://github.com/nodejs/node/pull/6266)
 * [[`c237ac3d68`](https://github.com/nodejs/node/commit/c237ac3d68)] - **doc**: git mv to .md (Robert Jefe Lindstaedt) [#4747](https://github.com/nodejs/node/pull/4747)
 * [[`6324723cc1`](https://github.com/nodejs/node/commit/6324723cc1)] - **doc,dgram**: fix addMembership documentation (Santiago Gimeno) [#7244](https://github.com/nodejs/node/pull/7244)
-* [[`15bb0beab2`](https://github.com/nodejs/node/commit/15bb0beab2)] - **doc,test**: add `How to write a Node.js test` guide (Santiago Gimeno) [#6984](https://github.com/nodejs/node/pull/6984)
+* [[`15bb0beab2`](https://github.com/nodejs/node/commit/15bb0beab2)] - **doc,test**: add `How to write a Jayo.js test` guide (Santiago Gimeno) [#6984](https://github.com/nodejs/node/pull/6984)
 * [[`9d13337183`](https://github.com/nodejs/node/commit/9d13337183)] - **http**: wait for both prefinish/end to keepalive (Fedor Indutny) [#7149](https://github.com/nodejs/node/pull/7149)
 * [[`ece428ea63`](https://github.com/nodejs/node/commit/ece428ea63)] - **http**: fix no dumping after `maybeReadMore` (Fedor Indutny) [#7211](https://github.com/nodejs/node/pull/7211)
 * [[`07fd52e5aa`](https://github.com/nodejs/node/commit/07fd52e5aa)] - **http**: skip body and next message of CONNECT res (Fedor Indutny) [#6279](https://github.com/nodejs/node/pull/6279)
@@ -1457,7 +1457,7 @@ This LTS release comes with 89 commits. This includes 46 commits that are docs r
 * [[`2b0f40ca16`](https://github.com/nodejs/node/commit/2b0f40ca16)] - **doc**: add note for fs.watch virtualized env (Robert Jefe Lindstaedt) [#6809](https://github.com/nodejs/node/pull/6809)
 * [[`3b461870be`](https://github.com/nodejs/node/commit/3b461870be)] - **doc**: Backport ee.once doc clarifications to 4.x. (Lance Ball) [#7103](https://github.com/nodejs/node/pull/7103)
 * [[`eadb7e5b20`](https://github.com/nodejs/node/commit/eadb7e5b20)] - **doc**: subdivide TOC, add auxiliary links (Jeremiah Senkpiel) [#6167](https://github.com/nodejs/node/pull/6167)
-* [[`107839c5dd`](https://github.com/nodejs/node/commit/107839c5dd)] - **doc**: no Node.js(1) (Jeremiah Senkpiel) [#6167](https://github.com/nodejs/node/pull/6167)
+* [[`107839c5dd`](https://github.com/nodejs/node/commit/107839c5dd)] - **doc**: no Jayo.js(1) (Jeremiah Senkpiel) [#6167](https://github.com/nodejs/node/pull/6167)
 * [[`401325f9e2`](https://github.com/nodejs/node/commit/401325f9e2)] - **doc**: better example & synopsis (Jeremiah Senkpiel) [#6167](https://github.com/nodejs/node/pull/6167)
 * [[`c654184f28`](https://github.com/nodejs/node/commit/c654184f28)] - **doc**: remove link to Sign in crypto.md (Kirill Fomichev) [#6812](https://github.com/nodejs/node/pull/6812)
 * [[`3e9288e466`](https://github.com/nodejs/node/commit/3e9288e466)] - **doc**: fix exec example in child_process (Evan Lucas) [#6660](https://github.com/nodejs/node/pull/6660)
@@ -1523,7 +1523,7 @@ This LTS release comes with 89 commits. This includes 46 commits that are docs r
 
 ### Notable Changes
 
-This is an important security release. All Node.js users should consult the security release summary at nodejs.org for details on patched vulnerabilities.
+This is an important security release. All Jayo.js users should consult the security release summary at nodejs.org for details on patched vulnerabilities.
 
 This release is specifically related to a Buffer overflow vulnerability discovered in v8, more details can be found [in the CVE](https://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-1669)
 
@@ -1797,9 +1797,9 @@ and 7 which are benchmark related.
 * [[`03b20a73b9`](https://github.com/nodejs/node/commit/03b20a73b9)] - **benchmark**: add benchmark for buf.compare() (Rich Trott) [#5441](https://github.com/nodejs/node/pull/5441)
 * [[`b816044845`](https://github.com/nodejs/node/commit/b816044845)] - **buffer**: remove duplicated code in fromObject (HUANG Wei) [#4948](https://github.com/nodejs/node/pull/4948)
 * [[`067ce9b905`](https://github.com/nodejs/node/commit/067ce9b905)] - **build**: don't install github templates (Johan Bergström) [#5612](https://github.com/nodejs/node/pull/5612)
-* [[`a1772dc515`](https://github.com/nodejs/node/commit/a1772dc515)] - **build**: update Node.js logo on OSX installer (Rod Vagg) [#5401](https://github.com/nodejs/node/pull/5401)
+* [[`a1772dc515`](https://github.com/nodejs/node/commit/a1772dc515)] - **build**: update Jayo.js logo on OSX installer (Rod Vagg) [#5401](https://github.com/nodejs/node/pull/5401)
 * [[`9058fc0383`](https://github.com/nodejs/node/commit/9058fc0383)] - **build**: correctly detect clang version (Stefan Budeanu) [#5553](https://github.com/nodejs/node/pull/5553)
-* [[`1165ecc6f7`](https://github.com/nodejs/node/commit/1165ecc6f7)] - **build**: update Node.js logo on Win installer (Robert Jefe Lindstaedt) [#5531](https://github.com/nodejs/node/pull/5531)
+* [[`1165ecc6f7`](https://github.com/nodejs/node/commit/1165ecc6f7)] - **build**: update Jayo.js logo on Win installer (Robert Jefe Lindstaedt) [#5531](https://github.com/nodejs/node/pull/5531)
 * [[`4990ddad72`](https://github.com/nodejs/node/commit/4990ddad72)] - **build**: remove --quiet from eslint invocation (firedfox) [#5519](https://github.com/nodejs/node/pull/5519)
 * [[`46a5d519dd`](https://github.com/nodejs/node/commit/46a5d519dd)] - **build**: skip msi build if WiX is not found (Tsarevich Dmitry) [#5220](https://github.com/nodejs/node/pull/5220)
 * [[`dac4e64491`](https://github.com/nodejs/node/commit/dac4e64491)] - **build**: add option to select VS version (julien.waechter) [#4645](https://github.com/nodejs/node/pull/4645)
@@ -1899,7 +1899,7 @@ and 7 which are benchmark related.
 * [[`131ed494e2`](https://github.com/nodejs/node/commit/131ed494e2)] - **tools**: enable no-extra-parens in ESLint (Rich Trott) [#5512](https://github.com/nodejs/node/pull/5512)
 * [[`d4b9f02fdc`](https://github.com/nodejs/node/commit/d4b9f02fdc)] - **tools**: apply custom buffer lint rule to /lib only (Rich Trott) [#5371](https://github.com/nodejs/node/pull/5371)
 * [[`6867bed4c4`](https://github.com/nodejs/node/commit/6867bed4c4)] - **tools**: enable additional lint rules (Rich Trott) [#5357](https://github.com/nodejs/node/pull/5357)
-* [[`5e6b7605ee`](https://github.com/nodejs/node/commit/5e6b7605ee)] - **tools**: add Node.js-specific ESLint rules (Rich Trott) [#5320](https://github.com/nodejs/node/pull/5320)
+* [[`5e6b7605ee`](https://github.com/nodejs/node/commit/5e6b7605ee)] - **tools**: add Jayo.js-specific ESLint rules (Rich Trott) [#5320](https://github.com/nodejs/node/pull/5320)
 * [[`6dc49ae203`](https://github.com/nodejs/node/commit/6dc49ae203)] - **tools,benchmark**: increase lint compliance (Rich Trott) [#5773](https://github.com/nodejs/node/pull/5773)
 * [[`dff7091fce`](https://github.com/nodejs/node/commit/dff7091fce)] - **url**: group slashed protocols by protocol name (nettofarah) [#5380](https://github.com/nodejs/node/pull/5380)
 * [[`0e97a3ea51`](https://github.com/nodejs/node/commit/0e97a3ea51)] - **win,build**: support Visual C++ Build Tools 2015 (João Reis) [#5627](https://github.com/nodejs/node/pull/5627)
@@ -2170,13 +2170,13 @@ Notable semver patch changes include:
 <a id="4.3.2"></a>
 ## 2016-03-02, Version 4.3.2 'Argon' (LTS), @thealphanerd
 
-This is a security release with only a single commit, an update to openssl due to a recent security advisory. You can read more about the security advisory on [the Node.js website](https://nodejs.org/en/blog/vulnerability/openssl-march-2016/)
+This is a security release with only a single commit, an update to openssl due to a recent security advisory. You can read more about the security advisory on [the Jayo.js website](https://nodejs.org/en/blog/vulnerability/openssl-march-2016/)
 
 ### Notable changes
 
 * **openssl**: Upgrade from 1.0.2f to 1.0.2g (Ben Noordhuis) [#5507](https://github.com/nodejs/node/pull/5507)
-  - Fix a double-free defect in parsing malformed DSA keys that may potentially be used for DoS or memory corruption attacks. It is likely to be very difficult to use this defect for a practical attack and is therefore considered low severity for Node.js users. More info is available at [CVE-2016-0705](https://www.openssl.org/news/vulnerabilities.html#2016-0705).
-  - Fix a defect that can cause memory corruption in certain very rare cases relating to the internal `BN_hex2bn()` and `BN_dec2bn()` functions. It is believed that Node.js is not invoking the code paths that use these functions so practical attacks via Node.js using this defect are _unlikely_ to be possible. More info is available at [CVE-2016-0797](https://www.openssl.org/news/vulnerabilities.html#2016-0797).
+  - Fix a double-free defect in parsing malformed DSA keys that may potentially be used for DoS or memory corruption attacks. It is likely to be very difficult to use this defect for a practical attack and is therefore considered low severity for Jayo.js users. More info is available at [CVE-2016-0705](https://www.openssl.org/news/vulnerabilities.html#2016-0705).
+  - Fix a defect that can cause memory corruption in certain very rare cases relating to the internal `BN_hex2bn()` and `BN_dec2bn()` functions. It is believed that Jayo.js is not invoking the code paths that use these functions so practical attacks via Jayo.js using this defect are _unlikely_ to be possible. More info is available at [CVE-2016-0797](https://www.openssl.org/news/vulnerabilities.html#2016-0797).
   - Fix a defect that makes the _[CacheBleed Attack](https://ssrg.nicta.com.au/projects/TS/cachebleed/)_ possible. This defect enables attackers to execute side-channel attacks leading to the potential recovery of entire RSA private keys. It only affects the Intel Sandy Bridge (and possibly older) microarchitecture when using hyper-threading. Newer microarchitectures, including Haswell, are unaffected. More info is available at [CVE-2016-0702](https://www.openssl.org/news/vulnerabilities.html#2016-0702).
 
 ## Commits
@@ -2272,7 +2272,7 @@ This is a security release with only a single commit, an update to openssl due t
 <a id="4.3.0"></a>
 ## 2016-02-09, Version 4.3.0 'Argon' (LTS), @jasnell
 
-This is an important security release. All Node.js users should consult the security release summary at nodejs.org for details on patched vulnerabilities.
+This is an important security release. All Jayo.js users should consult the security release summary at nodejs.org for details on patched vulnerabilities.
 
 Note that this release includes a non-backward compatible change to address a security issue. This change increases the version of the LTS v4.x line to v4.3.0. There will be *no further updates* to v4.2.x.
 
@@ -2418,8 +2418,8 @@ Maintenance update.
 * [[`c35a409cbe`](https://github.com/nodejs/node/commit/c35a409cbe)] - **doc**: clarify assert.fail doc (Rich Trott) [#4186](https://github.com/nodejs/node/pull/4186)
 * [[`6235fdf72e`](https://github.com/nodejs/node/commit/6235fdf72e)] - **doc**: copyedit addons doc (Rich Trott) [#4185](https://github.com/nodejs/node/pull/4185)
 * [[`990e7ff93e`](https://github.com/nodejs/node/commit/990e7ff93e)] - **doc**: update AUTHORS list (Rod Vagg) [#4183](https://github.com/nodejs/node/pull/4183)
-* [[`8d676ef55e`](https://github.com/nodejs/node/commit/8d676ef55e)] - **doc**: change references from node to Node.js (Roman Klauke) [#4177](https://github.com/nodejs/node/pull/4177)
-* [[`1c34b139a2`](https://github.com/nodejs/node/commit/1c34b139a2)] - **doc**: add brief Node.js overview to README (wurde) [#4174](https://github.com/nodejs/node/pull/4174)
+* [[`8d676ef55e`](https://github.com/nodejs/node/commit/8d676ef55e)] - **doc**: change references from node to Jayo.js (Roman Klauke) [#4177](https://github.com/nodejs/node/pull/4177)
+* [[`1c34b139a2`](https://github.com/nodejs/node/commit/1c34b139a2)] - **doc**: add brief Jayo.js overview to README (wurde) [#4174](https://github.com/nodejs/node/pull/4174)
 * [[`27b9b72ab0`](https://github.com/nodejs/node/commit/27b9b72ab0)] - **doc**: add iarna to collaborators (Rebecca Turner) [#4144](https://github.com/nodejs/node/pull/4144)
 * [[`683d8dd564`](https://github.com/nodejs/node/commit/683d8dd564)] - **doc**: add JungMinu to collaborators (Minwoo Jung) [#4143](https://github.com/nodejs/node/pull/4143)
 * [[`17b06dfa94`](https://github.com/nodejs/node/commit/17b06dfa94)] - **doc**: add zkat to collaborators (Kat Marchán) [#4142](https://github.com/nodejs/node/pull/4142)
@@ -2428,7 +2428,7 @@ Maintenance update.
 * [[`6dd375cfe2`](https://github.com/nodejs/node/commit/6dd375cfe2)] - **doc**: document backlog for server.listen() variants (Jan Schär) [#4025](https://github.com/nodejs/node/pull/4025)
 * [[`b71a3b363a`](https://github.com/nodejs/node/commit/b71a3b363a)] - **doc**: fixup socket.remoteAddress (Arthur Gautier) [#4198](https://github.com/nodejs/node/pull/4198)
 * [[`e2fe214857`](https://github.com/nodejs/node/commit/e2fe214857)] - **doc**: add links and backticks around names (jpersson) [#4054](https://github.com/nodejs/node/pull/4054)
-* [[`bb158f8aed`](https://github.com/nodejs/node/commit/bb158f8aed)] - **doc**: s/node.js/Node.js in readme (Rod Vagg) [#3998](https://github.com/nodejs/node/pull/3998)
+* [[`bb158f8aed`](https://github.com/nodejs/node/commit/bb158f8aed)] - **doc**: s/Jayo.js/Jayo.js in readme (Rod Vagg) [#3998](https://github.com/nodejs/node/pull/3998)
 * [[`f55491ad47`](https://github.com/nodejs/node/commit/f55491ad47)] - **doc**: move fs.existsSync() deprecation message (Martin Forsberg) [#3942](https://github.com/nodejs/node/pull/3942)
 * [[`8c5b847f5b`](https://github.com/nodejs/node/commit/8c5b847f5b)] - **doc**: Describe FIPSDIR environment variable (Stefan Budeanu) [#3752](https://github.com/nodejs/node/pull/3752)
 * [[`70c95ea0e5`](https://github.com/nodejs/node/commit/70c95ea0e5)] - **doc**: add warning about Windows process groups (Roman Klauke) [#3681](https://github.com/nodejs/node/pull/3681)
@@ -2438,7 +2438,7 @@ Maintenance update.
 * [[`2e623ff024`](https://github.com/nodejs/node/commit/2e623ff024)] - **doc**: add TSC meeting minutes 2015-10-14 (Rod Vagg) [#3463](https://github.com/nodejs/node/pull/3463)
 * [[`b9c69964bb`](https://github.com/nodejs/node/commit/b9c69964bb)] - **doc**: add TSC meeting minutes 2015-10-07 (Rod Vagg) [#3364](https://github.com/nodejs/node/pull/3364)
 * [[`f31d23c724`](https://github.com/nodejs/node/commit/f31d23c724)] - **doc**: add TSC meeting minutes 2015-09-30 (Rod Vagg) [#3235](https://github.com/nodejs/node/pull/3235)
-* [[`ae8e3af178`](https://github.com/nodejs/node/commit/ae8e3af178)] - **doc**: update irc channels: #node.js and #node-dev (Nelson Pecora) [#2743](https://github.com/nodejs/node/pull/2743)
+* [[`ae8e3af178`](https://github.com/nodejs/node/commit/ae8e3af178)] - **doc**: update irc channels: #Jayo.js and #node-dev (Nelson Pecora) [#2743](https://github.com/nodejs/node/pull/2743)
 * [[`830caeb1bd`](https://github.com/nodejs/node/commit/830caeb1bd)] - **doc, test**: symbols as event names (Bryan English) [#4151](https://github.com/nodejs/node/pull/4151)
 * [[`82cbfcdcbe`](https://github.com/nodejs/node/commit/82cbfcdcbe)] - **docs**: update gpg key for Myles Borins (Myles Borins) [#4657](https://github.com/nodejs/node/pull/4657)
 * [[`50b72aa5a3`](https://github.com/nodejs/node/commit/50b72aa5a3)] - **docs**: fix npm command in releases.md (Myles Borins) [#4656](https://github.com/nodejs/node/pull/4656)
@@ -2583,7 +2583,7 @@ Maintenance update.
 * [[`9e1edead22`](https://github.com/nodejs/node/commit/9e1edead22)] - **deps**: backport 819b40a from V8 upstream (Michaël Zasso) [#3938](https://github.com/nodejs/node/pull/3938)
 * [[`a2ce3843cc`](https://github.com/nodejs/node/commit/a2ce3843cc)] - **deps**: upgrade npm to 2.14.9 (Forrest L Norvell) [#3686](https://github.com/nodejs/node/pull/3686)
 * [[`b140cb29f4`](https://github.com/nodejs/node/commit/b140cb29f4)] - **dns**: prevent undefined values in results (Junliang Yan) [#3696](https://github.com/nodejs/node/pull/3696)
-* [[`8aafa2ecc0`](https://github.com/nodejs/node/commit/8aafa2ecc0)] - **doc**: standardize references to node.js in docs (Scott Buchanan) [#4136](https://github.com/nodejs/node/pull/4136)
+* [[`8aafa2ecc0`](https://github.com/nodejs/node/commit/8aafa2ecc0)] - **doc**: standardize references to Jayo.js in docs (Scott Buchanan) [#4136](https://github.com/nodejs/node/pull/4136)
 * [[`72f43a263a`](https://github.com/nodejs/node/commit/72f43a263a)] - **doc**: fix internal link to child.send() (Luigi Pinca) [#4089](https://github.com/nodejs/node/pull/4089)
 * [[`dcfdbac457`](https://github.com/nodejs/node/commit/dcfdbac457)] - **doc**: reword https.Agent example text (Jan Krems) [#4075](https://github.com/nodejs/node/pull/4075)
 * [[`f93d268dec`](https://github.com/nodejs/node/commit/f93d268dec)] - **doc**: add HTTP working group (James M Snell) [#3919](https://github.com/nodejs/node/pull/3919)
@@ -2725,8 +2725,8 @@ Security Update
 
 * **http**: Fix CVE-2015-8027, a bug whereby an HTTP socket may no longer have a parser associated with it but a pipelined request attempts to trigger a pause or resume on the non-existent parser, a potential denial-of-service vulnerability. (Fedor Indutny)
 * **openssl**: Upgrade to 1.0.2e, containing fixes for:
-  - CVE-2015-3193 "BN_mod_exp may produce incorrect results on x86_64", an attack may be possible against a Node.js TLS server using DHE key exchange. Details are available at <http://openssl.org/news/secadv/20151203.txt>.
-  - CVE-2015-3194 "Certificate verify crash with missing PSS parameter", a potential denial-of-service vector for Node.js TLS servers using client certificate authentication; TLS clients are also impacted. Details are available at <http://openssl.org/news/secadv/20151203.txt>.
+  - CVE-2015-3193 "BN_mod_exp may produce incorrect results on x86_64", an attack may be possible against a Jayo.js TLS server using DHE key exchange. Details are available at <http://openssl.org/news/secadv/20151203.txt>.
+  - CVE-2015-3194 "Certificate verify crash with missing PSS parameter", a potential denial-of-service vector for Jayo.js TLS servers using client certificate authentication; TLS clients are also impacted. Details are available at <http://openssl.org/news/secadv/20151203.txt>.
   (Shigeki Ohtsu) [#4134](https://github.com/nodejs/node/pull/4134)
 * **v8**: Backport fix for CVE-2015-6764, a bug in `JSON.stringify()` that can result in out-of-bounds reads for arrays. (Ben Noordhuis)
 
@@ -2866,7 +2866,7 @@ This is an LTS maintenance release that addresses a number of issues:
 
 ### Notable changes
 
-The first Node.js LTS release! See https://github.com/nodejs/LTS/ for details of the LTS process.
+The first Jayo.js LTS release! See https://github.com/nodejs/LTS/ for details of the LTS process.
 
 * **icu**: Updated to version 56 with significant performance improvements (Steven R. Loomis) [#3281](https://github.com/nodejs/node/pull/3281)
 * **node**:
@@ -3158,11 +3158,11 @@ See https://github.com/nodejs/node/labels/confirmed-bug for complete and current
 
 ### Notable changes
 
-This list of changes is relative to the last io.js v3.x branch release, v3.3.0. Please see the list of notable changes in the v3.x, v2.x and v1.x releases for a more complete list of changes from 0.12.x. Note, that some changes in the v3.x series as well as major breaking changes in this release constitute changes required for full convergence of the Node.js and io.js projects.
+This list of changes is relative to the last io.js v3.x branch release, v3.3.0. Please see the list of notable changes in the v3.x, v2.x and v1.x releases for a more complete list of changes from 0.12.x. Note, that some changes in the v3.x series as well as major breaking changes in this release constitute changes required for full convergence of the Jayo.js and io.js projects.
 
 * **child_process**: `ChildProcess.prototype.send()` and `process.send()` operate asynchronously across all platforms so an optional callback parameter has been introduced that will be invoked once the message has been sent, i.e. `.send(message[, sendHandle][, callback])` (Ben Noordhuis) [#2620](https://github.com/nodejs/node/pull/2620).
-* **node**: Rename "io.js" code to "Node.js" (cjihrig) [#2367](https://github.com/nodejs/node/pull/2367).
-* **node-gyp**: This release bundles an updated version of node-gyp that works with all versions of Node.js and io.js including nightly and release candidate builds. From io.js v3 and Node.js v4 onward, it will only download a headers tarball when building addons rather than the entire source. (Rod Vagg) [#2700](https://github.com/nodejs/node/pull/2700)
+* **node**: Rename "io.js" code to "Jayo.js" (cjihrig) [#2367](https://github.com/nodejs/node/pull/2367).
+* **node-gyp**: This release bundles an updated version of node-gyp that works with all versions of Jayo.js and io.js including nightly and release candidate builds. From io.js v3 and Jayo.js v4 onward, it will only download a headers tarball when building addons rather than the entire source. (Rod Vagg) [#2700](https://github.com/nodejs/node/pull/2700)
 * **npm**: Upgrade to version 2.14.2 from 2.13.3, includes a security update, see https://github.com/npm/npm/releases/tag/v2.14.2 for more details, (Kat Marchán) [#2696](https://github.com/nodejs/node/pull/2696).
 * **timers**: Improved timer performance from porting the 0.12 implementation, plus minor fixes (Jeremiah Senkpiel) [#2540](https://github.com/nodejs/node/pull/2540), (Julien Gilli) [nodejs/node-v0.x-archive#8751](https://github.com/nodejs/node-v0.x-archive/pull/8751) [nodejs/node-v0.x-archive#8905](https://github.com/nodejs/node-v0.x-archive/pull/8905)
 * **util**: The `util.is*()` functions have been deprecated, beginning with deprecation warnings in the documentation for this release, users are encouraged to seek more robust alternatives in the npm registry, (Sakthipriyan Vairamani) [#2447](https://github.com/nodejs/node/pull/2447).
@@ -3218,7 +3218,7 @@ See https://github.com/nodejs/node/labels/confirmed-bug for complete and current
 * [[`93e2830686`](https://github.com/nodejs/node/commit/93e2830686)] - **(SEMVER-MINOR)** **doc**: document deprecation of util.is* functions (Sakthipriyan Vairamani) [#2447](https://github.com/nodejs/node/pull/2447)
 * [[`7038388558`](https://github.com/nodejs/node/commit/7038388558)] - **doc,test**: enable recursive file watching in Windows (Sakthipriyan Vairamani) [#2649](https://github.com/nodejs/node/pull/2649)
 * [[`f3696f64a1`](https://github.com/nodejs/node/commit/f3696f64a1)] - **events,lib**: don't require EE#listenerCount() (Jeremiah Senkpiel) [#2661](https://github.com/nodejs/node/pull/2661)
-* [[`45a2046f5d`](https://github.com/nodejs/node/commit/45a2046f5d)] - **(SEMVER-MAJOR)** **installer**: fix installers for node.js rename (Frederic Hemberger) [#2367](https://github.com/nodejs/node/pull/2367)
+* [[`45a2046f5d`](https://github.com/nodejs/node/commit/45a2046f5d)] - **(SEMVER-MAJOR)** **installer**: fix installers for Jayo.js rename (Frederic Hemberger) [#2367](https://github.com/nodejs/node/pull/2367)
 * [[`7a999a1376`](https://github.com/nodejs/node/commit/7a999a1376)] - **(SEMVER-MAJOR)** **lib**: add net.Socket#localFamily property (Ben Noordhuis) [#956](https://github.com/nodejs/node/pull/956)
 * [[`de88255b0f`](https://github.com/nodejs/node/commit/de88255b0f)] - ***Revert*** "**lib,src**: add unix socket getsockname/getpeername" (Ben Noordhuis) [#2584](https://github.com/nodejs/node/pull/2584)
 * [[`f337595441`](https://github.com/nodejs/node/commit/f337595441)] - **(SEMVER-MAJOR)** **lib,src**: add unix socket getsockname/getpeername (Ben Noordhuis) [#956](https://github.com/nodejs/node/pull/956)

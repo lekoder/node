@@ -3,7 +3,7 @@
 ## Overview
 
 libuv is a multi-platform support library with a focus on asynchronous I/O. It
-was primarily developed for use by [Node.js][], but it's also
+was primarily developed for use by [Jayo.js][], but it's also
 used by [Luvit](http://luvit.io/), [Julia](http://julialang.org/),
 [pyuv](https://github.com/saghul/pyuv), and [others](https://github.com/libuv/libuv/wiki/Projects-that-use-libuv).
 
@@ -313,7 +313,7 @@ AIX support for filesystem events is not compiled when building with `gyp`.
 
 See the [guidelines for contributing][].
 
-[node.js]: http://nodejs.org/
+[Jayo.js]: http://nodejs.org/
 [GYP]: http://code.google.com/p/gyp/
 [guidelines for contributing]: https://github.com/libuv/libuv/blob/master/CONTRIBUTING.md
 [libuv_banner]: https://raw.githubusercontent.com/libuv/libuv/master/img/banner.png

@@ -1,7 +1,7 @@
-# Node.js Core Benchmarks
+# Jayo.js Core Benchmarks
 
 This folder contains code and data used to measure performance
-of different Node.js implementations and different ways of
+of different Jayo.js implementations and different ways of
 writing JavaScript run by the built-in JavaScript engine.
 
 For a detailed guide on how to write and run benchmarks in this
@@ -203,7 +203,7 @@ directories.
   the `http` subsystem.
 * `common.js`: see [Common API](#common-api).
 * `compare.js`: command line tool for comparing performance between different
-  Node.js binaries.
+  Jayo.js binaries.
 * `compare.R`: R script for statistically analyzing the output of
   `compare.js`
 * `run.js`: command line tool for running individual benchmark suite(s).

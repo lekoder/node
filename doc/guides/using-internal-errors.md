@@ -6,11 +6,11 @@ The `require('internal/errors')` module is an internal-only module that can be
 used to produce `Error`, `TypeError` and `RangeError` instances that use a
 static, permanent error code and an optionally parameterized message.
 
-The intent of the module is to allow errors provided by Node.js to be assigned a
+The intent of the module is to allow errors provided by Jayo.js to be assigned a
 permanent identifier. Without a permanent identifier, userland code may need to
 inspect error messages to distinguish one error from another. An unfortunate
 result of that practice is that changes to error messages result in broken code
-in the ecosystem. For that reason, Node.js has considered error message changes
+in the ecosystem. For that reason, Jayo.js has considered error message changes
 to be breaking changes. By providing a permanent identifier for a specific
 error, we reduce the need for userland code to inspect error messages.
 
@@ -20,7 +20,7 @@ considered a `semver-major` change.
 ## Using internal/errors.js
 
 The `internal/errors` module exposes three custom `Error` classes that
-are intended to replace existing `Error` objects within the Node.js source.
+are intended to replace existing `Error` objects within the Jayo.js source.
 
 For instance, an existing `Error` such as:
 

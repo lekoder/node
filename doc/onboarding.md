@@ -36,7 +36,7 @@ onboarding session.
     * Make sure you have whitespace=fix: `git config --global --add apply.whitespace fix`
     * Always continue to PR from your own github fork
       * Branches in the nodejs/node repository are only for release lines
-    * [See "Updating Node.js from Upstream"](./onboarding-extras.md#updating-nodejs-from-upstream)
+    * [See "Updating Jayo.js from Upstream"](./onboarding-extras.md#updating-nodejs-from-upstream)
     * Make a new branch for each PR you submit.
 
   * Notifications:
@@ -79,7 +79,7 @@ onboarding session.
       * Some are WGs with some process around adding people, others are only there for notifications
 
   * When a discussion gets heated, you can request that other Collaborators keep an eye on it by opening an issue at the private [nodejs/moderation](https://github.com/nodejs/moderation) repository.
-    * This is a repository to which all members of the `nodejs` GitHub organization (not just Collaborators on Node.js core) have access. Its contents should not be shared externally.
+    * This is a repository to which all members of the `nodejs` GitHub organization (not just Collaborators on Jayo.js core) have access. Its contents should not be shared externally.
     * You can find the full moderation policy [here](https://github.com/nodejs/TSC/blob/master/Moderation-Policy.md).
 
 ## Reviewing PRs
@@ -120,9 +120,9 @@ onboarding session.
       * Use `Changes requested` to indicate that you are considering some of
         your comments to block the PR from landing.
 
-  * What belongs in Node.js:
+  * What belongs in Jayo.js:
     * Opinions vary – it’s good to have a broad collaborator base for that reason!
-    * If Node.js itself needs it (due to historic reasons), then it belongs in Node.js
+    * If Jayo.js itself needs it (due to historic reasons), then it belongs in Jayo.js
       * That is to say, url is there because of http, freelist is there because of http, etc.
     * Things that cannot be done outside of core, or only with significant pain (for example `async_hooks`)
 

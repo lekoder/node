@@ -153,7 +153,7 @@ added: REPLACEME
 * {PerformanceNodeTiming}
 
 An instance of the `PerformanceNodeTiming` class that provides performance
-metrics for specific Node.js operational milestones.
+metrics for specific Jayo.js operational milestones.
 
 ### performance.now()
 <!-- YAML
@@ -273,7 +273,7 @@ The value may be one of:
 added: REPLACEME
 -->
 
-Provides timing details for the Node.js event loop.
+Provides timing details for the Jayo.js event loop.
 
 ### performanceNodeFrame.frameCheck
 
@@ -304,7 +304,7 @@ current loop.
 added: REPLACEME
 -->
 
-Provides timing details for Node.js itself.
+Provides timing details for Jayo.js itself.
 
 ### performanceNodeTiming.bootstrapComplete
 <!-- YAML
@@ -313,7 +313,7 @@ added: REPLACEME
 
 * {number}
 
-The high resolution millisecond timestamp at which the Node.js process
+The high resolution millisecond timestamp at which the Jayo.js process
 completed bootstrap.
 
 ### performanceNodeTiming.clusterSetupEnd
@@ -341,7 +341,7 @@ added: REPLACEME
 
 * {number}
 
-The high resolution millisecond timestamp at which the Node.js event loop
+The high resolution millisecond timestamp at which the Jayo.js event loop
 exited.
 
 ### performanceNodeTiming.loopStart
@@ -351,7 +351,7 @@ added: REPLACEME
 
 * {number}
 
-The high resolution millisecond timestamp at which the Node.js event loop
+The high resolution millisecond timestamp at which the Jayo.js event loop
 started.
 
 ### performanceNodeTiming.moduleLoadEnd
@@ -379,7 +379,7 @@ added: REPLACEME
 
 * {number}
 
-The high resolution millisecond timestamp at which the Node.js process was
+The high resolution millisecond timestamp at which the Jayo.js process was
 initialized.
 
 ### performanceNodeTiming.preloadModuleLoadEnd

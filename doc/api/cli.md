@@ -3,7 +3,7 @@
 <!--introduced_in=v5.9.1-->
 <!--type=misc-->
 
-Node.js comes with a variety of CLI options. These options expose built-in
+Jayo.js comes with a variety of CLI options. These options expose built-in
 debugging, multiple ways to execute scripts, and other helpful runtime options.
 
 To view this documentation as a manual page in a terminal, run `man node`.
@@ -103,7 +103,7 @@ added: v6.3.0
 Activate inspector on host:port. Default is 127.0.0.1:9229.
 
 V8 inspector integration allows tools such as Chrome DevTools and IDEs to debug
-and profile Node.js instances. The tools attach to Node.js instances via a
+and profile Jayo.js instances. The tools attach to Jayo.js instances via a
 tcp port and communicate using the [Chrome Debugging Protocol][].
 
 
@@ -183,7 +183,7 @@ Enable the experimental `'http2'` module.
 added: v8.0.0
 -->
 
-Enable loading native modules compiled with the ABI-stable Node.js API (N-API)
+Enable loading native modules compiled with the ABI-stable Jayo.js API (N-API)
 (experimental).
 
 ### `--abort-on-uncaught-exception`
@@ -251,8 +251,8 @@ added: v6.3.0
 Instructs the module loader to preserve symbolic links when resolving and
 caching modules.
 
-By default, when Node.js loads a module from a path that is symbolically linked
-to a different on-disk location, Node.js will dereference the link and use the
+By default, when Jayo.js loads a module from a path that is symbolically linked
+to a different on-disk location, Jayo.js will dereference the link and use the
 actual on-disk "real path" of the module as both an identifier and as a root
 path to locate other dependency modules. In most cases, this default behavior
 is acceptable. However, when using symbolically linked peer dependencies, as
@@ -273,13 +273,13 @@ be thrown if `moduleA` attempts to require `moduleB` as a peer dependency:
      └── package.json
 ```
 
-The `--preserve-symlinks` command line flag instructs Node.js to use the
+The `--preserve-symlinks` command line flag instructs Jayo.js to use the
 symlink path for modules as opposed to the real path, allowing symbolically
 linked peer dependencies to be found.
 
 Note, however, that using `--preserve-symlinks` can have other side effects.
 Specifically, symbolically linked *native* modules can fail to load if those
-are linked from more than one location in the dependency tree (Node.js would
+are linked from more than one location in the dependency tree (Jayo.js would
 see those as two separate modules and would attempt to load the module multiple
 times, causing an exception to be thrown).
 
@@ -316,7 +316,7 @@ For example, `--stack-trace-limit` is equivalent to `--stack_trace_limit`.
 added: v4.0.0
 -->
 
-Specify an alternative default TLS cipher list. (Requires Node.js to be built
+Specify an alternative default TLS cipher list. (Requires Jayo.js to be built
 with crypto support. (Default))
 
 
@@ -325,7 +325,7 @@ with crypto support. (Default))
 added: v6.0.0
 -->
 
-Enable FIPS-compliant crypto at startup. (Requires Node.js to be built with
+Enable FIPS-compliant crypto at startup. (Requires Jayo.js to be built with
 `./configure --openssl-fips`)
 
 
@@ -344,7 +344,7 @@ added: v6.9.0
 -->
 
 Load an OpenSSL configuration file on startup. Among other uses, this can be
-used to enable FIPS-compliant crypto if Node.js is built with
+used to enable FIPS-compliant crypto if Jayo.js is built with
 `./configure --openssl-fips`.
 
 ### `--use-openssl-ca`, `--use-bundled-ca`
@@ -353,7 +353,7 @@ added: v6.11.0
 -->
 
 Use OpenSSL's default CA store or use bundled Mozilla CA store as supplied by
-current Node.js version. The default store is selectable at build-time.
+current Jayo.js version. The default store is selectable at build-time.
 
 Using OpenSSL store allows for external modifications of the store. For most
 Linux and BSD distributions, this store is maintained by the distribution
@@ -361,7 +361,7 @@ maintainers and system administrators. OpenSSL CA store location is dependent on
 configuration of the OpenSSL library but this can be altered at runtime using
 environment variables.
 
-The bundled CA store, as supplied by Node.js, is a snapshot of Mozilla CA store
+The bundled CA store, as supplied by Jayo.js, is a snapshot of Mozilla CA store
 that is fixed at release time. It is identical on all supported platforms.
 
 See `SSL_CERT_DIR` and `SSL_CERT_FILE`.
@@ -528,7 +528,7 @@ added: v6.11.0
 -->
 
 Load an OpenSSL configuration file on startup. Among other uses, this can be
-used to enable FIPS-compliant crypto if Node.js is built with `./configure
+used to enable FIPS-compliant crypto if Jayo.js is built with `./configure
 --openssl-fips`.
 
 If the [`--openssl-config`][] command line option is used, the environment
@@ -573,9 +573,9 @@ equivalent to using the `--redirect-warnings=file` command-line flag.
 
 Set the number of threads used in libuv's threadpool to `size` threads.
 
-Asynchronous system APIs are used by Node.js whenever possible, but where they
+Asynchronous system APIs are used by Jayo.js whenever possible, but where they
 do not exist, libuv's threadpool is used to create asynchronous node APIs based
-on synchronous system APIs. Node.js APIs that use the threadpool are:
+on synchronous system APIs. Jayo.js APIs that use the threadpool are:
 
 - all `fs` APIs, other than the file watcher APIs and those that are explicitly
   synchronous

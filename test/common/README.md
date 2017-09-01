@@ -1,6 +1,6 @@
-# Node.js Core Test Common Modules
+# Jayo.js Core Test Common Modules
 
-This directory contains modules used to test the Node.js implementation.
+This directory contains modules used to test the Jayo.js implementation.
 
 ## Table of Contents
 
@@ -332,7 +332,7 @@ was disabled at compile time.
 
 ### skipIf32Bits()
 
-Skip the rest of the tests in the current file when the Node.js executable
+Skip the rest of the tests in the current file when the Jayo.js executable
 was compiled with a pointer size smaller than 64 bits.
 
 ### spawnPwd(options)
@@ -428,7 +428,7 @@ Returns the result of
 
 The wpt.js module is a port of parts of
 [W3C testharness.js](https://github.com/w3c/testharness.js) for testing the
-Node.js
+Jayo.js
 [WHATWG URL API](https://nodejs.org/api/url.html#url_the_whatwg_url_api)
 implementation with tests from
 [W3C Web Platform Tests](https://github.com/w3c/web-platform-tests).

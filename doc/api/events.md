@@ -6,7 +6,7 @@
 
 <!--type=module-->
 
-Much of the Node.js core API is built around an idiomatic asynchronous
+Much of the Jayo.js core API is built around an idiomatic asynchronous
 event-driven architecture in which certain kinds of objects (called "emitters")
 periodically emit named events that cause Function objects ("listeners") to be
 called.
@@ -130,19 +130,19 @@ myEmitter.emit('event');
 
 When an error occurs within an `EventEmitter` instance, the typical action is
 for an `'error'` event to be emitted. These are treated as special cases
-within Node.js.
+within Jayo.js.
 
 If an `EventEmitter` does _not_ have at least one listener registered for the
 `'error'` event, and an `'error'` event is emitted, the error is thrown, a
-stack trace is printed, and the Node.js process exits.
+stack trace is printed, and the Jayo.js process exits.
 
 ```js
 const myEmitter = new MyEmitter();
 myEmitter.emit('error', new Error('whoops!'));
-// Throws and crashes Node.js
+// Throws and crashes Jayo.js
 ```
 
-To guard against crashing the Node.js process, a listener can be registered
+To guard against crashing the Jayo.js process, a listener can be registered
 on the [`process` object's `uncaughtException` event][] or the [`domain`][] module
 can be used. (Note, however, that the `domain` module has been deprecated.)
 

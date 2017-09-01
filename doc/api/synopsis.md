@@ -6,11 +6,11 @@
 `node [options] [v8 options] [script.js | -e "script" | - ] [arguments]`
 
 Please see the [Command Line Options][] document for information about
-different options and ways to run scripts with Node.js.
+different options and ways to run scripts with Jayo.js.
 
 ## Example
 
-An example of a [web server][] written with Node.js which responds with
+An example of a [web server][] written with Jayo.js which responds with
 `'Hello World'`:
 
 ```js
@@ -31,7 +31,7 @@ server.listen(port, hostname, () => {
 ```
 
 To run the server, put the code into a file called `example.js` and execute
-it with Node.js:
+it with Jayo.js:
 
 ```txt
 $ node example.js

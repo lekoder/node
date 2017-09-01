@@ -18,7 +18,7 @@ The `repl` module exports the `repl.REPLServer` class. While running, instances
 of `repl.REPLServer` will accept individual lines of user input, evaluate those
 according to a user-defined evaluation function, then output the result. Input
 and output may be from `stdin` and `stdout`, respectively, or may be connected
-to any Node.js [stream][].
+to any Jayo.js [stream][].
 
 Instances of `repl.REPLServer` support automatic completion of inputs,
 simplistic Emacs-style line editing, multi-line inputs, ANSI-styled output,
@@ -50,10 +50,10 @@ function welcome(name) {
   return `Hello ${name}!`;
 }
 
-welcome('Node.js User');
+welcome('Jayo.js User');
 
 // ^D
-'Hello Node.js User!'
+'Hello Jayo.js User!'
 >
 ```
 
@@ -70,7 +70,7 @@ The following key combinations in the REPL have these special effects:
 ### Default Evaluation
 
 By default, all instances of `repl.REPLServer` use an evaluation function that
-evaluates JavaScript expressions and provides access to Node.js' built-in
+evaluates JavaScript expressions and provides access to Jayo.js' built-in
 modules. This default behavior can be overridden by passing in an alternative
 evaluation function when the `repl.REPLServer` instance is created.
 
@@ -130,9 +130,9 @@ Object.defineProperty(r.context, 'm', {
 });
 ```
 
-#### Accessing Core Node.js Modules
+#### Accessing Core Jayo.js Modules
 
-The default evaluator will automatically load Node.js core modules into the
+The default evaluator will automatically load Jayo.js core modules into the
 REPL environment when used. For instance, unless otherwise declared as a
 global or scoped variable, the input `fs` will be evaluated on-demand as
 `global.fs = require('fs')`.
@@ -351,8 +351,8 @@ replServer.defineCommand('saybye', function saybye() {
 The new commands can then be used from within the REPL instance:
 
 ```txt
-> .sayhello Node.js User
-Hello, Node.js User!
+> .sayhello Jayo.js User
+Hello, Jayo.js User!
 > .saybye
 Goodbye!
 ```
@@ -464,10 +464,10 @@ const repl = require('repl');
 repl.start('$ ');
 ```
 
-## The Node.js REPL
+## The Jayo.js REPL
 
-Node.js itself uses the `repl` module to provide its own interactive interface
-for executing JavaScript. This can be used by executing the Node.js binary
+Jayo.js itself uses the `repl` module to provide its own interactive interface
+for executing JavaScript. This can be used by executing the Jayo.js binary
 without passing any arguments (or by passing the `-i` argument):
 
 <!-- eslint-skip -->
@@ -487,7 +487,7 @@ undefined
 
 ### Environment Variable Options
 
-Various behaviors of the Node.js REPL can be customized using the following
+Various behaviors of the Jayo.js REPL can be customized using the following
 environment variables:
 
  - `NODE_REPL_HISTORY` - When a valid path is given, persistent REPL history
@@ -502,7 +502,7 @@ environment variables:
 
 ### Persistent History
 
-By default, the Node.js REPL will persist history between `node` REPL sessions
+By default, the Jayo.js REPL will persist history between `node` REPL sessions
 by saving inputs to a `.node_repl_history` file located in the user's home
 directory. This can be disabled by setting the environment variable
 `NODE_REPL_HISTORY=""`.
@@ -515,7 +515,7 @@ deprecated: v3.0.0
 
 > Stability: 0 - Deprecated: Use `NODE_REPL_HISTORY` instead.
 
-Previously in Node.js/io.js v2.x, REPL history was controlled by using a
+Previously in Jayo.js/io.js v2.x, REPL history was controlled by using a
 `NODE_REPL_HISTORY_FILE` environment variable, and the history was saved in JSON
 format. This variable has now been deprecated, and the old JSON REPL history
 file will be automatically converted to a simplified plain text format. This new
@@ -523,9 +523,9 @@ file will be saved to either the user's home directory, or a directory defined
 by the `NODE_REPL_HISTORY` variable, as documented in the
 [Environment Variable Options](#repl_environment_variable_options).
 
-### Using the Node.js REPL with advanced line-editors
+### Using the Jayo.js REPL with advanced line-editors
 
-For advanced line-editors, start Node.js with the environment variable
+For advanced line-editors, start Jayo.js with the environment variable
 `NODE_NO_READLINE=1`. This will start the main and debugger REPL in canonical
 terminal settings, which will allow use with `rlwrap`.
 
@@ -538,7 +538,7 @@ alias node="env NODE_NO_READLINE=1 rlwrap node"
 ### Starting multiple REPL instances against a single running instance
 
 It is possible to create and run multiple REPL instances against a single
-running instance of Node.js that share a single `global` object but have
+running instance of Jayo.js that share a single `global` object but have
 separate I/O interfaces.
 
 The following example, for instance, provides separate REPLs on `stdin`, a Unix
@@ -550,7 +550,7 @@ const repl = require('repl');
 let connections = 0;
 
 repl.start({
-  prompt: 'Node.js via stdin> ',
+  prompt: 'Jayo.js via stdin> ',
   input: process.stdin,
   output: process.stdout
 });
@@ -558,7 +558,7 @@ repl.start({
 net.createServer((socket) => {
   connections += 1;
   repl.start({
-    prompt: 'Node.js via Unix socket> ',
+    prompt: 'Jayo.js via Unix socket> ',
     input: socket,
     output: socket
   }).on('exit', () => {
@@ -569,7 +569,7 @@ net.createServer((socket) => {
 net.createServer((socket) => {
   connections += 1;
   repl.start({
-    prompt: 'Node.js via TCP socket> ',
+    prompt: 'Jayo.js via TCP socket> ',
     input: socket,
     output: socket
   }).on('exit', () => {
@@ -584,7 +584,7 @@ for instance, is useful for connecting to TCP sockets, while `socat` can be used
 to connect to both Unix and TCP sockets.
 
 By starting a REPL from a Unix socket-based server instead of stdin, it is
-possible to connect to a long-running Node.js process without restarting it.
+possible to connect to a long-running Jayo.js process without restarting it.
 
 For an example of running a "full-featured" (`terminal`) REPL over
 a `net.Server` and `net.Socket` instance, see: https://gist.github.com/2209310

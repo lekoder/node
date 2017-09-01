@@ -96,7 +96,7 @@ Error: EISDIR: illegal operation on a directory, read
     <stack trace.>
 ```
 
-*Note:* On Windows Node.js follows the concept of per-drive working directory.
+*Note:* On Windows Jayo.js follows the concept of per-drive working directory.
 This behavior can be observed when using a drive path without a backslash. For
 example `fs.readdirSync('c:\\')` can potentially return a different result than
 `fs.readdirSync('c:')`. For more information, see
@@ -909,7 +909,7 @@ fs.exists('/etc/passwd', (exists) => {
 ```
 
 **Note that the parameter to this callback is not consistent with other
-Node.js callbacks.** Normally, the first parameter to a Node.js callback is
+Jayo.js callbacks.** Normally, the first parameter to a Jayo.js callback is
 an `err` parameter, optionally followed by other parameters. The
 `fs.exists()` callback has only one boolean parameter. This is one reason
 `fs.access()` is recommended instead of `fs.exists()`.
@@ -1010,7 +1010,7 @@ Returns `true` if the file exists, `false` otherwise.
 
 Note that `fs.exists()` is deprecated, but `fs.existsSync()` is not.
 (The `callback` parameter to `fs.exists()` accepts parameters that are
-inconsistent with other Node.js callbacks. `fs.existsSync()` does not use
+inconsistent with other Jayo.js callbacks. `fs.existsSync()` does not use
 a callback.)
 
 ## fs.fchmod(fd, mode, callback)
@@ -1169,7 +1169,7 @@ For example, the following program retains only the first four bytes of the file
 
 ```js
 console.log(fs.readFileSync('temp.txt', 'utf8'));
-// Prints: Node.js
+// Prints: Jayo.js
 
 // get the file descriptor of the file to be truncated
 const fd = fs.openSync('temp.txt', 'r+');
@@ -1187,7 +1187,7 @@ extended part is filled with null bytes ('\0'). For example,
 
 ```js
 console.log(fs.readFileSync('temp.txt', 'utf-8'));
-// Prints: Node.js
+// Prints: Jayo.js
 
 // get the file descriptor of the file to be truncated
 const fd = fs.openSync('temp.txt', 'r+');
@@ -1198,7 +1198,7 @@ fs.ftruncate(fd, 10, (err) => {
   console.log(fs.readFileSync('temp.txt'));
 });
 // Prints: <Buffer 4e 6f 64 65 2e 6a 73 00 00 00>
-// ('Node.js\0\0\0' in UTF8)
+// ('Jayo.js\0\0\0' in UTF8)
 ```
 
 The last three bytes are null bytes ('\0'), to compensate the over-truncation.
@@ -1598,7 +1598,7 @@ fs.open('<directory>', 'a+', (err, fd) => {
 
 Some characters (`< > : " / \ | ? *`) are reserved under Windows as documented
 by [Naming Files, Paths, and Namespaces][]. Under NTFS, if the filename contains
-a colon, Node.js will open a file system stream, as described by
+a colon, Jayo.js will open a file system stream, as described by
 [this MSDN page][MSDN-Using-Streams].
 
 Functions based on `fs.open()` exhibit this behavior as well. eg.
@@ -2549,7 +2549,7 @@ to `'utf8'`.
 Example:
 
 ```js
-fs.writeFile('message.txt', 'Hello Node.js', (err) => {
+fs.writeFile('message.txt', 'Hello Jayo.js', (err) => {
   if (err) throw err;
   console.log('The file has been saved!');
 });
@@ -2558,7 +2558,7 @@ fs.writeFile('message.txt', 'Hello Node.js', (err) => {
 If `options` is a string, then it specifies the encoding. Example:
 
 ```js
-fs.writeFile('message.txt', 'Hello Node.js', 'utf8', callback);
+fs.writeFile('message.txt', 'Hello Jayo.js', 'utf8', callback);
 ```
 
 Any specified file descriptor has to support writing.

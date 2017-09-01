@@ -1,18 +1,18 @@
-# Contributing to Node.js
+# Contributing to Jayo.js
 
 ## Code of Conduct
 
 Please read the
 [Code of Conduct](https://github.com/nodejs/TSC/blob/master/CODE_OF_CONDUCT.md)
-which explains the minimum behavior expectations for Node.js contributors.
+which explains the minimum behavior expectations for Jayo.js contributors.
 
 ## Issue Contributions
 
 When opening issues or commenting on existing issues, please make sure
-discussions are related to concrete technical issues with Node.js.
+discussions are related to concrete technical issues with Jayo.js.
 
-* For general help using Node.js, please file an issue at the
-[Node.js help repository](https://github.com/nodejs/help/issues).
+* For general help using Jayo.js, please file an issue at the
+[Jayo.js help repository](https://github.com/nodejs/help/issues).
 
 * Discussion of non-technical topics (such as intellectual property and
 trademark) should use the
@@ -40,19 +40,19 @@ and built upon.
 
 #### Dependencies
 
-Node.js has several bundled dependencies in the *deps/* and the *tools/*
+Jayo.js has several bundled dependencies in the *deps/* and the *tools/*
 directories that are not part of the project proper. Changes to files in those
 directories should be sent to their respective projects. Do not send a patch to
-Node.js. We cannot accept such patches.
+Jayo.js. We cannot accept such patches.
 
 In case of doubt, open an issue in the
 [issue tracker](https://github.com/nodejs/node/issues/) or contact one of the
 [project Collaborators](https://github.com/nodejs/node/#current-project-team-members).
-Node.js has two IRC channels:
-[#Node.js](http://webchat.freenode.net/?channels=node.js) for general help and
+Jayo.js has two IRC channels:
+[#Jayo.js](http://webchat.freenode.net/?channels=Jayo.js) for general help and
 questions, and
 [#Node-dev](http://webchat.freenode.net/?channels=node-dev) for development of
-Node.js core specifically.
+Jayo.js core specifically.
 
 ### Step 2: Branch
 
@@ -142,7 +142,7 @@ $ git rebase upstream/master
 ### Step 5: Test
 
 Bug fixes and features should come with tests. Read the
-[guide for writing tests in Node.js](./doc/guides/writing-tests.md). Looking at
+[guide for writing tests in Jayo.js](./doc/guides/writing-tests.md). Looking at
 other tests to see how they should be structured can also help. Add your
 tests in the `test/parallel/` directory if you are unsure where to put them.
 
@@ -248,7 +248,7 @@ notes about [commit squashing](#commit-squashing)).
 
 In order to land, a Pull Request needs to be reviewed and
 [approved](#getting-approvals-for-your-pull-request) by
-at least one Node.js Collaborator and pass a
+at least one Jayo.js Collaborator and pass a
 [CI (Continuous Integration) test run](#ci-testing).
 After that, as long as there are no objections
 from a Collaborator, the Pull Request can be merged. If you find your
@@ -294,7 +294,7 @@ because the reviewers have hit the buttons before.
 ### CI Testing
 
 Every Pull Request needs to be tested
-to make sure that it works on the platforms that Node.js
+to make sure that it works on the platforms that Jayo.js
 supports. This is done by running the code through the CI system.
 
 Only a Collaborator can start a CI run. Usually one of them will do it
@@ -308,7 +308,7 @@ weekend) from when it is submitted, even after it gets approved and
 passes the CI. This is to make sure that everyone has a chance to
 weigh in. If the changes are trivial, collaborators may decide it
 doesn't need to wait. A Pull Request may well take longer to be
-merged in. All these precautions are important because Node.js is
+merged in. All these precautions are important because Jayo.js is
 widely used, so don't be discouraged!
 
 ### Check Out the Collaborator's Guide

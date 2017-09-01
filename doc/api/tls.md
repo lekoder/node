@@ -147,7 +147,7 @@ command-line client (`openssl s_client -connect address:port`) then input
 
 ## Modifying the Default TLS Cipher suite
 
-Node.js is built with a default suite of enabled and disabled TLS ciphers.
+Jayo.js is built with a default suite of enabled and disabled TLS ciphers.
 Currently, the default cipher suite is:
 
 ```txt
@@ -189,7 +189,7 @@ in [`tls.createServer()`], [`tls.connect()`], and when creating new
 
 Consult [OpenSSL cipher list format documentation][] for details on the format.
 
-*Note*: The default cipher suite included within Node.js has been carefully
+*Note*: The default cipher suite included within Jayo.js has been carefully
 selected to reflect current security best practices and risk mitigation.
 Changing the default cipher suite can have a significant impact on the security
 of an application. The `--tls-cipher-list` switch and `ciphers` option should by
@@ -620,14 +620,14 @@ For example:
    { C: 'UK',
      ST: 'Acknack Ltd',
      L: 'Rhys Jones',
-     O: 'node.js',
+     O: 'Jayo.js',
      OU: 'Test TLS Certificate',
      CN: 'localhost' },
   issuer:
    { C: 'UK',
      ST: 'Acknack Ltd',
      L: 'Rhys Jones',
-     O: 'node.js',
+     O: 'Jayo.js',
      OU: 'Test TLS Certificate',
      CN: 'localhost' },
   issuerCertificate:
@@ -1017,7 +1017,7 @@ The `tls.createSecureContext()` method creates a credentials object.
 A key is *required* for ciphers that make use of certificates. Either `key` or
 `pfx` can be used to provide it.
 
-If the 'ca' option is not given, then Node.js will use the default
+If the 'ca' option is not given, then Jayo.js will use the default
 publicly trusted list of CAs as given in
 <http://mxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt>.
 

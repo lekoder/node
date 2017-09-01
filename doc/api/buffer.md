@@ -6,12 +6,12 @@
 
 Prior to the introduction of [`TypedArray`] in ECMAScript 2015 (ES6), the
 JavaScript language had no mechanism for reading or manipulating streams
-of binary data. The `Buffer` class was introduced as part of the Node.js
+of binary data. The `Buffer` class was introduced as part of the Jayo.js
 API to make it possible to interact with octet streams in the context of things
 like TCP streams and file system operations.
 
 Now that [`TypedArray`] has been added in ES6, the `Buffer` class implements the
-[`Uint8Array`] API in a manner that is more optimized and suitable for Node.js'
+[`Uint8Array`] API in a manner that is more optimized and suitable for Jayo.js'
 use cases.
 
 Instances of the `Buffer` class are similar to arrays of integers but
@@ -19,7 +19,7 @@ correspond to fixed-sized, raw memory allocations outside the V8 heap.
 The size of the `Buffer` is established when it is created and cannot be
 resized.
 
-The `Buffer` class is a global within Node.js, making it unlikely that one
+The `Buffer` class is a global within Jayo.js, making it unlikely that one
 would need to ever use `require('buffer').Buffer`.
 
 Examples:
@@ -49,19 +49,19 @@ const buf6 = Buffer.from('tést', 'latin1');
 
 ## `Buffer.from()`, `Buffer.alloc()`, and `Buffer.allocUnsafe()`
 
-In versions of Node.js prior to v6, `Buffer` instances were created using the
+In versions of Jayo.js prior to v6, `Buffer` instances were created using the
 `Buffer` constructor function, which allocates the returned `Buffer`
 differently based on what arguments are provided:
 
 * Passing a number as the first argument to `Buffer()` (e.g. `new Buffer(10)`),
-  allocates a new `Buffer` object of the specified size. Prior to Node.js 8.0.0,
+  allocates a new `Buffer` object of the specified size. Prior to Jayo.js 8.0.0,
   the memory allocated for such `Buffer` instances is *not* initialized and
   *can contain sensitive data*. Such `Buffer` instances *must* be subsequently
   initialized by using either [`buf.fill(0)`][`buf.fill()`] or by writing to the
   `Buffer` completely. While this behavior is *intentional* to improve
   performance, development experience has demonstrated that a more explicit
   distinction is required between creating a fast-but-uninitialized `Buffer`
-  versus creating a slower-but-safer `Buffer`. Starting in Node.js 8.0.0,
+  versus creating a slower-but-safer `Buffer`. Starting in Jayo.js 8.0.0,
   `Buffer(num)` and `new Buffer(num)` will return a `Buffer` with initialized
   memory.
 * Passing a string, array, or `Buffer` as the first argument copies the
@@ -112,7 +112,7 @@ use the shared internal memory pool.
 added: v5.10.0
 -->
 
-Node.js can be started using the `--zero-fill-buffers` command line option to
+Jayo.js can be started using the `--zero-fill-buffers` command line option to
 force all newly allocated `Buffer` instances created using either
 `new Buffer(size)`, [`Buffer.allocUnsafe()`], [`Buffer.allocUnsafeSlow()`] or
 `new SlowBuffer(size)` to be *automatically zero-filled* upon creation. Use of
@@ -170,7 +170,7 @@ console.log(buf.toString('hex'));
 console.log(buf.toString('base64'));
 ```
 
-The character encodings currently supported by Node.js include:
+The character encodings currently supported by Jayo.js include:
 
 * `'ascii'` - for 7-bit ASCII data only. This encoding is fast and will strip
   the high bit if set.
@@ -453,7 +453,7 @@ Allocates a new `Buffer` of `size` bytes.  If the `size` is larger than
 [`buffer.constants.MAX_LENGTH`] or smaller than 0, a [`RangeError`] will be
 thrown. A zero-length `Buffer` will be created if `size` is 0.
 
-Prior to Node.js 8.0.0, the underlying memory for `Buffer` instances
+Prior to Jayo.js 8.0.0, the underlying memory for `Buffer` instances
 created in this way is *not initialized*. The contents of a newly created
 `Buffer` are unknown and *may contain sensitive data*. Use
 [`Buffer.alloc(size)`][`Buffer.alloc()`] instead to initialize a `Buffer`
@@ -997,14 +997,14 @@ setting does nothing.
 Example: Copy an ASCII string into a `Buffer`, one byte at a time
 
 ```js
-const str = 'Node.js';
+const str = 'Jayo.js';
 const buf = Buffer.allocUnsafe(str.length);
 
 for (let i = 0; i < str.length; i++) {
   buf[i] = str.charCodeAt(i);
 }
 
-// Prints: Node.js
+// Prints: Jayo.js
 console.log(buf.toString('ascii'));
 ```
 

@@ -21,7 +21,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question('What do you think of Node.js? ', (answer) => {
+rl.question('What do you think of Jayo.js? ', (answer) => {
   // TODO: Log the answer in a database
   console.log(`Thank you for your valuable feedback: ${answer}`);
 
@@ -29,7 +29,7 @@ rl.question('What do you think of Node.js? ', (answer) => {
 });
 ```
 
-*Note*: Once this code is invoked, the Node.js application will not
+*Note*: Once this code is invoked, the Jayo.js application will not
 terminate until the `readline.Interface` is closed because the interface
 waits for data to be received on the `input` stream.
 
@@ -124,7 +124,7 @@ rl.on('resume', () => {
 added: v0.7.5
 -->
 
-The `'SIGCONT'` event is emitted when a Node.js process previously moved into
+The `'SIGCONT'` event is emitted when a Jayo.js process previously moved into
 the background using `<ctrl>-Z` (i.e. `SIGTSTP`) is then brought back to the
 foreground using fg(1p).
 
@@ -173,7 +173,7 @@ added: v0.7.5
 
 The `'SIGTSTP'` event is emitted when the `input` stream receives a `<ctrl>-Z`
 input, typically known as `SIGTSTP`. If there are no `SIGTSTP` event listeners
-registered when the `input` stream receives a `SIGTSTP`, the Node.js process
+registered when the `input` stream receives a `SIGTSTP`, the Jayo.js process
 will be sent to the background.
 
 When the program is resumed using fg(1p), the `'pause'` and `SIGCONT` events

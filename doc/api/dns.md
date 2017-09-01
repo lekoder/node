@@ -170,7 +170,7 @@ such as no available file descriptors.
 `dns.lookup()` does not necessarily have anything to do with the DNS protocol.
 The implementation uses an operating system facility that can associate names
 with addresses, and vice versa. This implementation can have subtle but
-important consequences on the behavior of any Node.js program. Please take some
+important consequences on the behavior of any Jayo.js program. Please take some
 time to consult the [Implementation considerations section][] before using
 `dns.lookup()`.
 
@@ -608,7 +608,7 @@ Each DNS query can return one of the following error codes:
 Although [`dns.lookup()`][] and the various `dns.resolve*()/dns.reverse()`
 functions have the same goal of associating a network name with a network
 address (or vice versa), their behavior is quite different. These differences
-can have subtle but significant consequences on the behavior of Node.js
+can have subtle but significant consequences on the behavior of Jayo.js
 programs.
 
 ### `dns.lookup()`

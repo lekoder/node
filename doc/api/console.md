@@ -10,14 +10,14 @@ JavaScript console mechanism provided by web browsers.
 The module exports two specific components:
 
 * A `Console` class with methods such as `console.log()`, `console.error()` and
-  `console.warn()` that can be used to write to any Node.js stream.
+  `console.warn()` that can be used to write to any Jayo.js stream.
 * A global `console` instance configured to write to [`process.stdout`][] and
   [`process.stderr`][].  The global `console` can be used without calling
   `require('console')`.
 
 ***Warning***: The global console object's methods are neither consistently
 synchronous like the browser APIs they resemble, nor are they consistently
-asynchronous like all other Node.js streams. See the [note on process I/O][] for
+asynchronous like all other Jayo.js streams. See the [note on process I/O][] for
 more information.
 
 Example using the global `console`:
@@ -123,19 +123,19 @@ console.assert(false, 'Whoops %s', 'didn\'t work');
 // AssertionError: Whoops didn't work
 ```
 
-*Note*: The `console.assert()` method is implemented differently in Node.js
+*Note*: The `console.assert()` method is implemented differently in Jayo.js
 than the `console.assert()` method [available in browsers][web-api-assert].
 
 Specifically, in browsers, calling `console.assert()` with a falsy
 assertion will cause the `message` to be printed to the console without
-interrupting execution of subsequent code. In Node.js, however, a falsy
+interrupting execution of subsequent code. In Jayo.js, however, a falsy
 assertion will cause an `AssertionError` to be thrown.
 
 Functionality approximating that implemented by browsers can be implemented
-by extending Node.js' `console` and overriding the `console.assert()` method.
+by extending Jayo.js' `console` and overriding the `console.assert()` method.
 
 In the following example, a simple module is created that extends and overrides
-the default behavior of `console` in Node.js.
+the default behavior of `console` in Jayo.js.
 
 <!-- eslint-disable func-name-matching -->
 ```js
@@ -180,7 +180,7 @@ TTY. When `stdout` is not a TTY, this method does nothing.
 *Note*: The specific operation of `console.clear()` can vary across operating
 systems and terminal types. For most Linux operating systems, `console.clear()`
 operates similarly to the `clear` shell command. On Windows, `console.clear()`
-will clear only the output in the current terminal viewport for the Node.js
+will clear only the output in the current terminal viewport for the Jayo.js
 binary.
 
 ### console.count([label])
@@ -377,7 +377,7 @@ console.timeEnd('100-elements');
 // prints 100-elements: 225.438ms
 ```
 
-*Note*: As of Node.js v6.0.0, `console.timeEnd()` deletes the timer to avoid
+*Note*: As of Jayo.js v6.0.0, `console.timeEnd()` deletes the timer to avoid
 leaking it. On older versions, the timer persisted. This allowed
 `console.timeEnd()` to be called multiple times for the same label. This
 functionality was unintended and is no longer supported.

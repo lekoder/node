@@ -3,7 +3,7 @@
 > Stability: 1 - Experimental
 
 The `async_hooks` module provides an API to register callbacks tracking the
-lifetime of asynchronous resources created inside a Node.js application.
+lifetime of asynchronous resources created inside a Jayo.js application.
 It can be accessed using:
 
 ```js

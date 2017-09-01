@@ -126,7 +126,7 @@ Note that specifying both a `'listening'` event listener and passing a
 `callback` to the `socket.bind()` method is not harmful but not very
 useful.
 
-A bound datagram socket keeps the Node.js process running to receive
+A bound datagram socket keeps the Jayo.js process running to receive
 datagram messages.
 
 If binding fails, an `'error'` event is generated. In rare case (e.g.
@@ -187,7 +187,7 @@ underlying socket handle allowing connection handling duties to be shared.
 When `exclusive` is `true`, however, the handle is not shared and attempted
 port sharing results in an error.
 
-A bound datagram socket keeps the Node.js process running to receive
+A bound datagram socket keeps the Jayo.js process running to receive
 datagram messages.
 
 If binding fails, an `'error'` event is generated. In rare case (e.g.
@@ -232,9 +232,9 @@ drop membership on all valid interfaces.
 added: v0.9.1
 -->
 
-By default, binding a socket will cause it to block the Node.js process from
+By default, binding a socket will cause it to block the Jayo.js process from
 exiting as long as the socket is open. The `socket.unref()` method can be used
-to exclude the socket from the reference counting that keeps the Node.js
+to exclude the socket from the reference counting that keeps the Jayo.js
 process active. The `socket.ref()` method adds the socket back to the reference
 counting and restores the default behavior.
 
@@ -296,7 +296,7 @@ is assigned a random port number and is bound to the "all interfaces" address
 An optional `callback` function  may be specified to as a way of reporting
 DNS errors or for determining when it is safe to reuse the `buf` object.
 Note that DNS lookups delay the time to send for at least one tick of the
-Node.js event loop.
+Jayo.js event loop.
 
 The only way to know for sure that the datagram has been sent is by using a
 `callback`. If an error occurs and a `callback` is given, the error will be
@@ -419,9 +419,9 @@ The default on most systems is 64 but can vary.
 added: v0.9.1
 -->
 
-By default, binding a socket will cause it to block the Node.js process from
+By default, binding a socket will cause it to block the Jayo.js process from
 exiting as long as the socket is open. The `socket.unref()` method can be used
-to exclude the socket from the reference counting that keeps the Node.js
+to exclude the socket from the reference counting that keeps the Jayo.js
 process active, allowing the process to exit even if the socket is still
 listening.
 
@@ -432,7 +432,7 @@ chained.
 
 ### Change to asynchronous `socket.bind()` behavior
 
-As of Node.js v0.10, [`dgram.Socket#bind()`][] changed to an asynchronous
+As of Jayo.js v0.10, [`dgram.Socket#bind()`][] changed to an asynchronous
 execution model. Legacy code that assumes synchronous behavior, as in the
 following example:
 

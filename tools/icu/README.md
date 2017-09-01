@@ -50,7 +50,7 @@ python tools/icu/shrink-icu-src.py
 make
 ```
 
-- Test this newly default-generated Node.js
+- Test this newly default-generated Jayo.js
 
 <!-- eslint-disable strict -->
 ```js
@@ -89,7 +89,7 @@ make test-ci
 
 ## Notes about these tools
 
-The files in this directory were written for the node.js effort. It's
+The files in this directory were written for the Jayo.js effort. It's
 the intent of their author (Steven R. Loomis / srl295) to merge them
 upstream into ICU, pending much discussion within the ICU-PMC.
 

@@ -1,10 +1,10 @@
-# Node.js Release Process
+# Jayo.js Release Process
 
-This document describes the technical aspects of the Node.js release process. The intended audience is those who have been authorized by the Node.js Foundation Technical Steering Committee (TSC) to create, promote, and sign official release builds for Node.js, hosted on <https://nodejs.org/>.
+This document describes the technical aspects of the Jayo.js release process. The intended audience is those who have been authorized by the Jayo.js Foundation Technical Steering Committee (TSC) to create, promote, and sign official release builds for Jayo.js, hosted on <https://nodejs.org/>.
 
 ## Who can make a release?
 
-Release authorization is given by the Node.js TSC. Once authorized, an individual must be have the following:
+Release authorization is given by the Jayo.js TSC. Once authorized, an individual must be have the following:
 
 ### 1. Jenkins Release Access
 
@@ -16,7 +16,7 @@ There are three relevant Jenkins jobs that should be used for a release flow:
 
 **c.** **Release builds:** **[iojs+release](https://ci-release.nodejs.org/job/iojs+release/)** does all of the work to build all required release assets. Promotion of the release files is a manual step once they are ready (see below).
 
-The [Node.js build team](https://github.com/nodejs/build) is able to provide this access to individuals authorized by the TSC.
+The [Jayo.js build team](https://github.com/nodejs/build) is able to provide this access to individuals authorized by the TSC.
 
 ### 2. <nodejs.org> Access
 
@@ -26,7 +26,7 @@ The Jenkins release build slaves upload their artifacts to the web server as the
 
 Nightly builds are promoted automatically on the server by a cron task for the _dist_ user.
 
-Release builds require manual promotion by an individual with SSH access to the server as the _dist_ user. The [Node.js build team](https://github.com/nodejs/build) is able to provide this access to individuals authorized by the TSC.
+Release builds require manual promotion by an individual with SSH access to the server as the _dist_ user. The [Jayo.js build team](https://github.com/nodejs/build) is able to provide this access to individuals authorized by the TSC.
 
 ### 3. A Publicly Listed GPG Key
 
@@ -40,7 +40,7 @@ $ gpg --keyserver pool.sks-keyservers.net --recv-keys <FINGERPRINT>
 
 The key you use may be a child/subkey of an existing key.
 
-Additionally, full GPG key fingerprints for individuals authorized to release should be listed in the Node.js GitHub README.md file.
+Additionally, full GPG key fingerprints for individuals authorized to release should be listed in the Jayo.js GitHub README.md file.
 
 ## How to create a release
 
@@ -106,10 +106,10 @@ $ changelog-maker --group --start-ref v2.3.1
 
 #### Step 2: Update the appropriate doc/changelogs/CHANGELOG_*.md file
 
-There is a separate `CHANGELOG_*.md` file for each major Node.js release line.
+There is a separate `CHANGELOG_*.md` file for each major Jayo.js release line.
 These are located in the `doc/changelogs/` directory. Once the formatted list
 of changes is collected, it must be added to the top of the relevant changelog
-file in the release branch (e.g. a release for Node.js v4 would be added to the
+file in the release branch (e.g. a release for Jayo.js v4 would be added to the
 `/doc/changelogs/CHANGELOG_V4.md`).
 
 **Please do *not* add the changelog entries to the root `CHANGELOG.md` file.**
@@ -221,7 +221,7 @@ Jenkins collects the artifacts from the builds, allowing you to download and ins
 
 Once you have produced builds that you're happy with, create a new tag. By waiting until this stage to create tags, you can discard a proposed release if something goes wrong or additional commits are required. Once you have created a tag and pushed it to GitHub, you ***should not*** delete and re-tag. If you make a mistake after tagging then you'll have to version-bump and start again and count that tag/version as lost.
 
-Tag summaries have a predictable format, look at a recent tag to see, `git tag -v v6.0.0`. The message should look something like `2016-04-26 Node.js v6.0.0 (Current) Release`.
+Tag summaries have a predictable format, look at a recent tag to see, `git tag -v v6.0.0`. The message should look something like `2016-04-26 Jayo.js v6.0.0 (Current) Release`.
 
 Install `git-secure-tag` npm module:
 
@@ -232,7 +232,7 @@ $ npm install -g git-secure-tag
 Create a tag using the following command:
 
 ```console
-$ git secure-tag <vx.y.z> <commit-sha> -sm 'YYYY-MM-DD Node.js vx.y.z (Release Type) Release'
+$ git secure-tag <vx.y.z> <commit-sha> -sm 'YYYY-MM-DD Jayo.js vx.y.z (Release Type) Release'
 ```
 
 The tag **must** be signed using the GPG key that's listed for you on the project README.

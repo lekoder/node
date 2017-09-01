@@ -8,13 +8,13 @@ feel free to [open an issue](#reporting-issues).
 
 ## Code of Conduct
 
-The [Node.js Code of Conduct][] applies to this repo.
+The [Jayo.js Code of Conduct][] applies to this repo.
 
-[Node.js Code of Conduct]: https://github.com/nodejs/node/blob/master/CODE_OF_CONDUCT.md
+[Jayo.js Code of Conduct]: https://github.com/nodejs/node/blob/master/CODE_OF_CONDUCT.md
 
 ## Governance
 
-This project falls under the governance of the Node.js Diagnostics WG as
+This project falls under the governance of the Jayo.js Diagnostics WG as
 described at <https://github.com/nodejs/diagnostics/blob/master/GOVERNANCE.md>.
 
 ## Developer's Certificate of Origin 1.1

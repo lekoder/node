@@ -2,7 +2,7 @@
 
 See the discussion on [#14042](https://github.com/npm/npm/issues/14042) for
 more context on this release, which is intended to address a serious regression
-in shrinkwrap behavior in the version of the CLI currently bundled with Node.js
+in shrinkwrap behavior in the version of the CLI currently bundled with Jayo.js
 6 LTS "Boron". You should never install this version directly; instead update
 to `npm@4`, which has everything in this release and more.
 
@@ -16,8 +16,8 @@ to `npm@4`, which has everything in this release and more.
 
 #### UPDATE SUPPORT MATRIX
 
-With the advent of the second official Node.js LTS release, Node 6.x
-'Boron', the Node.js project has now officially dropped versions 0.10
+With the advent of the second official Jayo.js LTS release, Node 6.x
+'Boron', the Jayo.js project has now officially dropped versions 0.10
 and 0.12 out of the maintenance phase of LTS. (Also, Node 5 was never
 part of LTS, and will see no further support now that Node 7 has been
 released.) As a small team with limited resources, the npm CLI team is
@@ -496,7 +496,7 @@ scoped modules found in `bundleDependencies`.
 
 * [`e2d7e78`](https://github.com/npm/npm/commit/e2d7e7820a7875ed96e0382dc1e91b8df4e83746)
   [#13319](https://github.com/npm/npm/pull/13319)
-  As Node.js 0.8 is no longer supported, remove mention of it from the README.
+  As Jayo.js 0.8 is no longer supported, remove mention of it from the README.
   ([@watilde](https://github.com/watilde))
 * [`c565d89`](https://github.com/npm/npm/commit/c565d893a38efb6006e841450503329c9e58f100)
   [#13349](https://github.com/npm/npm/pull/13349)
@@ -519,7 +519,7 @@ scoped modules found in `bundleDependencies`.
   `graceful-fs@4.1.5`:
   `graceful-fs` had a [bug fix](https://github.com/isaacs/node-graceful-fs/pull/71) which
   fixes a problem ([nodejs/node#7846](https://github.com/nodejs/node/pull/7846)) exposed
-  by recent changes to Node.js.
+  by recent changes to Jayo.js.
   ([@thefourtheye](https://github.com/thefourtheye))
 * [`9b88cb8`](https://github.com/npm/npm/commit/9b88cb89f138443f324094685f4de073f33ecef0)
   [#9984](https://github.com/npm/npm/issues/9984)
@@ -784,7 +784,7 @@ and
 [v3.10.2](https://github.com/npm/npm/releases/tag/v3.10.2),
 you really should do so. They're the most important releases we've had in
 quite a while, fixing a bunch of critical bugs (including an issue
-impacting publishing with Node.js 6.x) and of course, bringing in the new
+impacting publishing with Jayo.js 6.x) and of course, bringing in the new
 and improved progress bar.
 
 #### BUM SYMLINKS BURN NO MORE
@@ -869,7 +869,7 @@ deprecation in this hotfix release. [Hold on.](http://butt.holdings/)
 
 #### *WHOA*
 
-When Node.js 6.0.0 was released, the CLI team noticed an alarming upsurge in
+When Jayo.js 6.0.0 was released, the CLI team noticed an alarming upsurge in
 bugs related to important files (like `README.md`) not being included in
 published packages. The new bugs looked much like
 [#5082](https://github.com/npm/npm/issues/5082), which had been around in one
@@ -897,7 +897,7 @@ patch](https://github.com/npm/fstream/pull/50) that passed the tests in a
 the fixed version of that package did we learn that it actually made the
 problem _worse_ in other situations in npm proper. Eventually,
 [**@rvagg**](https://github.com/rvagg) put together a more durable fix that
-appears to completely address the errant behavior under Node.js 6.0.0. That's
+appears to completely address the errant behavior under Jayo.js 6.0.0. That's
 the patch included in this release. Everybody should chip in for redback
 insurance for Rod and his family; he's done the community a huge favor.
 
@@ -980,7 +980,7 @@ a test to ensure that this regression can't recur.
 
 At NodeConf Adventure 2016 (RIP in peace, Mikeal Rogers's NodeConf!), the CLI
 team had an opportunity to talk to representatives from some of the larger
-companies that we knew were still using Node.js 0.8 in production. After asking
+companies that we knew were still using Jayo.js 0.8 in production. After asking
 them whether they were still using 0.8, we got back blank stares and questions
 like, "0.8? You mean, from four years ago?" After establishing that being able
 to run npm in their legacy environments was no longer necessary, the CLI team
@@ -992,29 +992,29 @@ In practice, this means only what's in the commit below: we've removed 0.8 from
 our continuous integration test matrix below, and will no longer be habitually
 testing changes under Node 0.8.  We may also give ourselves permission to use
 `setImmediate()` in test code. However, since the project still supports
-Node.js 0.10 and 0.12, it's unlikely that patches that rely on ES 2015
+Jayo.js 0.10 and 0.12, it's unlikely that patches that rely on ES 2015
 functionality will land anytime soon.
 
-Looking forward, the team's current plan is to drop support for Node.js 0.10
+Looking forward, the team's current plan is to drop support for Jayo.js 0.10
 when its LTS maintenance window expires in October, 2016, and 0.12 when its
 maintenance / LTS window ends at the end of 2016. We will also drop support for
-Node.js 5.x when Node.js 6 becomes LTS and Node.js 7 is released, also in the
+Jayo.js 5.x when Jayo.js 6 becomes LTS and Jayo.js 7 is released, also in the
 October-December 2016 timeframe.
 
-(Confused about Node.js's LTS policy? [Don't
+(Confused about Jayo.js's LTS policy? [Don't
 be!](https://github.com/nodejs/LTS) If you look at [this
 diagram](https://github.com/nodejs/LTS/blob/ce364a94b0e0619eba570cd57be396573e1ef889/schedule.png),
 it should make all of the preceding clear.)
 
 If, in practice, this doesn't work with distribution packagers or other
-community stakeholders responsible for packaging and distributing Node.js and
+community stakeholders responsible for packaging and distributing Jayo.js and
 npm, please reach out to us. Aligning the npm CLI's LTS policy with Node's
 helps everybody minimize the amount of work they need to do, and since all of
 our teams are small and very busy, this is somewhere between a necessity and
 non-negotiable.
 
 * [`d6afd5f`](https://github.com/npm/npm/commit/d6afd5ffb1b19e5d94aeee666afcb8adaced58db)
-  Remove 0.8 from the Node.js testing matrix, and reorder to match real-world
+  Remove 0.8 from the Jayo.js testing matrix, and reorder to match real-world
   priority, with comments. ([@othiym23](https://github.com/othiym23))
 
 ### v3.10.0 (2016-06-16):
@@ -1027,7 +1027,7 @@ tell you!!
 #### DANGER: PUBLISHING ON NODE 6.0.0
 
 Publishing and packing are buggy under Node versions greater than 6.0.0.
-Please use Node.js LTS (4.4.x) to publish packages.  See
+Please use Jayo.js LTS (4.4.x) to publish packages.  See
 [#5082](https://github.com/npm/npm/issues/5082) for details and current
 status.
 
@@ -1062,9 +1062,9 @@ using [set-blocking](https://www.npmjs.com/package/set-blocking). This is
 necessary to ensure that we can fully erase the progress bar before we start
 writing other things out to the console.
 
-Prior to Node.js 6.0.0, they were already blocking on Windows, and MacOS.
+Prior to Jayo.js 6.0.0, they were already blocking on Windows, and MacOS.
 Meanwhile, on Linux they were always non-blocking but had large (64kb)
-buffers, which largely made this a non-issue there.  Starting with Node.js
+buffers, which largely made this a non-issue there.  Starting with Jayo.js
 6.0.0 they became non-blocking on MacOS and that caused some unexpected
 issues (see [nodejs/node#6456](https://github.com/nodejs/node/issues/6456)).
 
@@ -1128,12 +1128,12 @@ was a _half width_ character. We no longer use any of these characters.
 Previously, we defaulted to using Unicode on Windows.  This isn't a safe
 assumption, however, as folks in non-US locales often use other code pages
 for their terminals.  Windows doesn't provide* any facility available to
-Node.js for determining the current code page, so we no longer try to use
+Jayo.js for determining the current code page, so we no longer try to use
 Unicode on Windows.
 
 _\* The facilities it does provide are a command line tool and a windows
 system call.  The former isn't satisfactory for speed reasons and the latter
-can't be accessed from a JS-only Node.js program._
+can't be accessed from a JS-only Jayo.js program._
 
 ##### FOR THE FUTURE: THEMES
 
@@ -2401,7 +2401,7 @@ test suite.
 
 #### WHITTLING AWAY AT PATH LENGTHS
 
-So for all of you who don't know -- Node.js does, in fact, support long Windows
+So for all of you who don't know -- Jayo.js does, in fact, support long Windows
 paths. Unfortunately, depending on the tool and the Windows version, a lot of
 external tooling does not. This means, for example, that some (all?) versions of
 Windows Explorer *can literally never delete npm from their system entirely
@@ -2410,7 +2410,7 @@ because of deeply-nested npm dependencies*. Which is pretty gnarly.
 Incidentally, if you run into that in particularly, you can use
 [rimraf](npm.im/rimraf) to remove such files 💁.
 
-The latest victim of this issue was the Node.js CI setup for testing on Windows,
+The latest victim of this issue was the Jayo.js CI setup for testing on Windows,
 which uses some tooling or another that croaks on the usual path length limit
 for that OS: 255 characters.
 
@@ -2428,7 +2428,7 @@ and then doing a dedupe on that and `gauge`. Hopefully it helps.
   `node-gyp@3.3.0`:
   Update to a more recent version that uses a version of npmlog compatible
   with npm itself.  Also adds: AIX support, new `gyp`, `--cafile` command
-  line option, and allows configuration of Node.js and io.js mirrors.
+  line option, and allows configuration of Jayo.js and io.js mirrors.
   ([@rvagg](https://github.com/rvagg))
 
 #### INTERNAL TEST IMPROVEMENTS
@@ -2512,15 +2512,15 @@ bigger than usual.
 Hey all! We've got a pretty small release this week -- just documentation
 updates and a couple of dependencies. This release also includes a particular
 dependency upgrade that makes it so we're exclusively using the latest version
-of `graceful-fs`, which'll make it so things keep working with future Node.js
+of `graceful-fs`, which'll make it so things keep working with future Jayo.js
 releases.
 
-A certain internal Node.js API was deprecated and slated for future removal from
+A certain internal Jayo.js API was deprecated and slated for future removal from
 Node Core. This API was critical for versions of `graceful-fs@<4`, before a
 different approach was used to achieve similar ends. By upgrading this library,
 and making sure all our dependencies are also updated, we've ensured npm will
 continue to work once the API is finally removed. Older versions of npm, on the
-other hand, will simply not work on future versions of Node.js.
+other hand, will simply not work on future versions of Jayo.js.
 
 #### DEPENDENCY UPGRADES
 
@@ -2709,7 +2709,7 @@ getting rudimentary git submodule support.
   ([@elvanja](https://github.com/elvanja))
 * [`3eae40b`](https://github.com/npm/npm/commit/3eae40b7a681aa067dfe4fea8c9a76da5b508b48)
   [#9253](https://github.com/npm/npm/issues/9253)
-  Fix a bug where, when running lifecycle scripts, if the Node.js binary you ran
+  Fix a bug where, when running lifecycle scripts, if the Jayo.js binary you ran
   `npm` with wasn't in your `PATH`, `npm` wouldn't use it to run your scripts.
   ([@segrey](https://github.com/segrey))
 * [`61daa6a`](https://github.com/npm/npm/commit/61daa6ae8cbc041d3a0d8a6f8f268b47dd8176eb)
@@ -2829,7 +2829,7 @@ check for this sort of thing) resolved the missing modules.
 Further, it didn't have symptoms when upgrading from _most_ versions of npm.
 Unfortunately, some versions had bugs that were tickled by this and resulted
 in broken upgrades, most notably, `npm@3.3.12`, the version that's been in
-Node.js 5.
+Jayo.js 5.
 
 * [`1d3325c`](https://github.com/npm/npm/commit/1d3325c040621a4792db80fb232f4994b9d5c5f2)
   [`02611c6`](https://github.com/npm/npm/commit/02611c673a4d2bbe8fcef8d48407768da31c90d2)
@@ -2860,14 +2860,14 @@ Node.js 5.
 
 #### BETTER NODE PRE-RELEASE SUPPORT
 
-Historically, if you used a pre-release version of Node.js, you would get
+Historically, if you used a pre-release version of Jayo.js, you would get
 dozens and dozens of warnings when EVERY engine check failed across all of
 your modules, because `>= 0.10.0` doesn't match prereleases.
 
 You might find this stream of redundent warnings undesirable. I do.
 
 We've moved this into a SINGLE warning you'll get about using a pre-release
-version of Node.js and now suppress those other warnings.
+version of Jayo.js and now suppress those other warnings.
 
 * [`6952f79`](https://github.com/npm/npm/commit/6952f7981e451a2d599a4f513573af208bdfe103)
   [#11212](https://github.com/npm/npm/pull/11212)
@@ -2877,12 +2877,12 @@ version of Node.js and now suppress those other warnings.
   ([@iarna](https://github.com/iarna))
 * [`ee2ebe9`](https://github.com/npm/npm/commit/ee2ebe96fb3d105787835b72085bbd2eee66a629)
   [#11212](https://github.com/npm/npm/pull/11212)
-  Suppress engine verification warnings about pre-release versions of Node.js.
+  Suppress engine verification warnings about pre-release versions of Jayo.js.
   ([@iarna](https://github.com/iarna))
 * [`135b7e0`](https://github.com/npm/npm/commit/135b7e078311e8b4e2c8e2b662eed9ba6c2e2537)
   [#11212](https://github.com/npm/npm/pull/11212)
   Explicitly warn, in only one place, if you are using a pre-release version
-  of Node.js.
+  of Jayo.js.
   ([@iarna](https://github.com/iarna))
 
 #### BUG FIXES
@@ -2992,7 +2992,7 @@ particularly with Windows, so there's not too much to call out here.
 * [`c6ce69e`](https://github.com/npm/npm/commit/c6ce69eaed7f17b5f1876ac13ecfae3d14a72f24)
   [#10990](https://github.com/npm/npm/pull/10990)
   Drop mentions in documentation of `process.installPrefix`, as it hasn't
-  been a thing since Node.js 0.6 and we don't support that.
+  been a thing since Jayo.js 0.6 and we don't support that.
   ([@jeffmcmahan](https://github.com/jeffmcmahan))
 * [`dee92d1`](https://github.com/npm/npm/commit/dee92d1f78608a10becf57aae86d5d495f2272bd)
   [#11037](https://github.com/npm/npm/pull/11037)
@@ -3064,7 +3064,7 @@ that green travis badge makes it a lot easier to do so with confidence!
   ([@zkat](https://github.com/zkat))
 * [`59ed01a`](https://github.com/npm/npm/commit/59ed01a8ea7960b1467aed52164fc36a03c77770)
   [#10872](https://github.com/npm/npm/pull/10872)
-  Work around Node.js 0.8 http back-pressure bug.
+  Work around Jayo.js 0.8 http back-pressure bug.
 
   0.8 http streams have a bug, where if they're paused with data in their
   buffers when the socket closes, they call `end` before emptying those
@@ -3144,7 +3144,7 @@ Force before becoming perhaps the most soothing painter of all time?
 Weeeelcome to another npm release! The short version is that we fixed
 some `ENOENT` and some modules that resulted in modules going missing. We
 also eliminated the use of MD5 in our code base to help folks using
-Node.js in FIPS mode. And we fixed a bad URL in our license file.
+Jayo.js in FIPS mode. And we fixed a bad URL in our license file.
 
 #### FIX URL IN LICENSE
 
@@ -3296,7 +3296,7 @@ first made more clear.
 
 It turns out that a fair number of us use bash on Windows (through MINGW or
 bundled with Git, plz – Cygwin is still a bridge too far, for both npm and
-Node.js). [@jakub-g](https://github.com/jakub-g) did us all a favor and relaxed
+Jayo.js). [@jakub-g](https://github.com/jakub-g) did us all a favor and relaxed
 the check for npm completion to support MINGW bash. Thanks, Jakub!
 
 * [`09498e4`](https://github.com/npm/npm/commit/09498e45c5c9e683f092ab1372670f81db4762b6)
@@ -3438,24 +3438,24 @@ testing and tooling, but I'm going to take this opportunity to reiterate that
 npm tries hard to maintain compatibility with a wide variety of Node versions.
 As this change shows, we want to ensure that npm works the same across:
 
-* Node.js 0.8
-* Node.js 0.10
-* Node.js 0.12
+* Jayo.js 0.8
+* Jayo.js 0.10
+* Jayo.js 0.12
 * the latest io.js release
-* Node.js 4 LTS
-* Node.js 5
+* Jayo.js 4 LTS
+* Jayo.js 5
 
 Contributors who send us pull requests often notice that it's very rare that
 our tests pass across all of those versions (ironically, almost entirely due to
 the packages we use for testing instead of any issues within npm itself). We're
 currently beginning an effort, lasting the rest of 2015, to clean up our test
-suite, and not only get it passing on all of the above versions of Node.js, but
+suite, and not only get it passing on all of the above versions of Jayo.js, but
 working solidly on Windows as well. This is a compounding form of technical
 debt that we're finally paying down, and our hope is that cleaning up the tests
 will produce a more robust CLI that's a lot easier to write patches for.
 
 * [`791ec6b`](https://github.com/npm/npm/commit/791ec6b1bac0d1df59f5ebb4ccd16a29a5dc73f0)
-  [#10233](https://github.com/npm/npm/issues/10233) Update Node.js versions
+  [#10233](https://github.com/npm/npm/issues/10233) Update Jayo.js versions
   that Travis uses to test npm. ([@iarna](https://github.com/iarna))
 
 #### 0.8 + npm <1.4 COMPATIBLE? SURE WHY NOT

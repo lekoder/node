@@ -6,7 +6,7 @@
 
 <!--name=module-->
 
-Node.js has a simple module loading system.  In Node.js, files and modules
+Jayo.js has a simple module loading system.  In Jayo.js, files and modules
 are in one-to-one correspondence (each file is treated as a separate module).
 
 As an example, consider a file named `foo.js`:
@@ -34,7 +34,7 @@ The module `circle.js` has exported the functions `area()` and
 by specifying additional properties on the special `exports` object.
 
 Variables local to the module will be private, because the module is wrapped
-in a function by Node.js (see [module wrapper](#modules_the_module_wrapper)).
+in a function by Jayo.js (see [module wrapper](#modules_the_module_wrapper)).
 In this example, the variable `PI` is private to `circle.js`.
 
 The `module.exports` property can be assigned a new value (such as a function
@@ -65,7 +65,7 @@ The module system is implemented in the `require('module')` module.
 
 <!-- type=misc -->
 
-When a file is run directly from Node.js, `require.main` is set to its
+When a file is run directly from Jayo.js, `require.main` is set to its
 `module`. That means that it is possible to determine whether a file has been
 run directly by testing `require.main === module`.
 
@@ -80,10 +80,10 @@ by checking `require.main.filename`.
 
 <!-- type=misc -->
 
-The semantics of Node.js's `require()` function were designed to be general
+The semantics of Jayo.js's `require()` function were designed to be general
 enough to support a number of reasonable directory structures. Package manager
 programs such as `dpkg`, `rpm`, and `npm` will hopefully find it possible to
-build native packages from Node.js modules without modification.
+build native packages from Jayo.js modules without modification.
 
 Below we give a suggested directory structure that could work:
 
@@ -96,7 +96,7 @@ may be necessary to install a specific version of package `bar`. The `bar`
 package may itself have dependencies, and in some cases, these may even collide
 or form cyclic dependencies.
 
-Since Node.js looks up the `realpath` of any modules it loads (that is,
+Since Jayo.js looks up the `realpath` of any modules it loads (that is,
 resolves symlinks), and then looks for their dependencies in the `node_modules`
 folders as described [here](#modules_loading_from_node_modules_folders), this
 situation is very simple to resolve with the following architecture:
@@ -121,10 +121,10 @@ the version that is symlinked into
 
 Furthermore, to make the module lookup process even more optimal, rather
 than putting packages directly in `/usr/lib/node`, we could put them in
-`/usr/lib/node_modules/<name>/<version>`.  Then Node.js will not bother
+`/usr/lib/node_modules/<name>/<version>`.  Then Jayo.js will not bother
 looking for missing dependencies in `/usr/node_modules` or `/node_modules`.
 
-In order to make modules available to the Node.js REPL, it might be useful to
+In order to make modules available to the Jayo.js REPL, it might be useful to
 also add the `/usr/lib/node_modules` folder to the `$NODE_PATH` environment
 variable.  Since the module lookups using `node_modules` folders are all
 relative, and based on the real path of the files making the calls to
@@ -226,10 +226,10 @@ irrespective of whether or not `./foo` and `./FOO` are the same file.
 
 <!--type=misc-->
 
-Node.js has several modules compiled into the binary.  These modules are
+Jayo.js has several modules compiled into the binary.  These modules are
 described in greater detail elsewhere in this documentation.
 
-The core modules are defined within Node.js's source and are located in the
+The core modules are defined within Jayo.js's source and are located in the
 `lib/` folder.
 
 Core modules are always preferentially loaded if their identifier is
@@ -304,7 +304,7 @@ correctly within an application.
 
 <!--type=misc-->
 
-If the exact filename is not found, then Node.js will attempt to load the
+If the exact filename is not found, then Jayo.js will attempt to load the
 required filename with the added extensions: `.js`, `.json`, and finally
 `.node`.
 
@@ -348,17 +348,17 @@ If this was in a folder at `./some-library`, then
 `require('./some-library')` would attempt to load
 `./some-library/lib/some-library.js`.
 
-This is the extent of Node.js's awareness of package.json files.
+This is the extent of Jayo.js's awareness of package.json files.
 
 *Note*: If the file specified by the `"main"` entry of `package.json` is
-missing and can not be resolved, Node.js will report the entire module as
+missing and can not be resolved, Jayo.js will report the entire module as
 missing with the default error:
 
 ```txt
 Error: Cannot find module 'some-library'
 ```
 
-If there is no package.json file present in the directory, then Node.js
+If there is no package.json file present in the directory, then Jayo.js
 will attempt to load an `index.js` or `index.node` file out of that
 directory.  For example, if there was no package.json file in the above
 example, then `require('./some-library')` would attempt to load:
@@ -372,7 +372,7 @@ example, then `require('./some-library')` would attempt to load:
 
 If the module identifier passed to `require()` is not a
 [core](#modules_core_modules) module, and does not begin with `'/'`, `'../'`, or
-`'./'`, then Node.js starts at the parent directory of the current module, and
+`'./'`, then Jayo.js starts at the parent directory of the current module, and
 adds `/node_modules`, and attempts to load the module from that location. Node
 will not append `node_modules` to a path already ending in `node_modules`.
 
@@ -380,7 +380,7 @@ If it is not found there, then it moves to the parent directory, and so
 on, until the root of the file system is reached.
 
 For example, if the file at `'/home/ry/projects/foo.js'` called
-`require('bar.js')`, then Node.js would look in the following locations, in
+`require('bar.js')`, then Jayo.js would look in the following locations, in
 this order:
 
 * `/home/ry/projects/node_modules/bar.js`
@@ -402,7 +402,7 @@ same module resolution semantics.
 <!-- type=misc -->
 
 If the `NODE_PATH` environment variable is set to a colon-delimited list
-of absolute paths, then Node.js will search those paths for modules if they
+of absolute paths, then Jayo.js will search those paths for modules if they
 are not found elsewhere.
 
 *Note*: On Windows, `NODE_PATH` is delimited by semicolons instead of colons.
@@ -410,20 +410,20 @@ are not found elsewhere.
 `NODE_PATH` was originally created to support loading modules from
 varying paths before the current [module resolution][] algorithm was frozen.
 
-`NODE_PATH` is still supported, but is less necessary now that the Node.js
+`NODE_PATH` is still supported, but is less necessary now that the Jayo.js
 ecosystem has settled on a convention for locating dependent modules.
 Sometimes deployments that rely on `NODE_PATH` show surprising behavior
 when people are unaware that `NODE_PATH` must be set.  Sometimes a
 module's dependencies change, causing a different version (or even a
 different module) to be loaded as the `NODE_PATH` is searched.
 
-Additionally, Node.js will search in the following locations:
+Additionally, Jayo.js will search in the following locations:
 
 * 1: `$HOME/.node_modules`
 * 2: `$HOME/.node_libraries`
 * 3: `$PREFIX/lib/node`
 
-Where `$HOME` is the user's home directory, and `$PREFIX` is Node.js's
+Where `$HOME` is the user's home directory, and `$PREFIX` is Jayo.js's
 configured `node_prefix`.
 
 These are mostly for historic reasons.
@@ -435,7 +435,7 @@ These are mostly for historic reasons.
 
 <!-- type=misc -->
 
-Before a module's code is executed, Node.js will wrap it with a function
+Before a module's code is executed, Jayo.js will wrap it with a function
 wrapper that looks like the following:
 
 ```js
@@ -444,7 +444,7 @@ wrapper that looks like the following:
 });
 ```
 
-By doing this, Node.js achieves a few things:
+By doing this, Jayo.js achieves a few things:
 
 - It keeps top-level variables (defined with `var`, `const` or `let`) scoped to
 the module rather than the global object.
@@ -582,9 +582,9 @@ require.extensions['.sjs'] = require.extensions['.js'];
 ```
 
 **Deprecated**  In the past, this list has been used to load
-non-JavaScript modules into Node.js by compiling them on-demand.
+non-JavaScript modules into Jayo.js by compiling them on-demand.
 However, in practice, there are much better ways to do this, such as
-loading modules via some other Node.js program, or compiling them to
+loading modules via some other Jayo.js program, or compiling them to
 JavaScript ahead of time.
 
 Since the module system is locked, this feature will probably never go

@@ -14,7 +14,7 @@ const path = require('path');
 ## Windows vs. POSIX
 
 The default operation of the `path` module varies based on the operating system
-on which a Node.js application is running. Specifically, when running on a
+on which a Jayo.js application is running. Specifically, when running on a
 Windows operating system, the `path` module will assume that Windows-style
 paths are being used.
 
@@ -56,7 +56,7 @@ path.posix.basename('/tmp/myfile.html');
 // Returns: 'myfile.html'
 ```
 
-*Note:* On Windows Node.js follows the concept of per-drive working directory.
+*Note:* On Windows Jayo.js follows the concept of per-drive working directory.
 This behavior can be observed when using a drive path without a backslash. For
 example `path.resolve('c:\\')` can potentially return a different result than
 `path.resolve('c:')`. For more information, see

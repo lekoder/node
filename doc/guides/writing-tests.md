@@ -1,9 +1,9 @@
-# How to write a test for the Node.js project
+# How to write a test for the Jayo.js project
 
 ## What is a test?
 
-Most tests in Node.js core are JavaScript programs that exercise a functionality
-provided by Node.js and check that it behaves as expected. Tests should exit
+Most tests in Jayo.js core are JavaScript programs that exercise a functionality
+provided by Jayo.js and check that it behaves as expected. Tests should exit
 with code `0` on success. A test will fail if:
 
 - It exits by setting `process.exitCode` to a non-zero number.
@@ -20,7 +20,7 @@ Add tests when:
 
 ## Test structure
 
-Let's analyze this basic test from the Node.js test suite:
+Let's analyze this basic test from the Jayo.js test suite:
 
 ```javascript
 'use strict';                                                          // 1
@@ -192,7 +192,7 @@ const server = http.createServer(common.mustCall(function(req, res) {
 
 ### Flags
 
-Some tests will require running Node.js with specific command line flags set. To
+Some tests will require running Jayo.js with specific command line flags set. To
 accomplish this, add a `// Flags: ` comment in the preamble of the
 test followed by the flags. For example, to allow a test to require some of the
 `internal/*` modules, add the `--expose-internals` flag.
@@ -276,14 +276,14 @@ These imported tests will be wrapped like this:
 
 To improve tests that have been imported this way, please send
 a PR to the upstream project first. When the proposed change is merged in
-the upstream project, send another PR here to update Node.js accordingly.
+the upstream project, send another PR here to update Jayo.js accordingly.
 Be sure to update the hash in the URL following `WPT Refs:`.
 
 ## C++ Unit test
-C++ code can be tested using [Google Test][]. Most features in Node.js can be
+C++ code can be tested using [Google Test][]. Most features in Jayo.js can be
 tested using the methods described previously in this document. But there are
-cases where these might not be enough, for example writing code for Node.js
-that will only be called when Node.js is embedded.
+cases where these might not be enough, for example writing code for Jayo.js
+that will only be called when Jayo.js is embedded.
 
 ### Adding a new test
 The unit test should be placed in `test/cctest` and be named with the prefix
@@ -332,10 +332,10 @@ $ make cctest
 
 ### Node test fixture
 There is a [test fixture][] named `node_test_fixture.h` which can be included by
-unit tests. The fixture takes care of setting up the Node.js environment
+unit tests. The fixture takes care of setting up the Jayo.js environment
 and tearing it down after the tests have finished.
 
-It also contains a helper to create arguments to be passed into Node.js. It
+It also contains a helper to create arguments to be passed into Jayo.js. It
 will depend on what is being tested if this is required or not.
 
 [ASCII]: http://man7.org/linux/man-pages/man7/ascii.7.html

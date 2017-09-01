@@ -1,7 +1,7 @@
-## How to upgrade openssl library in Node.js
+## How to upgrade openssl library in Jayo.js
 
 This document describes the procedure to upgrade openssl from 1.0.2e
-to 1.0.2f in Node.js. This procedure might be applied to upgrading
+to 1.0.2f in Jayo.js. This procedure might be applied to upgrading
 any versions in 1.0.2.
 
 ### Build System and Upgrading Overview
@@ -17,7 +17,7 @@ hardware performance according to the type of cpus.
 `Configure TABLE` shows various build parameters that depend on each
 os and arch.
 
-In Node.js, build target is defined as `--dest-os` and `--dest-cpu` in
+In Jayo.js, build target is defined as `--dest-os` and `--dest-cpu` in
 configure options which are different from the one that is defined in
 openssl and it's build system is gyp that is based on python,
 therefore we cannot use the openssl build system directly.

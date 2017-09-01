@@ -1,6 +1,6 @@
-# Node.js Project Governance
+# Jayo.js Project Governance
 
-The Node.js project is governed by its Collaborators, including a Technical
+The Jayo.js project is governed by its Collaborators, including a Technical
 Steering Committee (TSC) which is responsible for high-level guidance of the
 project.
 
@@ -10,17 +10,17 @@ The [nodejs/node](https://github.com/nodejs/node) GitHub repository is
 maintained by Collaborators who are added by the TSC on an ongoing basis.
 
 Individuals identified by the TSC as making significant and valuable
-contributions across any Node.js repository may be made Collaborators and given
+contributions across any Jayo.js repository may be made Collaborators and given
 commit access to the project. Activities taken into consideration include (but
 are not limited to) the quality of:
 
 * code commits and pull requests
 * documentation commits and pull requests
 * comments on issues and pull requests
-* contributions to the Node.js website
+* contributions to the Jayo.js website
 * assistance provided to end users and novice contributors
 * participation in Working Groups
-* other participation in the wider Node.js community
+* other participation in the wider Jayo.js community
 
 If individuals making valuable contributions do not believe they have been
 considered for commit access, they may log an issue or contact a TSC member
@@ -81,7 +81,7 @@ including:
 * [Current list of TSC members](./README.md#current-project-team-members)
 
 The operations of the TSC are governed by the [TSC Charter][] as approved by
-the Node.js Foundation Board of Directors.
+the Jayo.js Foundation Board of Directors.
 
 ### TSC Meetings
 

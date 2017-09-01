@@ -6,7 +6,7 @@
 
 To use the HTTP server and client one must `require('http')`.
 
-The HTTP interfaces in Node.js are designed to support many features
+The HTTP interfaces in Jayo.js are designed to support many features
 of the protocol which have been traditionally difficult to use.
 In particular, large, possibly chunk-encoded, messages. The interface is
 careful to never buffer entire requests or responses--the
@@ -25,7 +25,7 @@ HTTP message headers are represented by an object like this:
 
 Keys are lowercased. Values are not modified.
 
-In order to support the full spectrum of possible HTTP applications, Node.js's
+In order to support the full spectrum of possible HTTP applications, Jayo.js's
 HTTP API is very low-level. It deals with stream handling and message
 parsing only. It parses a message into headers and body but it does not
 parse the actual headers or the body.
@@ -70,7 +70,7 @@ the requests to that server, but each one will occur over a new connection.
 
 When a connection is closed by the client or the server, it is removed
 from the pool. Any unused sockets in the pool will be unrefed so as not
-to keep the Node.js process running when there are no outstanding requests.
+to keep the Jayo.js process running when there are no outstanding requests.
 (see [socket.unref()]).
 
 It is good practice, to [`destroy()`][] an `Agent` instance when it is no
@@ -307,7 +307,7 @@ Until the data is consumed, the `'end'` event will not fire.  Also, until
 the data is read it will consume memory that can eventually lead to a
 'process out of memory' error.
 
-*Note*: Node.js does not check whether Content-Length and the length of the
+*Note*: Jayo.js does not check whether Content-Length and the length of the
 body which has been transmitted are equal or not.
 
 The request implements the [Writable Stream][] interface. This is an
@@ -359,7 +359,7 @@ proxy.on('connect', (req, cltSocket, head) => {
   const srvUrl = url.parse(`http://${req.url}`);
   const srvSocket = net.connect(srvUrl.port, srvUrl.hostname, () => {
     cltSocket.write('HTTP/1.1 200 Connection Established\r\n' +
-                    'Proxy-agent: Node.js-Proxy\r\n' +
+                    'Proxy-agent: Jayo.js-Proxy\r\n' +
                     '\r\n');
     srvSocket.write(head);
     srvSocket.pipe(cltSocket);
@@ -534,7 +534,7 @@ added: v1.6.0
 
 Flush the request headers.
 
-For efficiency reasons, Node.js normally buffers the request headers until
+For efficiency reasons, Jayo.js normally buffers the request headers until
 `request.end()` is called or the first chunk of request data is written. It
 then tries to pack the request headers and data into a single TCP packet.
 
@@ -1310,7 +1310,7 @@ higher-level multi-part body encodings that may be used.
 
 The first time [`response.write()`][] is called, it will send the buffered
 header information and the first chunk of the body to the client. The second
-time [`response.write()`][] is called, Node.js assumes data will be streamed,
+time [`response.write()`][] is called, Jayo.js assumes data will be streamed,
 and sends the new data separately. That is, the response is buffered up to the
 first chunk of the body.
 
@@ -1378,7 +1378,7 @@ Note that Content-Length is given in bytes not characters. The above example
 works because the string `'hello world'` contains only single byte characters.
 If the body contains higher coded characters then `Buffer.byteLength()`
 should be used to determine the number of bytes in a given encoding.
-And Node.js does not check whether Content-Length and the length of the body
+And Jayo.js does not check whether Content-Length and the length of the body
 which has been transmitted are equal or not.
 
 Attempting to set a header field name or value that contains invalid characters
@@ -1692,7 +1692,7 @@ changes:
 * `callback` {Function}
 * Returns: {http.ClientRequest}
 
-Since most requests are GET requests without bodies, Node.js provides this
+Since most requests are GET requests without bodies, Jayo.js provides this
 convenience method. The only difference between this method and
 [`http.request()`][] is that it sets the method to GET and calls `req.end()`
 automatically. Note that the callback must take care to consume the response
@@ -1794,7 +1794,7 @@ changes:
 * `callback` {Function}
 * Returns: {http.ClientRequest}
 
-Node.js maintains several connections per server to make HTTP requests.
+Jayo.js maintains several connections per server to make HTTP requests.
 This function allows one to transparently issue requests.
 
 `options` can be an object, a string, or a [`URL`][] object. If `options` is a
@@ -1858,7 +1858,7 @@ are registered the error will be thrown.
 
 There are a few special headers that should be noted.
 
-* Sending a 'Connection: keep-alive' will notify Node.js that the connection to
+* Sending a 'Connection: keep-alive' will notify Jayo.js that the connection to
   the server should be persisted until the next request.
 
 * Sending a 'Content-Length' header will disable the default chunked encoding.

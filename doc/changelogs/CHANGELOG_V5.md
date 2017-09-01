@@ -1,4 +1,4 @@
-# Node.js 5 ChangeLog
+# Jayo.js 5 ChangeLog
 
 <table>
 <tr>
@@ -40,14 +40,14 @@
   * [Archive](CHANGELOG_ARCHIVE.md)
 
 *Note*: Official support for the v5 release line is scheduled to expire
-around June 2016. Users of v5 should upgrade to [Node.js v6](CHANGELOG_V6.md).
+around June 2016. Users of v5 should upgrade to [Jayo.js v6](CHANGELOG_V6.md).
 
 <a id="5.12.0"></a>
 ## 2016-06-23, Version 5.12.0 (Stable), @evanlucas
 
 ### Notable changes
 
-This is a security release. All Node.js users should consult the security release summary at https://nodejs.org/en/blog/vulnerability/june-2016-security-releases for details on patched vulnerabilities.
+This is a security release. All Jayo.js users should consult the security release summary at https://nodejs.org/en/blog/vulnerability/june-2016-security-releases for details on patched vulnerabilities.
 
 * **buffer**
   * backport allocUnsafeSlow (Сковорода Никита Андреевич) [#7169](https://github.com/nodejs/node/pull/7169)
@@ -306,10 +306,10 @@ This is a security release. All Node.js users should consult the security releas
 * [[`80155d398c`](https://github.com/nodejs/node/commit/80155d398c)] - **(SEMVER-MINOR)** **fs**: add the fs.mkdtemp() function. (Florian MARGAINE) [#5333](https://github.com/nodejs/node/pull/5333)
 * [[`bb28770aa1`](https://github.com/nodejs/node/commit/bb28770aa1)] - **governance**: remove target size for CTC (Rich Trott) [#5879](https://github.com/nodejs/node/pull/5879)
 * [[`63c601bc15`](https://github.com/nodejs/node/commit/63c601bc15)] - **http**: speed up checkIsHttpToken (Jackson Tian) [#4790](https://github.com/nodejs/node/pull/4790)
-* [[`ec6af31eba`](https://github.com/nodejs/node/commit/ec6af31eba)] - **lib**: rename /node.js to /bootstrap_node.js (Jeremiah Senkpiel) [#5103](https://github.com/nodejs/node/pull/5103)
+* [[`ec6af31eba`](https://github.com/nodejs/node/commit/ec6af31eba)] - **lib**: rename /Jayo.js to /bootstrap_Jayo.js (Jeremiah Senkpiel) [#5103](https://github.com/nodejs/node/pull/5103)
 * [[`91466b855f`](https://github.com/nodejs/node/commit/91466b855f)] - **lib**: refactor code with startsWith/endsWith (Jackson Tian) [#5753](https://github.com/nodejs/node/pull/5753)
-* [[`4bf2acaa1e`](https://github.com/nodejs/node/commit/4bf2acaa1e)] - **lib,src**: move src/node.js to lib/internal/node.js (Jeremiah Senkpiel) [#5103](https://github.com/nodejs/node/pull/5103)
-* [[`015cef25eb`](https://github.com/nodejs/node/commit/015cef25eb)] - **lib,src**: refactor src/node.js into internal files (Jeremiah Senkpiel) [#5103](https://github.com/nodejs/node/pull/5103)
+* [[`4bf2acaa1e`](https://github.com/nodejs/node/commit/4bf2acaa1e)] - **lib,src**: move src/Jayo.js to lib/internal/Jayo.js (Jeremiah Senkpiel) [#5103](https://github.com/nodejs/node/pull/5103)
+* [[`015cef25eb`](https://github.com/nodejs/node/commit/015cef25eb)] - **lib,src**: refactor src/Jayo.js into internal files (Jeremiah Senkpiel) [#5103](https://github.com/nodejs/node/pull/5103)
 * [[`b07bc5d996`](https://github.com/nodejs/node/commit/b07bc5d996)] - **(SEMVER-MINOR)** **net**: emit host in lookup event (HUANG Wei) [#5598](https://github.com/nodejs/node/pull/5598)
 * [[`8363ede855`](https://github.com/nodejs/node/commit/8363ede855)] - **(SEMVER-MINOR)** **node**: --no-browser-globals configure flag (Fedor Indutny) [#5853](https://github.com/nodejs/node/pull/5853)
 * [[`a2ad21645f`](https://github.com/nodejs/node/commit/a2ad21645f)] - **querystring**: don't stringify bad surrogate pair (Brian White) [#5858](https://github.com/nodejs/node/pull/5858)
@@ -410,7 +410,7 @@ https://github.com/nodejs/node/pull/5392
 https://github.com/nodejs/node/pull/4361
 * **src**: allow both -i and -e flags to be used at the same time (Rich Trott)
 https://github.com/nodejs/node/pull/5655
-* **timers**: Internal Node.js timeouts now use the same logic path as those created with `setTimeout()` (Jeremiah Senkpiel) [#4007](https://github.com/nodejs/node/pull/4007)
+* **timers**: Internal Jayo.js timeouts now use the same logic path as those created with `setTimeout()` (Jeremiah Senkpiel) [#4007](https://github.com/nodejs/node/pull/4007)
   * This may cause a slightly different performance profile in some situations. So far, it has shown to be positive in most cases.
 * **v8**: backport fb4ccae from v8 upstream (Vladimir Krivosheev) #4231
   -  breakout events from v8 to offer better support for external debuggers
@@ -487,7 +487,7 @@ https://github.com/nodejs/node/pull/5120
 
 * [[`12ca84fc7f`](https://github.com/nodejs/node/commit/12ca84fc7f)] - **benchmark**: add util.format benchmark (Evan Lucas) [#5360](https://github.com/nodejs/node/pull/5360)
 * [[`b955d02266`](https://github.com/nodejs/node/commit/b955d02266)] - **benchmark**: fix lint errors (Rich Trott) [#5517](https://github.com/nodejs/node/pull/5517)
-* [[`2abf866b6e`](https://github.com/nodejs/node/commit/2abf866b6e)] - **build**: update Node.js logo on Win installer (Robert Jefe Lindstaedt) [#5531](https://github.com/nodejs/node/pull/5531)
+* [[`2abf866b6e`](https://github.com/nodejs/node/commit/2abf866b6e)] - **build**: update Jayo.js logo on Win installer (Robert Jefe Lindstaedt) [#5531](https://github.com/nodejs/node/pull/5531)
 * [[`86900f8f2b`](https://github.com/nodejs/node/commit/86900f8f2b)] - **build**: correctly detect clang version (Stefan Budeanu) [#5553](https://github.com/nodejs/node/pull/5553)
 * [[`a3017992e4`](https://github.com/nodejs/node/commit/a3017992e4)] - **(SEMVER-MINOR)** **child_process**: add keepOpen option to send() (cjihrig) [#5283](https://github.com/nodejs/node/pull/5283)
 * [[`6d4887ccc2`](https://github.com/nodejs/node/commit/6d4887ccc2)] - **(SEMVER-MINOR)** **child_process**: support options in send() (cjihrig) [#5283](https://github.com/nodejs/node/pull/5283)
@@ -522,10 +522,10 @@ https://github.com/nodejs/node/pull/5120
 
 ### Notable changes
 
-* **governance**: The Core Technical Committee (CTC) added four new members to help guide Node.js core development: Evan Lucas, Rich Trott, Ali Ijaz Sheikh and Сковорода Никита Андреевич (Nikita Skovoroda).
+* **governance**: The Core Technical Committee (CTC) added four new members to help guide Jayo.js core development: Evan Lucas, Rich Trott, Ali Ijaz Sheikh and Сковорода Никита Андреевич (Nikita Skovoroda).
 * **openssl**: Upgrade from 1.0.2f to 1.0.2g (Ben Noordhuis) [#5507](https://github.com/nodejs/node/pull/5507).
-  - Fix a double-free defect in parsing malformed DSA keys that may potentially be used for DoS or memory corruption attacks. It is likely to be very difficult to use this defect for a practical attack and is therefore considered low severity for Node.js users. More info is available at [CVE-2016-0705](https://www.openssl.org/news/vulnerabilities.html#2016-0705).
-  - Fix a defect that can cause memory corruption in certain very rare cases relating to the internal `BN_hex2bn()` and `BN_dec2bn()` functions. It is believed that Node.js is not invoking the code paths that use these functions so practical attacks via Node.js using this defect are _unlikely_ to be possible. More info is available at [CVE-2016-0797](https://www.openssl.org/news/vulnerabilities.html#2016-0797).
+  - Fix a double-free defect in parsing malformed DSA keys that may potentially be used for DoS or memory corruption attacks. It is likely to be very difficult to use this defect for a practical attack and is therefore considered low severity for Jayo.js users. More info is available at [CVE-2016-0705](https://www.openssl.org/news/vulnerabilities.html#2016-0705).
+  - Fix a defect that can cause memory corruption in certain very rare cases relating to the internal `BN_hex2bn()` and `BN_dec2bn()` functions. It is believed that Jayo.js is not invoking the code paths that use these functions so practical attacks via Jayo.js using this defect are _unlikely_ to be possible. More info is available at [CVE-2016-0797](https://www.openssl.org/news/vulnerabilities.html#2016-0797).
   - Fix a defect that makes the _[CacheBleed Attack](https://ssrg.nicta.com.au/projects/TS/cachebleed/)_ possible. This defect enables attackers to execute side-channel attacks leading to the potential recovery of entire RSA private keys. It only affects the Intel Sandy Bridge (and possibly older) microarchitecture when using hyper-threading. Newer microarchitectures, including Haswell, are unaffected. More info is available at [CVE-2016-0702](https://www.openssl.org/news/vulnerabilities.html#2016-0702).
 * Fixed several regressions that appeared in v5.7.0:
   - **`path.relative()`**:
@@ -546,7 +546,7 @@ https://github.com/nodejs/node/pull/5120
 * [[`2f9fee6e8e`](https://github.com/nodejs/node/commit/2f9fee6e8e)] - **benchmark**: use strict mode (Rich Trott) [#5336](https://github.com/nodejs/node/pull/5336)
 * [[`4c09e7f359`](https://github.com/nodejs/node/commit/4c09e7f359)] - **build**: remove --quiet from eslint invocation (firedfox) [#5519](https://github.com/nodejs/node/pull/5519)
 * [[`2c619f2012`](https://github.com/nodejs/node/commit/2c619f2012)] - **build**: run lint before tests (Rich Trott) [#5470](https://github.com/nodejs/node/pull/5470)
-* [[`f349a9a2cf`](https://github.com/nodejs/node/commit/f349a9a2cf)] - **build**: update Node.js logo on OSX installer (Rod Vagg) [#5401](https://github.com/nodejs/node/pull/5401)
+* [[`f349a9a2cf`](https://github.com/nodejs/node/commit/f349a9a2cf)] - **build**: update Jayo.js logo on OSX installer (Rod Vagg) [#5401](https://github.com/nodejs/node/pull/5401)
 * [[`88f393588a`](https://github.com/nodejs/node/commit/88f393588a)] - **crypto**: PBKDF2 works with `int` not `ssize_t` (Fedor Indutny) [#5397](https://github.com/nodejs/node/pull/5397)
 * [[`1e86804503`](https://github.com/nodejs/node/commit/1e86804503)] - **deps**: upgrade openssl to 1.0.2g (Ben Noordhuis) [#5507](https://github.com/nodejs/node/pull/5507)
 * [[`d3f9b84be8`](https://github.com/nodejs/node/commit/d3f9b84be8)] - **dgram**: handle default address case when offset and length are specified (Matteo Collina)
@@ -729,7 +729,7 @@ https://github.com/nodejs/node/pull/5120
 * [[`f2bd86775b`](https://github.com/nodejs/node/commit/f2bd86775b)] - **test**: update arrow function style (cjihrig) [#4813](https://github.com/nodejs/node/pull/4813)
 * [[`aed04b85c2`](https://github.com/nodejs/node/commit/aed04b85c2)] - **tls**: nullify `.ssl` on handle close (Fedor Indutny) [#5168](https://github.com/nodejs/node/pull/5168)
 * [[`c3f8aab652`](https://github.com/nodejs/node/commit/c3f8aab652)] - **(SEMVER-MINOR)** **tls**: add getProtocol() to TLS sockets (Brian White) [#4995](https://github.com/nodejs/node/pull/4995)
-* [[`7fc2e3161f`](https://github.com/nodejs/node/commit/7fc2e3161f)] - **tools**: add Node.js-specific ESLint rules (Rich Trott) [#5320](https://github.com/nodejs/node/pull/5320)
+* [[`7fc2e3161f`](https://github.com/nodejs/node/commit/7fc2e3161f)] - **tools**: add Jayo.js-specific ESLint rules (Rich Trott) [#5320](https://github.com/nodejs/node/pull/5320)
 * [[`983325cb0c`](https://github.com/nodejs/node/commit/983325cb0c)] - **tools**: replace obsolete ESLint rules (Rich Trott) [#5214](https://github.com/nodejs/node/pull/5214)
 * [[`f601d040b5`](https://github.com/nodejs/node/commit/f601d040b5)] - **tools**: update ESLint to version 2.1.0 (Rich Trott) [#5214](https://github.com/nodejs/node/pull/5214)
 * [[`13af565759`](https://github.com/nodejs/node/commit/13af565759)] - **tools**: remove obsolete lint rules (Rich Trott) [#5214](https://github.com/nodejs/node/pull/5214)
@@ -751,7 +751,7 @@ https://github.com/nodejs/node/pull/5120
 <a id="5.6.0"></a>
 ## 2016-02-09, Version 5.6.0 (Stable), @jasnell
 
-This is an important security release. All Node.js users should consult the security release summary at nodejs.org for details on patched vulnerabilities.
+This is an important security release. All Jayo.js users should consult the security release summary at nodejs.org for details on patched vulnerabilities.
 
 ### Notable changes
 
@@ -928,7 +928,7 @@ This is an important security release. All Node.js users should consult the secu
 * Surrogate pair in REPL can freeze terminal. [#690](https://github.com/nodejs/node/issues/690)
 * Calling `dns.setServers()` while a DNS query is in progress can cause the process to crash on a failed assertion. [#894](https://github.com/nodejs/node/issues/894)
 * `url.resolve` may transfer the auth portion of the url when resolving between two full hosts, see [#1435](https://github.com/nodejs/node/issues/1435).
-* Unicode characters in filesystem paths are not handled consistently across platforms or Node.js APIs. See [#2088](https://github.com/nodejs/node/issues/2088), [#3401](https://github.com/nodejs/node/issues/3401) and [#3519](https://github.com/nodejs/node/issues/3519).
+* Unicode characters in filesystem paths are not handled consistently across platforms or Jayo.js APIs. See [#2088](https://github.com/nodejs/node/issues/2088), [#3401](https://github.com/nodejs/node/issues/3401) and [#3519](https://github.com/nodejs/node/issues/3519).
 
 ### Commits
 
@@ -1008,7 +1008,7 @@ This is an important security release. All Node.js users should consult the secu
 * Surrogate pair in REPL can freeze terminal. [#690](https://github.com/nodejs/node/issues/690)
 * Calling `dns.setServers()` while a DNS query is in progress can cause the process to crash on a failed assertion. [#894](https://github.com/nodejs/node/issues/894)
 * `url.resolve` may transfer the auth portion of the url when resolving between two full hosts, see [#1435](https://github.com/nodejs/node/issues/1435).
-* Unicode characters in filesystem paths are not handled consistently across platforms or Node.js APIs. See [#2088](https://github.com/nodejs/node/issues/2088), [#3401](https://github.com/nodejs/node/issues/3401) and [#3519](https://github.com/nodejs/node/issues/3519).
+* Unicode characters in filesystem paths are not handled consistently across platforms or Jayo.js APIs. See [#2088](https://github.com/nodejs/node/issues/2088), [#3401](https://github.com/nodejs/node/issues/3401) and [#3519](https://github.com/nodejs/node/issues/3519).
 
 ### commits
 
@@ -1060,7 +1060,7 @@ This is an important security release. All Node.js users should consult the secu
 * Surrogate pair in REPL can freeze terminal. [#690](https://github.com/nodejs/node/issues/690)
 * Calling `dns.setServers()` while a DNS query is in progress can cause the process to crash on a failed assertion. [#894](https://github.com/nodejs/node/issues/894)
 * `url.resolve` may transfer the auth portion of the url when resolving between two full hosts, see [#1435](https://github.com/nodejs/node/issues/1435).
-* Unicode characters in filesystem paths are not handled consistently across platforms or Node.js APIs. See [#2088](https://github.com/nodejs/node/issues/2088), [#3401](https://github.com/nodejs/node/issues/3401) and [#3519](https://github.com/nodejs/node/issues/3519).
+* Unicode characters in filesystem paths are not handled consistently across platforms or Jayo.js APIs. See [#2088](https://github.com/nodejs/node/issues/2088), [#3401](https://github.com/nodejs/node/issues/3401) and [#3519](https://github.com/nodejs/node/issues/3519).
 
 ### Commits
 
@@ -1185,7 +1185,7 @@ This is an important security release. All Node.js users should consult the secu
 * Surrogate pair in REPL can freeze terminal. [#690](https://github.com/nodejs/node/issues/690)
 * Calling `dns.setServers()` while a DNS query is in progress can cause the process to crash on a failed assertion. [#894](https://github.com/nodejs/node/issues/894)
 * `url.resolve` may transfer the auth portion of the url when resolving between two full hosts, see [#1435](https://github.com/nodejs/node/issues/1435).
-* Unicode characters in filesystem paths are not handled consistently across platforms or Node.js APIs. See [#2088](https://github.com/nodejs/node/issues/2088), [#3401](https://github.com/nodejs/node/issues/3401) and [#3519](https://github.com/nodejs/node/issues/3519).
+* Unicode characters in filesystem paths are not handled consistently across platforms or Jayo.js APIs. See [#2088](https://github.com/nodejs/node/issues/2088), [#3401](https://github.com/nodejs/node/issues/3401) and [#3519](https://github.com/nodejs/node/issues/3519).
 
 ### Commits
 
@@ -1199,7 +1199,7 @@ This is an important security release. All Node.js users should consult the secu
 * [[`a8854e5b59`](https://github.com/nodejs/node/commit/a8854e5b59)] - **doc**: document the cache parameter for fs.realpathSync (Jackson Tian) [#4285](https://github.com/nodejs/node/pull/4285)
 * [[`9e1b7aa874`](https://github.com/nodejs/node/commit/9e1b7aa874)] - **doc**: document backlog for server.listen() variants (Jan Schär) [#4025](https://github.com/nodejs/node/pull/4025)
 * [[`435d571f22`](https://github.com/nodejs/node/commit/435d571f22)] - **doc**: update AUTHORS list (Rod Vagg) [#4183](https://github.com/nodejs/node/pull/4183)
-* [[`3b3061365a`](https://github.com/nodejs/node/commit/3b3061365a)] - **doc**: update irc channels: #node.js and #node-dev (Nelson Pecora) [#2743](https://github.com/nodejs/node/pull/2743)
+* [[`3b3061365a`](https://github.com/nodejs/node/commit/3b3061365a)] - **doc**: update irc channels: #Jayo.js and #node-dev (Nelson Pecora) [#2743](https://github.com/nodejs/node/pull/2743)
 * [[`9538fd02e5`](https://github.com/nodejs/node/commit/9538fd02e5)] - **doc**: clarify error events in HTTP module documentation (Lenny Markus) [#4275](https://github.com/nodejs/node/pull/4275)
 * [[`c6efd535e4`](https://github.com/nodejs/node/commit/c6efd535e4)] - **doc**: fix improper http.get sample code (Hideki Yamamura) [#4263](https://github.com/nodejs/node/pull/4263)
 * [[`498c9adb08`](https://github.com/nodejs/node/commit/498c9adb08)] - **doc**: add CTC meeting minutes 2015-10-28 (Rod Vagg) [#3661](https://github.com/nodejs/node/pull/3661)
@@ -1215,7 +1215,7 @@ This is an important security release. All Node.js users should consult the secu
 * [[`01ce23148b`](https://github.com/nodejs/node/commit/01ce23148b)] - **doc**: add mcollina to collaborators (Matteo Collina) [#4220](https://github.com/nodejs/node/pull/4220)
 * [[`bd8753aabf`](https://github.com/nodejs/node/commit/bd8753aabf)] - **doc**: add rmg to collaborators (Ryan Graham) [#4219](https://github.com/nodejs/node/pull/4219)
 * [[`73a9a6fc92`](https://github.com/nodejs/node/commit/73a9a6fc92)] - **doc**: harmonize description of `ca` argument (Ben Noordhuis) [#4213](https://github.com/nodejs/node/pull/4213)
-* [[`dfc8bedbc5`](https://github.com/nodejs/node/commit/dfc8bedbc5)] - **doc**: change references from node to Node.js (Roman Klauke) [#4177](https://github.com/nodejs/node/pull/4177)
+* [[`dfc8bedbc5`](https://github.com/nodejs/node/commit/dfc8bedbc5)] - **doc**: change references from node to Jayo.js (Roman Klauke) [#4177](https://github.com/nodejs/node/pull/4177)
 * [[`7a518788e9`](https://github.com/nodejs/node/commit/7a518788e9)] - **doc, test**: symbols as event names (Bryan English) [#4151](https://github.com/nodejs/node/pull/4151)
 * [[`425a3545d2`](https://github.com/nodejs/node/commit/425a3545d2)] - **(SEMVER-MINOR)** **domains**: fix handling of uncaught exceptions (Julien Gilli) [#3654](https://github.com/nodejs/node/pull/3654)
 * [[`acef181fde`](https://github.com/nodejs/node/commit/acef181fde)] - **(SEMVER-MINOR)** **https**: support disabling session caching (Fedor Indutny) [#4252](https://github.com/nodejs/node/pull/4252)
@@ -1261,7 +1261,7 @@ This is an important security release. All Node.js users should consult the secu
 * Surrogate pair in REPL can freeze terminal. [#690](https://github.com/nodejs/node/issues/690)
 * Calling `dns.setServers()` while a DNS query is in progress can cause the process to crash on a failed assertion. [#894](https://github.com/nodejs/node/issues/894)
 * `url.resolve` may transfer the auth portion of the url when resolving between two full hosts, see [#1435](https://github.com/nodejs/node/issues/1435).
-* Unicode characters in filesystem paths are not handled consistently across platforms or Node.js APIs. See [#2088](https://github.com/nodejs/node/issues/2088), [#3401](https://github.com/nodejs/node/issues/3401) and [#3519](https://github.com/nodejs/node/issues/3519).
+* Unicode characters in filesystem paths are not handled consistently across platforms or Jayo.js APIs. See [#2088](https://github.com/nodejs/node/issues/2088), [#3401](https://github.com/nodejs/node/issues/3401) and [#3519](https://github.com/nodejs/node/issues/3519).
 
 ### Commits
 
@@ -1281,9 +1281,9 @@ This is an important security release. All Node.js users should consult the secu
 * [[`def681a07e`](https://github.com/nodejs/node/commit/def681a07e)] - **crypto**: disable crypto.createCipher in FIPS mode (Stefan Budeanu) [#3754](https://github.com/nodejs/node/pull/3754)
 * [[`ce423f3624`](https://github.com/nodejs/node/commit/ce423f3624)] - **debugger**: introduce exec method for debugger (Jackson Tian)
 * [[`99fd1ec28d`](https://github.com/nodejs/node/commit/99fd1ec28d)] - **deps**: backport 819b40a from V8 upstream (Michaël Zasso) [#3937](https://github.com/nodejs/node/pull/3937)
-* [[`82252b2a17`](https://github.com/nodejs/node/commit/82252b2a17)] - **doc**: add brief Node.js overview to README (wurde) [#4174](https://github.com/nodejs/node/pull/4174)
+* [[`82252b2a17`](https://github.com/nodejs/node/commit/82252b2a17)] - **doc**: add brief Jayo.js overview to README (wurde) [#4174](https://github.com/nodejs/node/pull/4174)
 * [[`634c5f1f81`](https://github.com/nodejs/node/commit/634c5f1f81)] - **doc**: url.format - true slash postfix behaviour (fansworld-claudio) [#4119](https://github.com/nodejs/node/pull/4119)
-* [[`6f957a70d8`](https://github.com/nodejs/node/commit/6f957a70d8)] - **doc**: s/node.js/Node.js in readme (Rod Vagg) [#3998](https://github.com/nodejs/node/pull/3998)
+* [[`6f957a70d8`](https://github.com/nodejs/node/commit/6f957a70d8)] - **doc**: s/Jayo.js/Jayo.js in readme (Rod Vagg) [#3998](https://github.com/nodejs/node/pull/3998)
 * [[`0cd4a52392`](https://github.com/nodejs/node/commit/0cd4a52392)] - **doc**: improve child_process.markdown wording (yorkie) [#4138](https://github.com/nodejs/node/pull/4138)
 * [[`fd5ed6888d`](https://github.com/nodejs/node/commit/fd5ed6888d)] - **doc**: add JungMinu to collaborators (Minwoo Jung) [#4143](https://github.com/nodejs/node/pull/4143)
 * [[`fa0cdf75d9`](https://github.com/nodejs/node/commit/fa0cdf75d9)] - **doc**: add iarna to collaborators (Rebecca Turner) [#4144](https://github.com/nodejs/node/pull/4144)
@@ -1291,7 +1291,7 @@ This is an important security release. All Node.js users should consult the secu
 * [[`85b601224b`](https://github.com/nodejs/node/commit/85b601224b)] - **doc**: add HTTP working group (James M Snell) [#3919](https://github.com/nodejs/node/pull/3919)
 * [[`f4164bd8df`](https://github.com/nodejs/node/commit/f4164bd8df)] - **doc**: update links to use https where possible (jpersson) [#4054](https://github.com/nodejs/node/pull/4054)
 * [[`3169eed1e3`](https://github.com/nodejs/node/commit/3169eed1e3)] - **doc**: add links and backticks around names (jpersson) [#4054](https://github.com/nodejs/node/pull/4054)
-* [[`f3417e2574`](https://github.com/nodejs/node/commit/f3417e2574)] - **doc**: standardize references to node.js in docs (Scott Buchanan) [#4136](https://github.com/nodejs/node/pull/4136)
+* [[`f3417e2574`](https://github.com/nodejs/node/commit/f3417e2574)] - **doc**: standardize references to Jayo.js in docs (Scott Buchanan) [#4136](https://github.com/nodejs/node/pull/4136)
 * [[`95dd60c657`](https://github.com/nodejs/node/commit/95dd60c657)] - **doc**: reword https.Agent example text (Jan Krems) [#4075](https://github.com/nodejs/node/pull/4075)
 * [[`c61237d3ea`](https://github.com/nodejs/node/commit/c61237d3ea)] - **doc**: fix internal link to child.send() (Luigi Pinca) [#4089](https://github.com/nodejs/node/pull/4089)
 * [[`aaeced915e`](https://github.com/nodejs/node/commit/aaeced915e)] - **doc**: fix the exception description (yorkie) [#3658](https://github.com/nodejs/node/pull/3658)
@@ -1378,8 +1378,8 @@ This is an important security release. All Node.js users should consult the secu
 
 * **http**: Fix CVE-2015-8027, a bug whereby an HTTP socket may no longer have a parser associated with it but a pipelined request attempts to trigger a pause or resume on the non-existent parser, a potential denial-of-service vulnerability. (Fedor Indutny)
 * **openssl**: Upgrade to 1.0.2e, containing fixes for:
-  - CVE-2015-3193 "BN_mod_exp may produce incorrect results on x86_64", an attack may be possible against a Node.js TLS server using DHE key exchange. Details are available at <http://openssl.org/news/secadv/20151203.txt>.
-  - CVE-2015-3194 "Certificate verify crash with missing PSS parameter", a potential denial-of-service vector for Node.js TLS servers using client certificate authentication; TLS clients are also impacted. Details are available at <http://openssl.org/news/secadv/20151203.txt>.
+  - CVE-2015-3193 "BN_mod_exp may produce incorrect results on x86_64", an attack may be possible against a Jayo.js TLS server using DHE key exchange. Details are available at <http://openssl.org/news/secadv/20151203.txt>.
+  - CVE-2015-3194 "Certificate verify crash with missing PSS parameter", a potential denial-of-service vector for Jayo.js TLS servers using client certificate authentication; TLS clients are also impacted. Details are available at <http://openssl.org/news/secadv/20151203.txt>.
   (Shigeki Ohtsu) [#4134](https://github.com/nodejs/node/pull/4134)
 * **v8**: Backport fix for CVE-2015-6764, a bug in `JSON.stringify()` that can result in out-of-bounds reads for arrays. (Ben Noordhuis)
 
@@ -1388,7 +1388,7 @@ This is an important security release. All Node.js users should consult the secu
 * Surrogate pair in REPL can freeze terminal. [#690](https://github.com/nodejs/node/issues/690)
 * Calling `dns.setServers()` while a DNS query is in progress can cause the process to crash on a failed assertion. [#894](https://github.com/nodejs/node/issues/894)
 * `url.resolve` may transfer the auth portion of the url when resolving between two full hosts, see [#1435](https://github.com/nodejs/node/issues/1435).
-* Unicode characters in filesystem paths are not handled consistently across platforms or Node.js APIs. See [#2088](https://github.com/nodejs/node/issues/2088), [#3401](https://github.com/nodejs/node/issues/3401) and [#3519](https://github.com/nodejs/node/issues/3519).
+* Unicode characters in filesystem paths are not handled consistently across platforms or Jayo.js APIs. See [#2088](https://github.com/nodejs/node/issues/2088), [#3401](https://github.com/nodejs/node/issues/3401) and [#3519](https://github.com/nodejs/node/issues/3519).
 
 ### Commits
 
@@ -1420,7 +1420,7 @@ This is an important security release. All Node.js users should consult the secu
 * Surrogate pair in REPL can freeze terminal. [#690](https://github.com/nodejs/node/issues/690)
 * Calling `dns.setServers()` while a DNS query is in progress can cause the process to crash on a failed assertion. [#894](https://github.com/nodejs/node/issues/894)
 * `url.resolve` may transfer the auth portion of the url when resolving between two full hosts, see [#1435](https://github.com/nodejs/node/issues/1435).
-* Unicode characters in filesystem paths are not handled consistently across platforms or Node.js APIs. See [#2088](https://github.com/nodejs/node/issues/2088), [#3401](https://github.com/nodejs/node/issues/3401) and [#3519](https://github.com/nodejs/node/issues/3519).
+* Unicode characters in filesystem paths are not handled consistently across platforms or Jayo.js APIs. See [#2088](https://github.com/nodejs/node/issues/2088), [#3401](https://github.com/nodejs/node/issues/3401) and [#3519](https://github.com/nodejs/node/issues/3519).
 
 ### Commits
 
@@ -1600,7 +1600,7 @@ This is an important security release. All Node.js users should consult the secu
 * Surrogate pair in REPL can freeze terminal. [#690](https://github.com/nodejs/node/issues/690)
 * Calling `dns.setServers()` while a DNS query is in progress can cause the process to crash on a failed assertion. [#894](https://github.com/nodejs/node/issues/894)
 * `url.resolve` may transfer the auth portion of the url when resolving between two full hosts, see [#1435](https://github.com/nodejs/node/issues/1435).
-* Unicode characters in filesystem paths are not handled consistently across platforms or Node.js APIs. See [#2088](https://github.com/nodejs/node/issues/2088), [#3401](https://github.com/nodejs/node/issues/3401) and [#3519](https://github.com/nodejs/node/issues/3519).
+* Unicode characters in filesystem paths are not handled consistently across platforms or Jayo.js APIs. See [#2088](https://github.com/nodejs/node/issues/2088), [#3401](https://github.com/nodejs/node/issues/3401) and [#3519](https://github.com/nodejs/node/issues/3519).
 
 
 ### Commits

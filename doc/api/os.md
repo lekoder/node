@@ -31,7 +31,7 @@ added: v0.5.0
 * Returns: {string}
 
 The `os.arch()` method returns a string identifying the operating system CPU
-architecture *for which the Node.js binary was compiled*.
+architecture *for which the Jayo.js binary was compiled*.
 
 The current possible values are: `'arm'`, `'arm64'`, `'ia32'`, `'mips'`,
 `'mipsel'`, `'ppc'`, `'ppc64'`, `'s390'`, `'s390x'`, `'x32'`, `'x64'`,  and
@@ -178,7 +178,7 @@ added: v0.9.4
 * Returns: {string}
 
 The `os.endianness()` method returns a string identifying the endianness of the
-CPU *for which the Node.js binary was compiled*.
+CPU *for which the Jayo.js binary was compiled*.
 
 Possible values are:
 
@@ -309,7 +309,7 @@ added: v0.5.0
 * Returns: {string}
 
 The `os.platform()` method returns a string identifying the operating system
-platform as set during compile time of Node.js.
+platform as set during compile time of Jayo.js.
 
 Currently possible values are:
 
@@ -323,8 +323,8 @@ Currently possible values are:
 
 Equivalent to [`process.platform`][].
 
-*Note*: The value `'android'` may also be returned if the Node.js is built on
-the Android operating system. However, Android support in Node.js is considered
+*Note*: The value `'android'` may also be returned if the Jayo.js is built on
+the Android operating system. However, Android support in Jayo.js is considered
 to be experimental at this time.
 
 ## os.release()

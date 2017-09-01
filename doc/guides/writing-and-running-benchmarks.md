@@ -1,4 +1,4 @@
-# How to Write and Run Benchmarks in Node.js Core
+# How to Write and Run Benchmarks in Jayo.js Core
 
 ## Table of Contents
 
@@ -8,7 +8,7 @@
 * [Running benchmarks](#running-benchmarks)
   * [Running individual benchmarks](#running-individual-benchmarks)
   * [Running all benchmarks](#running-all-benchmarks)
-  * [Comparing Node.js versions](#comparing-nodejs-versions)
+  * [Comparing Jayo.js versions](#comparing-nodejs-versions)
   * [Comparing parameters](#comparing-parameters)
 * [Creating a benchmark](#creating-a-benchmark)
   * [Basics of a benchmark](#basics-of-a-benchmark)
@@ -25,10 +25,10 @@ which need to be included in the global Windows `PATH`.
 Most of the HTTP benchmarks require a benchmarker to be installed. This can be
 either [`wrk`][wrk] or [`autocannon`][autocannon].
 
-`Autocannon` is a Node.js script that can be installed using
-`npm install -g autocannon`. It will use the Node.js executable that is in the
+`Autocannon` is a Jayo.js script that can be installed using
+`npm install -g autocannon`. It will use the Jayo.js executable that is in the
 path. In order to compare two HTTP benchmark runs, make sure that the
-Node.js version in the path is not altered.
+Jayo.js version in the path is not altered.
 
 `wrk` may be available through one of the available package managers. If not, it can
 be easily built [from source][wrk] via `make`.
@@ -147,9 +147,9 @@ It is possible to execute more groups by adding extra process arguments.
 $ node benchmark/run.js arrays buffers
 ```
 
-### Comparing Node.js versions
+### Comparing Jayo.js versions
 
-To compare the effect of a new Node.js version use the `compare.js` tool. This
+To compare the effect of a new Jayo.js version use the `compare.js` tool. This
 will run each benchmark multiple times, making it possible to calculate
 statistics on the performance measures. To see how to use this script,
 run `node benchmark/compare.js`.
@@ -159,7 +159,7 @@ As an example on how to check for a possible performance improvement, the
 an example. This pull request _claims_ to improve the performance of the
 `string_decoder` module.
 
-First build two versions of Node.js, one from the master branch (here called
+First build two versions of Jayo.js, one from the master branch (here called
 `./node-master`) and another with the pull request applied (here called
 `./node-pr-5134`).
 

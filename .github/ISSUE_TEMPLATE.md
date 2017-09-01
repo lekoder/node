@@ -1,7 +1,7 @@
 <!--
 Thank you for reporting an issue.
 
-This issue tracker is for bugs and issues found within Node.js core.
+This issue tracker is for bugs and issues found within Jayo.js core.
 If you require more general support please file an issue on our help
 repo. https://github.com/nodejs/help
 

@@ -3,7 +3,7 @@
 <!--introduced_in=v0.10.0-->
 <!-- type=misc -->
 
-The goal of this documentation is to comprehensively explain the Node.js
+The goal of this documentation is to comprehensively explain the Jayo.js
 API, both from a reference as well as a conceptual point of view. Each
 section describes a built-in module or high-level concept.
 
@@ -17,7 +17,7 @@ experimental, and added for the benefit of IDEs and other utilities that
 wish to do programmatic things with the documentation.
 
 Every `.html` and `.json` file is generated based on the corresponding
-`.md` file in the `doc/api/` folder in Node.js's source tree. The
+`.md` file in the `doc/api/` folder in Jayo.js's source tree. The
 documentation is generated using the `tools/doc/generate.js` program.
 The HTML template is located at `doc/template.html`.
 
@@ -30,7 +30,7 @@ or see [the contributing guide][] for directions on how to submit a patch.
 <!--type=misc-->
 
 Throughout the documentation are indications of a section's
-stability. The Node.js API is still somewhat changing, and as it
+stability. The Jayo.js API is still somewhat changing, and as it
 matures, certain parts are more reliable than others. Some are so
 proven, and so relied upon, that they are unlikely to ever change at
 all. Others are brand new and experimental, or known to be hazardous
@@ -50,12 +50,12 @@ Stability: 1 - Experimental
 This feature is still under active development and subject to non-backwards
 compatible changes, or even removal, in any future version. Use of the feature
 is not recommended in production environments. Experimental features are not
-subject to the Node.js Semantic Versioning model.
+subject to the Jayo.js Semantic Versioning model.
 ```
 
 *Note*: Caution must be used when making use of `Experimental` features,
 particularly within modules that may be used as dependencies (or dependencies
-of dependencies) within a Node.js application. End users may not be aware that
+of dependencies) within a Jayo.js application. End users may not be aware that
 experimental features are being used, and therefore may experience unexpected
 failures or behavioral changes when changes occur. To help avoid such surprises,
 `Experimental` features may require a command-line flag to explicitly enable
@@ -76,7 +76,7 @@ is a high priority, and will not be broken unless absolutely necessary.
 Every HTML file in the markdown has a corresponding JSON file with the
 same data.
 
-This feature was added in Node.js v0.6.12. It is experimental.
+This feature was added in Jayo.js v0.6.12. It is experimental.
 
 ## Syscalls and man pages
 

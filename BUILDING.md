@@ -1,11 +1,11 @@
-# Building Node.js
+# Building Jayo.js
 
 Depending on what platform or features you require, the build process may
 differ slightly. After you've successfully built a binary, running the
 test suite to validate that the binary works as intended is a good next step.
 
 If you consistently can reproduce a test failure, search for it in the
-[Node.js issue tracker](https://github.com/nodejs/node/issues) or
+[Jayo.js issue tracker](https://github.com/nodejs/node/issues) or
 file a new issue.
 
 ## Supported platforms
@@ -15,14 +15,14 @@ which it is attached.
 
 ### Input
 
-Node.js relies on V8 and libuv. Therefore, we adopt a subset of their
+Jayo.js relies on V8 and libuv. Therefore, we adopt a subset of their
 supported platforms.
 
 ### Strategy
 
 Support is divided into three tiers:
 
-* **Tier 1**: Full test coverage and maintenance by the Node.js core team and
+* **Tier 1**: Full test coverage and maintenance by the Jayo.js core team and
   the broader community.
 * **Tier 2**: Full test coverage but more limited maintenance,
   often provided by the vendor of the platform.
@@ -55,7 +55,7 @@ note1 - The gcc4.8-libs package needs to be installed, because node
   installed by default. For these node versions, the recommended binaries
   are the ones available in pkgsrc, not the one available from nodejs.org.
   Note that the binaries downloaded from the pkgsrc repositories are not
-  officially supported by the Node.js project, and instead are supported
+  officially supported by the Jayo.js project, and instead are supported
   by Joyent. SmartOS images >= 16.4 are not supported because
   GCC 4.8 runtime libraries are not available in their pkgsrc repository
 
@@ -72,7 +72,7 @@ Depending on host platform, the selection of toolchains may vary.
 
 * Visual Studio 2015 or Visual C++ Build Tools 2015 or newer
 
-## Building Node.js on supported platforms
+## Building Jayo.js on supported platforms
 
 ### Unix / macOS
 
@@ -102,7 +102,7 @@ directory and the symbolic `node` link in the project's root directory.
 On FreeBSD and OpenBSD, you may also need:
 * libexecinfo
 
-To build Node.js:
+To build Jayo.js:
 
 ```console
 $ ./configure
@@ -128,13 +128,13 @@ $ make test
 
 To build the documentation:
 
-This will build Node.js first (if necessary) and then use it to build the docs:
+This will build Jayo.js first (if necessary) and then use it to build the docs:
 
 ```console
 $ make doc
 ```
 
-If you have an existing Node.js build, you can build just the docs with:
+If you have an existing Jayo.js build, you can build just the docs with:
 
 ```console
 $ NODE=/path/to/node make doc-only
@@ -146,13 +146,13 @@ To read the documentation:
 $ man doc/node.1
 ```
 
-To test if Node.js was built correctly:
+To test if Jayo.js was built correctly:
 
 ```console
-$ ./node -e "console.log('Hello from Node.js ' + process.version)"
+$ ./node -e "console.log('Hello from Jayo.js ' + process.version)"
 ```
 
-To install this version of Node.js into a system directory:
+To install this version of Jayo.js into a system directory:
 
 ```console
 $ [sudo] make install
@@ -188,10 +188,10 @@ To run the tests:
 > .\vcbuild test
 ```
 
-To test if Node.js was built correctly:
+To test if Jayo.js was built correctly:
 
 ```console
-> Release\node -e "console.log('Hello from Node.js', process.version)"
+> Release\node -e "console.log('Hello from Jayo.js', process.version)"
 ```
 
 ### Android / Android-based devices (e.g. Firefox OS)
@@ -232,7 +232,7 @@ data at runtime.
 
 With the `--download=all`, this may download ICU if you don't have an
 ICU in `deps/icu`. (The embedded `small-icu` included in the default
-Node.js source does not include all locales.)
+Jayo.js source does not include all locales.)
 
 ##### Unix / macOS:
 
@@ -306,11 +306,11 @@ as `deps/icu` (You'll have: `deps/icu/source/...`)
 > .\vcbuild full-icu
 ```
 
-## Building Node.js with FIPS-compliant OpenSSL
+## Building Jayo.js with FIPS-compliant OpenSSL
 
 NOTE: Windows is not yet supported
 
-It is possible to build Node.js with
+It is possible to build Jayo.js with
 [OpenSSL FIPS module](https://www.openssl.org/docs/fipsnotes.html).
 
 **Note**: building in this way does **not** allow you to claim that the
@@ -344,9 +344,9 @@ and [user guide](https://openssl.org/docs/fips/UserGuide-2.0.pdf).
    used in place of `./config`, and the FIPSDIR environment variable
    may be used to specify a non-standard install folder for the
    validated module, as per User Guide sections 4.2.1, 4.2.2, and 4.2.3.
-6. Get into Node.js checkout folder
+6. Get into Jayo.js checkout folder
 7. `./configure --openssl-fips=/path/to/openssl-fips/installdir`
    For example on ubuntu 12 the installation directory was
    `/usr/local/ssl/fips-2.0`
-8. Build Node.js with `make -j`
+8. Build Jayo.js with `make -j`
 9. Verify with `node -p "process.versions.openssl"` (for example `1.0.2a-fips`)

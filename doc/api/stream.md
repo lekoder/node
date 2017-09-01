@@ -4,11 +4,11 @@
 
 > Stability: 2 - Stable
 
-A stream is an abstract interface for working with streaming data in Node.js.
+A stream is an abstract interface for working with streaming data in Jayo.js.
 The `stream` module provides a base API that makes it easy to build objects
 that implement the stream interface.
 
-There are many stream objects provided by Node.js. For instance, a
+There are many stream objects provided by Jayo.js. For instance, a
 [request to an HTTP server][http-incoming-message] and [`process.stdout`][]
 are both stream instances.
 
@@ -21,7 +21,7 @@ The `stream` module can be accessed using:
 const stream = require('stream');
 ```
 
-While it is important for all Node.js users to understand how streams work,
+While it is important for all Jayo.js users to understand how streams work,
 the `stream` module itself is most useful for developers that are creating new
 types of stream instances. Developers who are primarily *consuming* stream
 objects will rarely (if ever) have need to use the `stream` module directly.
@@ -35,7 +35,7 @@ the elements of the API that are required to *implement* new types of streams.
 
 ## Types of Streams
 
-There are four fundamental stream types within Node.js:
+There are four fundamental stream types within Jayo.js:
 
 * [Readable][] - streams from which data can be read (for example
   [`fs.createReadStream()`][]).
@@ -48,7 +48,7 @@ There are four fundamental stream types within Node.js:
 
 ### Object Mode
 
-All streams created by Node.js APIs operate exclusively on strings and `Buffer`
+All streams created by Jayo.js APIs operate exclusively on strings and `Buffer`
 (or `Uint8Array`) objects. It is possible, however, for stream implementations
 to work with other types of JavaScript values (with the exception of `null`,
 which serves a special purpose within streams). Such streams are considered to
@@ -107,8 +107,8 @@ of the other.
 
 <!--type=misc-->
 
-Almost all Node.js applications, no matter how simple, use streams in some
-manner. The following is an example of using streams in a Node.js application
+Almost all Jayo.js applications, no matter how simple, use streams in some
+manner. The following is an example of using streams in a Jayo.js application
 that implements an HTTP server:
 
 ```js
@@ -410,7 +410,7 @@ The `writable.uncork()` method flushes all data buffered since
 When using [`writable.cork()`][] and `writable.uncork()` to manage the buffering
 of writes to a stream, it is recommended that calls to `writable.uncork()` be
 deferred using `process.nextTick()`. Doing so allows batching of all
-`writable.write()` calls that occur within a given Node.js event loop phase.
+`writable.write()` calls that occur within a given Jayo.js event loop phase.
 
 ```js
 stream.cork();
@@ -476,7 +476,7 @@ return false. Once all currently buffered chunks are drained (accepted for
 delivery by the operating system), the `'drain'` event will be emitted.
 It is recommended that once write() returns false, no more chunks be written
 until the `'drain'` event is emitted. While calling `write()` on a stream that
-is not draining is allowed, Node.js will buffer all written chunks until
+is not draining is allowed, Jayo.js will buffer all written chunks until
 maximum memory usage occurs, at which point it will abort unconditionally.
 Even before it aborts, high memory usage will cause poor garbage collector
 performance and high RSS (which is not typically released back to the system,
@@ -630,7 +630,7 @@ within the streams internal buffer.
 
 #### Choose One
 
-The Readable stream API evolved across multiple Node.js versions and provides
+The Readable stream API evolved across multiple Jayo.js versions and provides
 multiple methods of consuming stream data. In general, developers should choose
 *one* of the methods of consuming data and *should never* use multiple methods
 to consume data from a single stream.
@@ -876,7 +876,7 @@ error occurs, it will be necessary to *manually* close each stream in order
 to prevent memory leaks.
 
 *Note*: The [`process.stderr`][] and [`process.stdout`][] Writable streams are
-never closed until the Node.js process exits, regardless of the specified
+never closed until the Jayo.js process exits, regardless of the specified
 options.
 
 ##### readable.read([size])
@@ -1090,17 +1090,17 @@ added: v0.9.4
 
 * `stream` {Stream} An "old style" readable stream
 
-Versions of Node.js prior to v0.10 had streams that did not implement the
+Versions of Jayo.js prior to v0.10 had streams that did not implement the
 entire `stream` module API as it is currently defined. (See [Compatibility][]
 for more information.)
 
-When using an older Node.js library that emits [`'data'`][] events and has a
+When using an older Jayo.js library that emits [`'data'`][] events and has a
 [`stream.pause()`][stream-pause] method that is advisory only, the
 `readable.wrap()` method can be used to create a [Readable][] stream that uses
 the old stream as its data source.
 
 It will rarely be necessary to use `readable.wrap()` but the method has been
-provided as a convenience for interacting with older Node.js applications and
+provided as a convenience for interacting with older Jayo.js applications and
 libraries.
 
 For example:
@@ -1813,7 +1813,7 @@ const myDuplex = new Duplex({
 The following illustrates a simple example of a Duplex stream that wraps a
 hypothetical lower-level source object to which data can be written, and
 from which data can be read, albeit using an API that is not compatible with
-Node.js streams.
+Jayo.js streams.
 The following illustrates a simple example of a Duplex stream that buffers
 incoming written data via the [Writable][] interface that is read back out
 via the [Readable][] interface.
@@ -2061,11 +2061,11 @@ primarily for examples and testing, but there are some use cases where
 
 <!--type=misc-->
 
-### Compatibility with Older Node.js Versions
+### Compatibility with Older Jayo.js Versions
 
 <!--type=misc-->
 
-In versions of Node.js prior to v0.10, the Readable stream interface was
+In versions of Jayo.js prior to v0.10, the Readable stream interface was
 simpler, but also less powerful and less useful.
 
 * Rather than waiting for calls the [`stream.read()`][stream-read] method,
@@ -2076,8 +2076,8 @@ simpler, but also less powerful and less useful.
   guaranteed. This meant that it was still necessary to be prepared to receive
   [`'data'`][] events *even when the stream was in a paused state*.
 
-In Node.js v0.10, the [Readable][] class was added. For backwards compatibility
-with older Node.js programs, Readable streams switch into "flowing mode" when a
+In Jayo.js v0.10, the [Readable][] class was added. For backwards compatibility
+with older Jayo.js programs, Readable streams switch into "flowing mode" when a
 [`'data'`][] event handler is added, or when the
 [`stream.resume()`][stream-resume] method is called. The effect is that, even
 when not using the new [`stream.read()`][stream-read] method and
@@ -2106,8 +2106,8 @@ net.createServer((socket) => {
 }).listen(1337);
 ```
 
-In versions of Node.js prior to v0.10, the incoming message data would be
-simply discarded. However, in Node.js v0.10 and beyond, the socket remains
+In versions of Jayo.js prior to v0.10, the incoming message data would be
+simply discarded. However, in Jayo.js v0.10 and beyond, the socket remains
 paused forever.
 
 The workaround in this situation is to call the
@@ -2144,7 +2144,7 @@ stream is not currently reading, then calling `stream.read(0)` will trigger
 a low-level [`stream._read()`][stream-_read] call.
 
 While most applications will almost never need to do this, there are
-situations within Node.js where this is done, particularly in the
+situations within Jayo.js where this is done, particularly in the
 Readable stream class internals.
 
 ### `readable.push('')`

@@ -5,7 +5,7 @@
 | subsystem | maintainers |
 | --- | --- |
 | `benchmark/*` | @nodejs/benchmarking, @mscdex |
-| `bootstrap_node.js` | @fishrock123 |
+| `bootstrap_Jayo.js` | @fishrock123 |
 | `doc/*`, `*.md` | @nodejs/documentation |
 | `lib/assert` | @nodejs/testing |
 | `lib/buffer` | @nodejs/buffer |
@@ -118,7 +118,7 @@ need to be attached anymore, as only important bugfixes will be included.
   * No x86{_64}, since that is the implied default
 
 
-## Updating Node.js from Upstream
+## Updating Jayo.js from Upstream
 
 * `git remote add upstream git://github.com/nodejs/node.git`
 

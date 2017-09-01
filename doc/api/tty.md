@@ -12,11 +12,11 @@ However, it can be accessed using:
 const tty = require('tty');
 ```
 
-When Node.js detects that it is being run inside a text terminal ("TTY")
+When Jayo.js detects that it is being run inside a text terminal ("TTY")
 context, the `process.stdin` will, by default, be initialized as an instance of
 `tty.ReadStream` and both `process.stdout` and `process.stderr` will, by
 default be instances of `tty.WriteStream`. The preferred method of determining
-whether Node.js is being run within a TTY context is to check that the value of
+whether Jayo.js is being run within a TTY context is to check that the value of
 the `process.stdout.isTTY` property is `true`:
 
 ```sh
@@ -36,7 +36,7 @@ added: v0.5.8
 
 The `tty.ReadStream` class is a subclass of `net.Socket` that represents the
 readable side of a TTY. In normal circumstances `process.stdin` will be the
-only `tty.ReadStream` instance in a Node.js process and there should be no
+only `tty.ReadStream` instance in a Jayo.js process and there should be no
 reason to create additional instances.
 
 ### readStream.isRaw
@@ -72,7 +72,7 @@ added: v0.5.8
 The `tty.WriteStream` class is a subclass of `net.Socket` that represents the
 writable side of a TTY. In normal circumstances, `process.stdout` and
 `process.stderr` will be the only `tty.WriteStream` instances created for a
-Node.js process and there should be no reason to create additional instances.
+Jayo.js process and there should be no reason to create additional instances.
 
 ### Event: 'resize'
 <!-- YAML

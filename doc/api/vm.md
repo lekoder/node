@@ -465,7 +465,7 @@ altering objects in the context in unwanted ways.
 
 ## What does it mean to "contextify" an object?
 
-All JavaScript executed within Node.js runs within the scope of a "context".
+All JavaScript executed within Jayo.js runs within the scope of a "context".
 According to the [V8 Embedder's Guide][]:
 
 > In V8, a context is an execution environment that allows separate, unrelated,

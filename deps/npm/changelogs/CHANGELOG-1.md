@@ -19,12 +19,12 @@ npm WARN deprecated To upgrade to the latest stable version, run:
 npm WARN deprecated
 npm WARN deprecated   npm -g install npm@latest
 npm WARN deprecated
-npm WARN deprecated (Depending on how Node.js was installed on your system, you
+npm WARN deprecated (Depending on how Jayo.js was installed on your system, you
 npm WARN deprecated may need to prefix the preceding commands with `sudo`, or if
 npm WARN deprecated on Windows, run them from an Administrator prompt.)
 npm WARN deprecated
 npm WARN deprecated If you're running the version of npm bundled with
-npm WARN deprecated Node.js 0.10 LTS, be aware that the next version of 0.10 LTS
+npm WARN deprecated Jayo.js 0.10 LTS, be aware that the next version of 0.10 LTS
 npm WARN deprecated will be bundled with a version of npm@2, which has some small
 npm WARN deprecated backwards-incompatible changes made to `npm run-script` and
 npm WARN deprecated semver behavior.

@@ -1,4 +1,4 @@
-# Node.js 7 ChangeLog
+# Jayo.js 7 ChangeLog
 
 <table>
 <tr>
@@ -40,7 +40,7 @@
 <a id="7.10.1"></a>
 ## 2017-07-11, Version 7.10.1 (Current), @evanlucas
 
-This is a security release. All Node.js users should consult the
+This is a security release. All Jayo.js users should consult the
 security release summary at
 https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/
 for details on patched vulnerabilities.
@@ -579,7 +579,7 @@ Thank you to @italoacasas for preparing the majority of this release.
 
 ### Notables changes
 
-Node.js 7.7.0 contains a bug that will prevent all native modules from building, this patch should fix the issue. Apologies to everyone who was affected by 7.7.0.
+Jayo.js 7.7.0 contains a bug that will prevent all native modules from building, this patch should fix the issue. Apologies to everyone who was affected by 7.7.0.
 
 ### Commits
 
@@ -919,7 +919,7 @@ Thank you to @italoacasas for preparing the majority of this release.
 
 This release contains security fixes to upgrade OpenSSL to version 1.0.2k.
 
-Although the OpenSSL team have determined a maximum severity rating of "moderate", the Node.js
+Although the OpenSSL team have determined a maximum severity rating of "moderate", the Jayo.js
 crypto team (Ben Noordhuis, Shigeki Ohtsu and Fedor Indutny) have determined the impact to Node
 users is "low". Details on this determination can be found
 [on the Nodejs.org website](https://nodejs.org/en/blog/vulnerability/openssl-january-2017/).
@@ -1056,7 +1056,7 @@ users is "low". Details on this determination can be found
 * [[`e30e307a70`](https://github.com/nodejs/node/commit/e30e307a70)] - **inspector**: move options parsing (Eugene Ostroukhov) [#9691](https://github.com/nodejs/node/pull/9691)
 * [[`60f27f91e4`](https://github.com/nodejs/node/commit/60f27f91e4)] - **inspector**: remove unused uv_async_t (Eugene Ostroukhov) [#10392](https://github.com/nodejs/node/pull/10392)
 * [[`a3abba0b1a`](https://github.com/nodejs/node/commit/a3abba0b1a)] - **lib**: remove unnecessary parameter for assertCrypto() (Jackson Tian) [#10834](https://github.com/nodejs/node/pull/10834)
-* [[`4de7b03a7d`](https://github.com/nodejs/node/commit/4de7b03a7d)] - **lib**: refactor bootstrap_node.js regular expression (Rich Trott) [#10749](https://github.com/nodejs/node/pull/10749)
+* [[`4de7b03a7d`](https://github.com/nodejs/node/commit/4de7b03a7d)] - **lib**: refactor bootstrap_Jayo.js regular expression (Rich Trott) [#10749](https://github.com/nodejs/node/pull/10749)
 * [[`a6c93af244`](https://github.com/nodejs/node/commit/a6c93af244)] - **lib**: refactor crypto cipher/hash/curve getters (Rich Trott) [#10682](https://github.com/nodejs/node/pull/10682)
 * [[`6e8d627217`](https://github.com/nodejs/node/commit/6e8d627217)] - **lib,src**: support values > 4GB in heap statistics (Ben Noordhuis) [#10186](https://github.com/nodejs/node/pull/10186)
 * [[`de8eee6b16`](https://github.com/nodejs/node/commit/de8eee6b16)] - **meta**: decharter the http working group (James M Snell) [#10604](https://github.com/nodejs/node/pull/10604)
@@ -1266,7 +1266,7 @@ users is "low". Details on this determination can be found
 * [[`e86bf27fe8`](https://github.com/nodejs/node/commit/e86bf27fe8)] - **doc**: improve rinfo object documentation (Matt Crummey) [#10050](https://github.com/nodejs/node/pull/10050)
 * [[`5b7b457643`](https://github.com/nodejs/node/commit/5b7b457643)] - **doc**: add tls.DEFAULT_ECDH_CURVE (Sam Roberts) [#10264](https://github.com/nodejs/node/pull/10264)
 * [[`cf3f75f6f0`](https://github.com/nodejs/node/commit/cf3f75f6f0)] - **doc**: fixup errors in stream.md (Fumiya KARASAWA) [#10411](https://github.com/nodejs/node/pull/10411)
-* [[`89fb82214f`](https://github.com/nodejs/node/commit/89fb82214f)] - **doc**: use "Node.js" in V8 guide (Rich Trott) [#10438](https://github.com/nodejs/node/pull/10438)
+* [[`89fb82214f`](https://github.com/nodejs/node/commit/89fb82214f)] - **doc**: use "Jayo.js" in V8 guide (Rich Trott) [#10438](https://github.com/nodejs/node/pull/10438)
 * [[`aabaef0aa7`](https://github.com/nodejs/node/commit/aabaef0aa7)] - **doc**: more efficient example in the console.md (Vse Mozhet Byt) [#10451](https://github.com/nodejs/node/pull/10451)
 * [[`3d181ce4fd`](https://github.com/nodejs/node/commit/3d181ce4fd)] - **doc**: var -> const / let in the console.md (Vse Mozhet Byt) [#10451](https://github.com/nodejs/node/pull/10451)
 * [[`9ce28ec3c5`](https://github.com/nodejs/node/commit/9ce28ec3c5)] - **doc**: add the valid link for curl(1) in repl.md (Vse Mozhet Byt) [#10244](https://github.com/nodejs/node/pull/10244)

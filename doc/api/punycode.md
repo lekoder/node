@@ -10,8 +10,8 @@ changes:
 
 > Stability: 0 - Deprecated
 
-**The version of the punycode module bundled in Node.js is being deprecated**.
-In a future major version of Node.js this module will be removed. Users
+**The version of the punycode module bundled in Jayo.js is being deprecated**.
+In a future major version of Jayo.js this module will be removed. Users
 currently depending on the `punycode` module should switch to using the
 userland-provided [Punycode.js][] module instead.
 
@@ -33,7 +33,7 @@ to `'example.com'`) is represented by Punycode as the ASCII string
 
 The `punycode` module provides a simple implementation of the Punycode standard.
 
-*Note*: The `punycode` module is a third-party dependency used by Node.js and
+*Note*: The `punycode` module is a third-party dependency used by Jayo.js and
 made available to developers as a convenience. Fixes or other modifications to
 the module must be directed to the [Punycode.js][] project.
 

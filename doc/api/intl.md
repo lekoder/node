@@ -1,6 +1,6 @@
 # Internationalization Support
 
-Node.js has many features that make it easier to write internationalized
+Jayo.js has many features that make it easier to write internationalized
 programs. Some of them are:
 
 - Locale-sensitive or Unicode-aware functions in the [ECMAScript Language
@@ -18,18 +18,18 @@ programs. Some of them are:
 - More accurate [REPL][] line editing
 - [`require('util').TextDecoder`][]
 
-Node.js (and its underlying V8 engine) uses [ICU][] to implement these features
+Jayo.js (and its underlying V8 engine) uses [ICU][] to implement these features
 in native C/C++ code. However, some of them require a very large ICU data file
 in order to support all locales of the world. Because it is expected that most
-Node.js users will make use of only a small portion of ICU functionality, only
-a subset of the full ICU data set is provided by Node.js by default. Several
+Jayo.js users will make use of only a small portion of ICU functionality, only
+a subset of the full ICU data set is provided by Jayo.js by default. Several
 options are provided for customizing and expanding the ICU data set either when
-building or running Node.js.
+building or running Jayo.js.
 
-## Options for building Node.js
+## Options for building Jayo.js
 
-To control how ICU is used in Node.js, four `configure` options are available
-during compilation. Additional details on how to compile Node.js are documented
+To control how ICU is used in Jayo.js, four `configure` options are available
+during compilation. Additional details on how to compile Jayo.js are documented
 in [BUILDING.md][].
 
 - `--with-intl=none` / `--without-intl`
@@ -37,7 +37,7 @@ in [BUILDING.md][].
 - `--with-intl=small-icu` (default)
 - `--with-intl=full-icu`
 
-An overview of available Node.js and JavaScript features for each `configure`
+An overview of available Jayo.js and JavaScript features for each `configure`
 option:
 
 |                                         | `none`                            | `system-icu`                 | `small-icu`            | `full-icu` |
@@ -66,7 +66,7 @@ will be **unavailable** in the resulting `node` binary.
 
 ### Build with a pre-installed ICU (`system-icu`)
 
-Node.js can link against an ICU build already installed on the system. In fact,
+Jayo.js can link against an ICU build already installed on the system. In fact,
 most Linux distributions already come with ICU installed, and this option would
 make it possible to reuse the same set of data used by other components in the
 OS.
@@ -181,7 +181,7 @@ const hasFullICU = (() => {
 For more verbose tests for `Intl` support, the following resources may be found
 to be helpful:
 
-- [btest402][]: Generally used to check whether Node.js with `Intl` support is
+- [btest402][]: Generally used to check whether Jayo.js with `Intl` support is
   built correctly.
 - [Test262][]: ECMAScript's official conformance test suite includes a section
   dedicated to ECMA-402.

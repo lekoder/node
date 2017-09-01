@@ -26,13 +26,13 @@ ls.on('close', (code) => {
 ```
 
 By default, pipes for `stdin`, `stdout` and `stderr` are established between
-the parent Node.js process and the spawned child. It is possible to stream data
+the parent Jayo.js process and the spawned child. It is possible to stream data
 through these pipes in a non-blocking way. *Note, however, that some programs
-use line-buffered I/O internally. While that does not affect Node.js, it can
+use line-buffered I/O internally. While that does not affect Jayo.js, it can
 mean that data sent to the child process may not be immediately consumed.*
 
 The [`child_process.spawn()`][] method spawns the child process asynchronously,
-without blocking the Node.js event loop. The [`child_process.spawnSync()`][]
+without blocking the Jayo.js event loop. The [`child_process.spawnSync()`][]
 function provides equivalent functionality in a synchronous manner that blocks
 the event loop until the spawned process either exits or is terminated.
 
@@ -45,13 +45,13 @@ implemented on top of [`child_process.spawn()`][] or [`child_process.spawnSync()
     passing the `stdout` and `stderr` to a callback function when complete.
   * [`child_process.execFile()`][]: similar to [`child_process.exec()`][] except that
     it spawns the command directly without first spawning a shell.
-  * [`child_process.fork()`][]: spawns a new Node.js process and invokes a
+  * [`child_process.fork()`][]: spawns a new Jayo.js process and invokes a
     specified module with an IPC communication channel established that allows
     sending messages between parent and child.
   * [`child_process.execSync()`][]: a synchronous version of
-    [`child_process.exec()`][] that *will* block the Node.js event loop.
+    [`child_process.exec()`][] that *will* block the Jayo.js event loop.
   * [`child_process.execFileSync()`][]: a synchronous version of
-    [`child_process.execFile()`][] that *will* block the Node.js event loop.
+    [`child_process.execFile()`][] that *will* block the Jayo.js event loop.
 
 For certain use cases, such as automating shell scripts, the
 [synchronous counterparts][] may be more convenient. In many cases, however,
@@ -62,10 +62,10 @@ stalling the event loop while spawned processes complete.
 
 The [`child_process.spawn()`][], [`child_process.fork()`][], [`child_process.exec()`][],
 and [`child_process.execFile()`][] methods all follow the idiomatic asynchronous
-programming pattern typical of other Node.js APIs.
+programming pattern typical of other Jayo.js APIs.
 
 Each of the methods returns a [`ChildProcess`][] instance. These objects
-implement the Node.js [`EventEmitter`][] API, allowing the parent process to
+implement the Jayo.js [`EventEmitter`][] API, allowing the parent process to
 register listener functions that are called when certain events occur during
 the life cycle of the child process.
 
@@ -188,7 +188,7 @@ signal that terminated the process. Any exit code other than `0` is considered
 to be an error.
 
 The `stdout` and `stderr` arguments passed to the callback will contain the
-stdout and stderr output of the child process. By default, Node.js will decode
+stdout and stderr output of the child process. By default, Jayo.js will decode
 the output as UTF-8 and pass strings to the callback. The `encoding` option
 can be used to specify the character encoding used to decode the stdout and
 stderr output. If `encoding` is `'buffer'`, or an unrecognized character
@@ -277,7 +277,7 @@ const child = execFile('node', ['--version'], (error, stdout, stderr) => {
 ```
 
 The `stdout` and `stderr` arguments passed to the callback will contain the
-stdout and stderr output of the child process. By default, Node.js will decode
+stdout and stderr output of the child process. By default, Jayo.js will decode
 the output as UTF-8 and pass strings to the callback. The `encoding` option
 can be used to specify the character encoding used to decode the stdout and
 stderr output. If `encoding` is `'buffer'`, or an unrecognized character
@@ -331,24 +331,24 @@ changes:
 * Returns: {ChildProcess}
 
 The `child_process.fork()` method is a special case of
-[`child_process.spawn()`][] used specifically to spawn new Node.js processes.
+[`child_process.spawn()`][] used specifically to spawn new Jayo.js processes.
 Like [`child_process.spawn()`][], a [`ChildProcess`][] object is returned. The returned
 [`ChildProcess`][] will have an additional communication channel built-in that
 allows messages to be passed back and forth between the parent and child. See
 [`subprocess.send()`][] for details.
 
-It is important to keep in mind that spawned Node.js child processes are
+It is important to keep in mind that spawned Jayo.js child processes are
 independent of the parent with exception of the IPC communication channel
 that is established between the two. Each process has its own memory, with
 their own V8 instances. Because of the additional resource allocations
-required, spawning a large number of child Node.js processes is not
+required, spawning a large number of child Jayo.js processes is not
 recommended.
 
-By default, `child_process.fork()` will spawn new Node.js instances using the
+By default, `child_process.fork()` will spawn new Jayo.js instances using the
 [`process.execPath`][] of the parent process. The `execPath` property in the
 `options` object allows for an alternative execution path to be used.
 
-Node.js processes launched with a custom `execPath` will communicate with the
+Jayo.js processes launched with a custom `execPath` will communicate with the
 parent process using the file descriptor (fd) identified using the
 environment variable `NODE_CHANNEL_FD` on the child process. The input and
 output on this fd is expected to be line delimited JSON objects.
@@ -484,8 +484,8 @@ subprocess.on('error', (err) => {
 *Note*: Certain platforms (macOS, Linux) will use the value of `argv[0]` for
 the process title while others (Windows, SunOS) will use `command`.
 
-*Note*: Node.js currently overwrites `argv[0]` with `process.execPath` on
-startup, so `process.argv[0]` in a Node.js child process will not match the
+*Note*: Jayo.js currently overwrites `argv[0]` with `process.execPath` on
+startup, so `process.argv[0]` in a Jayo.js child process will not match the
 `argv0` parameter passed to `spawn` from the parent, retrieve it with the
 `process.argv0` property instead.
 
@@ -584,13 +584,13 @@ pipes between the parent and child. The value is one of the following:
    file descriptor. Setting this option enables the [`subprocess.send()`][]
    method. If the child writes JSON messages to this file descriptor, the
    [`subprocess.on('message')`][`'message'`] event handler will be triggered in
-   the parent. If the child is a Node.js process, the presence of an IPC channel
+   the parent. If the child is a Jayo.js process, the presence of an IPC channel
    will enable [`process.send()`][], [`process.disconnect()`][],
    [`process.on('disconnect')`][], and [`process.on('message')`] within the
    child.
-3. `'ignore'` - Instructs Node.js to ignore the fd in the child. While Node.js
+3. `'ignore'` - Instructs Jayo.js to ignore the fd in the child. While Jayo.js
    will always open fds 0 - 2 for the processes it spawns, setting the fd to
-   `'ignore'` will cause Node.js to open `/dev/null` and attach it to the
+   `'ignore'` will cause Jayo.js to open `/dev/null` and attach it to the
    child's fd.
 4. {Stream} object - Share a readable or writable stream that refers to a tty,
    file, socket, or a pipe with the child process. The stream's underlying
@@ -622,7 +622,7 @@ spawn('prg', [], { stdio: ['pipe', null, null, null, 'pipe'] });
 ```
 
 *It is worth noting that when an IPC channel is established between the
-parent and child processes, and the child is a Node.js process, the child
+parent and child processes, and the child is a Jayo.js process, the child
 is launched with the IPC channel unreferenced (using `unref()`) until the
 child registers an event handler for the [`process.on('disconnect')`][] event
 or the [`process.on('message')`][] event.This allows the child to exit normally
@@ -634,7 +634,7 @@ See also: [`child_process.exec()`][] and [`child_process.fork()`][]
 
 The [`child_process.spawnSync()`][], [`child_process.execSync()`][], and
 [`child_process.execFileSync()`][] methods are **synchronous** and **WILL** block
-the Node.js event loop, pausing execution of any additional code until the
+the Jayo.js event loop, pausing execution of any additional code until the
 spawned process exits.
 
 Blocking calls like these are mostly useful for simplifying general purpose
@@ -869,9 +869,9 @@ the signal, otherwise `null`. One of the two will always be non-null.
 Note that when the `'exit'` event is triggered, child process stdio streams
 might still be open.
 
-Also, note that Node.js establishes signal handlers for `SIGINT` and
-`SIGTERM` and Node.js processes will not terminate immediately due to receipt
-of those signals. Rather, Node.js will perform a sequence of cleanup actions
+Also, note that Jayo.js establishes signal handlers for `SIGINT` and
+`SIGTERM` and Jayo.js processes will not terminate immediately due to receipt
+of those signals. Rather, Jayo.js will perform a sequence of cleanup actions
 and then will re-raise the handled signal.
 
 See waitpid(2).
@@ -924,7 +924,7 @@ The `'disconnect'` event will be emitted when there are no messages in the
 process of being received. This will most often be triggered immediately after
 calling `subprocess.disconnect()`.
 
-Note that when the child process is a Node.js instance (e.g. spawned using
+Note that when the child process is a Jayo.js instance (e.g. spawned using
 [`child_process.fork()`]), the `process.disconnect()` method can be invoked
 within the child process to close the IPC channel as well.
 
@@ -1044,7 +1044,7 @@ changes:
 When an IPC channel has been established between the parent and child (
 i.e. when using [`child_process.fork()`][]), the `subprocess.send()` method can
 be used to send messages to the child process. When the child process is a
-Node.js instance, these messages can be received via the
+Jayo.js instance, these messages can be received via the
 [`process.on('message')`][] event.
 
 For example, in the parent script:
@@ -1070,14 +1070,14 @@ process.on('message', (m) => {
 process.send({ foo: 'bar' });
 ```
 
-Child Node.js processes will have a [`process.send()`][] method of their own that
+Child Jayo.js processes will have a [`process.send()`][] method of their own that
 allows the child to send messages back to the parent.
 
 There is a special case when sending a `{cmd: 'NODE_foo'}` message. All messages
 containing a `NODE_` prefix in its `cmd` property are considered to be reserved
-for use within Node.js core and will not be emitted in the child's
+for use within Jayo.js core and will not be emitted in the child's
 [`process.on('message')`][] event. Rather, such messages are emitted using the
-`process.on('internalMessage')` event and are consumed internally by Node.js.
+`process.on('internalMessage')` event and are consumed internally by Jayo.js.
 Applications should avoid using such messages or listening for
 `'internalMessage'` events as it is subject to change without notice.
 

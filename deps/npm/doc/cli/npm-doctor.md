@@ -11,7 +11,7 @@ npm-doctor(1) -- Check your environments
 what it needs to manage your JavaScript packages. npm is mostly a standalone tool, but it does
 have some basic requirements that must be met:
 
-+ Node.js and git must be executable by npm.
++ Jayo.js and git must be executable by npm.
 + The primary npm registry, `registry.npmjs.com`, or another service that uses
   the registry API, is available.
 + The directories that npm uses, `node_modules` (both locally and globally),
@@ -44,7 +44,7 @@ primary registry, this check may fail.
 
 ### `npm -v`
 
-While Node.js may come bundled with a particular version of npm, it's the
+While Jayo.js may come bundled with a particular version of npm, it's the
 policy of the CLI team that we recommend all users run `npm@latest` if they
 can. As the CLI is maintained by a small team of contributors, there are only
 resources for a single line of development, so npm's own long-term support
@@ -59,7 +59,7 @@ latest long-term support (LTS) release. Those of you who want access to new
 ECMAscript features or bleeding-edge changes to Node's standard library may be
 running a newer version, and some of you may be required to run an older
 version of Node because of enterprise change control policies. That's OK! But
-in general, the npm team recommends that most users run Node.js LTS.
+in general, the npm team recommends that most users run Jayo.js LTS.
 
 ### `npm config get registry`
 
